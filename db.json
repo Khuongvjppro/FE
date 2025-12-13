@@ -1,0 +1,120 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Áo Polo Nam Basic",
+      "category": "ao-polo",
+      "price": 299000,
+      "originalPrice": 399000,
+      "image": "https://via.placeholder.com/300x400/4299e1/ffffff?text=Ao+Polo",
+      "description": "Áo polo nam chất liệu cotton cao cấp, thoáng mát, phù hợp mặc hàng ngày",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["Trắng", "Đen", "Xanh Navy", "Xám"],
+      "stock": 100,
+      "rating": 4.5,
+      "reviews": 125
+    },
+    {
+      "id": 2,
+      "name": "Áo Sơ Mi Trắng Công Sở",
+      "category": "ao-so-mi",
+      "price": 349000,
+      "originalPrice": 449000,
+      "image": "https://via.placeholder.com/300x400/10b981/ffffff?text=Ao+So+Mi",
+      "description": "Áo sơ mi trắng form slim fit, chống nhăn, phù hợp đi làm và dự tiệc",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["Trắng", "Xanh Nhạt", "Hồng"],
+      "stock": 80,
+      "rating": 4.7,
+      "reviews": 89
+    },
+    {
+      "id": 3,
+      "name": "Quần Kaki Nam Slimfit",
+      "category": "quan-kaki",
+      "price": 399000,
+      "originalPrice": 499000,
+      "image": "https://via.placeholder.com/300x400/f59e0b/ffffff?text=Quan+Kaki",
+      "description": "Quần kaki nam form slimfit, co giãn nhẹ, thoải mái vận động",
+      "sizes": ["28", "29", "30", "31", "32", "33"],
+      "colors": ["Be", "Xanh Navy", "Đen", "Xám"],
+      "stock": 120,
+      "rating": 4.6,
+      "reviews": 156
+    },
+    {
+      "id": 4,
+      "name": "Áo Thun Nam Cotton Basic",
+      "category": "ao-thun",
+      "price": 199000,
+      "originalPrice": 249000,
+      "image": "https://via.placeholder.com/300x400/8b5cf6/ffffff?text=Ao+Thun",
+      "description": "Áo thun nam cotton 100%, form regular, nhiều màu sắc",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["Trắng", "Đen", "Xám", "Xanh", "Đỏ"],
+      "stock": 200,
+      "rating": 4.8,
+      "reviews": 234
+    },
+    {
+      "id": 5,
+      "name": "Quần Jean Nam Slimfit",
+      "category": "quan-jean",
+      "price": 449000,
+      "originalPrice": 599000,
+      "image": "https://via.placeholder.com/300x400/ec4899/ffffff?text=Quan+Jean",
+      "description": "Quần jean nam co giãn 4 chiều, form slimfit hiện đại",
+      "sizes": ["28", "29", "30", "31", "32", "33"],
+      "colors": ["Xanh Đậm", "Xanh Nhạt", "Đen"],
+      "stock": 95,
+      "rating": 4.5,
+      "reviews": 178
+    },
+    {
+      "id": 6,
+      "name": "Áo Khoác Gió Nam",
+      "category": "ao-khoac",
+      "price": 549000,
+      "originalPrice": 699000,
+      "image": "https://via.placeholder.com/300x400/06b6d4/ffffff?text=Ao+Khoac",
+      "description": "Áo khoác gió chống nước, chống UV, phù hợp thể thao và dạo phố",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["Đen", "Xanh Navy", "Xám", "Xanh Lá"],
+      "stock": 60,
+      "rating": 4.7,
+      "reviews": 92
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Áo Polo",
+      "slug": "ao-polo"
+    },
+    {
+      "id": 2,
+      "name": "Áo Sơ Mi",
+      "slug": "ao-so-mi"
+    },
+    {
+      "id": 3,
+      "name": "Quần Kaki",
+      "slug": "quan-kaki"
+    },
+    {
+      "id": 4,
+      "name": "Áo Thun",
+      "slug": "ao-thun"
+    },
+    {
+      "id": 5,
+      "name": "Quần Jean",
+      "slug": "quan-jean"
+    },
+    {
+      "id": 6,
+      "name": "Áo Khoác",
+      "slug": "ao-khoac"
+    }
+  ]
+}
