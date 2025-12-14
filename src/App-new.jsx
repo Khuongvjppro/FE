@@ -28,6 +28,7 @@ const BulkOrder = lazy(() => import("./pages/BulkOrder"));
 const FAQPage = lazy(() => import("./pages/FAQPage"));
 const SizePage = lazy(() => import("./pages/SizePage"));
 const ColorPage = lazy(() => import("./pages/ColorPage"));
+const ExperiencePage = lazy(() => import("./pages/ExperiencePage"));
 const FabricMaterial = lazy(() => import("./pages/FabricMaterial"));
 const PolicyPage = lazy(() => import("./pages/PolicyPage"));
 const PrintTechnologyPage = lazy(() => import("./pages/PrintTechnologyPage"));
@@ -109,6 +110,7 @@ function App() {
               <Route path="/tu-van/faq" element={<FAQPage />} />
               <Route path="/tu-van/bang-size" element={<SizePage />} />
               <Route path="/tu-van/bang-mau" element={<ColorPage />} />
+              <Route path="/tu-van/trai-nghiem" element={<ExperiencePage />} />
               <Route path={ROUTES.FABRIC_MATERIAL} element={<FabricMaterial />} />
               <Route path={ROUTES.POLICY_GIFT} element={<PolicyPage />} />
               <Route path="/tu-van/chinh-sach" element={<PolicyPage />} />

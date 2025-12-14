@@ -1,12 +1,21 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import "../styles/consultation-common.css";
 import "./ColorPage.css";
 
 function ColorPage() {
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState("cotton");
   const [activeTab, setActiveTab] = useState("basic");
+
+  const handleContactClick = () => {
+    window.open('https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F100924208854298%2F%3Fref%3Dweb_panda_dpx%26messaging_source%3Dsource%253Apages%253Amessage_shortlink%26source_id%3D1441792%26recurring_notification%3D0', '_blank');
+  };
+
+  const handleExperienceClick = () => {
+    navigate('/tu-van/trai-nghiem');
+  };
 
   const cottonTabs = {
     basic: {
@@ -103,8 +112,8 @@ function ColorPage() {
               Panda Uniform là đơn vị cung cấp áo đồng phục chất lượng hàng đầu Việt Nam mang lại trải nghiệm tuyệt vời cho khách hàng về sản phẩm và dịch vụ. Đặc biệt, Panda Uniform có khả năng cung cấp màu đa dạng trên nhiều chất liệu khác nhau.
             </p>
             <div className="hero-buttons">
-              <button className="btn-primary">Trải nghiệm màu áo thực tế</button>
-              <button className="btn-secondary">Liên hệ ngay</button>
+              <button className="btn-primary" onClick={handleExperienceClick}>Trải nghiệm màu áo thực tế</button>
+              <button className="btn-secondary" onClick={handleContactClick}>Liên hệ ngay</button>
             </div>
           </div>
           <div className="consultation-hashtag">#dongphucpanda</div>
