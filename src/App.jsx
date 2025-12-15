@@ -39,17 +39,20 @@ function App() {
       <Header />
 
       <section className="hero-banner">
-        <div className="hero-content">
-          <h2>BỘ SƯU TẬP MỚI NHẤT</h2>
-          <p>Đồng phục công sở - Chất lượng cao - Giá tốt nhất</p>
-          <button className="cta-button">Khám phá ngay</button>
+        <div className="container">
+          <div className="hero-content">
+            <div className="subtitle">CITY PLAYER 🔥</div>
+            <h2>CITY PLAYERS<br/>BST ÁO SƠ MI BÓNG CHÀY CỔ TRÒN</h2>
+            <p>Kêm một chút các cảm xúc cháy hết kiếp diễm cho những trở về, Sống tạo điều ta với mẫu áo Bông chày từ hướng cây về thuyền đây cám hành. BST City Player đãu trung sức xứ dáng bóng chày những động sang thể loại kích thước đã đồ trưng những sụ năng ấu bật môt, Panda Uniform đãu diệt sư dụng chết tiếu với mã giúp chỉ đó đáo trơ nên nhũ, thoải mái, tự kin show chết chạt.</p>
+            <button className="cta-button">Khám phá ngay</button>
+          </div>
         </div>
       </section>
 
       <main className="main-content">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">Danh mục sản phẩm</h2>
+            <h2 className="section-title">TOP ĐỒNG PHỤC BÁN CHẠY</h2>
             <div className="category-tabs">
               <button
                 className={selectedCategory === "all" ? "active" : ""}
@@ -95,32 +98,35 @@ function App() {
         <div className="container">
           <div className="footer-content">
             <div className="footer-column">
-              <h3>VỀ CHÚNG TÔI</h3>
-              <p>Chuyên cung cấp đồng phục chất lượng cao với giá cả hợp lý</p>
+              <h3>ĐỒNG PHỤC PANDA</h3>
+              <p>Tự hào là thương hiệu cung cấp đồng phục uy tín, chất lượng hàng đầu. Chúng tôi luôn nỗ lực dùng tất cả tâm huyết để mang tới những sản phẩm tuyệt vời nhất.</p>
             </div>
             <div className="footer-column">
-              <h3>CHÍNH SÁCH</h3>
-              <a href="#">Chính sách đổi trả</a>
-              <a href="#">Chính sách bảo mật</a>
-              <a href="#">Điều khoản sử dụng</a>
+              <h3>ĐẶT ÁO</h3>
+              <a href="#">Quy trình đặt hàng</a>
+              <a href="#">Góc chọn áo</a>
+              <a href="#">Tư vấn chọn size</a>
+              <a href="#">Ưu đãi quà tặng</a>
+              <a href="#">Chính sách bảo hành</a>
             </div>
             <div className="footer-column">
               <h3>LIÊN HỆ</h3>
-              <p>📞 1900.272737</p>
-              <p>📧 support@dongphuc.vn</p>
-              <p>📍 Hà Nội, Việt Nam</p>
+              <p>📞 1900 8697</p>
+              <p>📧 dongphucsangxinmin@gmail.com</p>
+              <p>📍 Số 25, ngách 2, ngõ 208 Trần Cung, phường Nghĩa Đô, TP Hà Nội</p>
             </div>
             <div className="footer-column">
-              <h3>THEO DÕI CHÚNG TÔI</h3>
+              <h3>MẠNG XÃ HỘI</h3>
               <div className="social-links">
                 <a href="#">Facebook</a>
                 <a href="#">Instagram</a>
+                <a href="#">Tiktok</a>
                 <a href="#">Youtube</a>
               </div>
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; 2024 Đồng Phục. All rights reserved.</p>
+            <p>&copy; 2024 Đồng Phục Panda. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -1,77 +1,113 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "./Header.css";
 
 function Header() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [menuData, setMenuData] = useState([]);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  useEffect(() => {
+    fetchMenuData();
+  }, []);
+
+  const fetchMenuData = async () => {
+    try {
+      const response = await axios.get("http://localhost:3001/menuCategories");
+      setMenuData(response.data);
+    } catch (error) {
+      console.error("Lỗi khi tải menu:", error);
+    }
+  };
 
   return (
     <header className="header">
-      <div className="header-top">
-        <div className="container">
-          <div className="header-top-content">
-            <div className="header-info">
-              <span>📞 Hotline: 1900.272737</span>
-              <span>📧 support@dongphuc.vn</span>
-            </div>
-            <div className="header-actions">
-              <a href="#">Đăng nhập</a>
-              <a href="#">Đăng ký</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="header-main">
-        <div className="container">
-          <div className="header-main-content">
-            <h1 className="logo">ĐỒNG PHỤC</h1>
-
-            <div className="search-bar">
-              <input
-                type="text"
-                placeholder="Tìm kiếm sản phẩm..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-              <button className="search-btn">🔍</button>
-            </div>
-
-            <div className="header-icons">
-              <button className="icon-btn">
-                <span className="icon">👤</span>
-                <span>Tài khoản</span>
-              </button>
-              <button className="icon-btn">
-                <span className="icon">🛒</span>
-                <span>Giỏ hàng</span>
-                <span className="badge">0</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <nav className="header-nav">
         <div className="container">
-          <div className="nav-menu">
-            <a href="#" className="nav-link">
-              TRANG CHỦ
+          <div className="nav-wrapper">
+            {/* Menu bên trái */}
+            <div className="nav-left">
+              {menuData.slice(0, 2).map((menu) => (
+                <div
+                  key={menu.id}
+                  className="nav-item"
+                  onMouseEnter={() => menu.hasDropdown && setActiveDropdown(menu.id)}
+                  onMouseLeave={() => menu.hasDropdown && setActiveDropdown(null)}
+                >
+                  <a href={menu.link} className="nav-link">
+                    {menu.label}
+                  </a>
+                  
+                  {menu.hasDropdown && activeDropdown === menu.id && (
+                    <div className="dropdown-menu">
+                      {menu.dropdown.map((section, idx) => (
+                        <div className="dropdown-column" key={idx}>
+                          <h3 className="dropdown-title">{section.title}</h3>
+                          <ul className="dropdown-list">
+                            {section.items.map((item, itemIdx) => (
+                              <li key={itemIdx}>
+                                <a href={item.link} className={item.highlight ? "highlight" : ""}>
+                                  {item.name}
+                                  {item.subtitle && <span className="subtitle">{item.subtitle}</span>}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Logo ở giữa */}
+            <a href="/" className="logo">
+              <img src="https://dongphucpanda.com/wp-content/uploads/2020/04/logo-panda.png" alt="Panda Uniform" />
             </a>
-            <a href="#" className="nav-link">
-              NAM
-            </a>
-            <a href="#" className="nav-link">
-              NỮ
-            </a>
-            <a href="#" className="nav-link">
-              PHỤ KIỆN
-            </a>
-            <a href="#" className="nav-link">
-              SALE
-            </a>
-            <a href="#" className="nav-link">
-              VỀ CHÚNG TÔI
-            </a>
+
+            {/* Menu bên phải */}
+            <div className="nav-right">
+              {menuData.slice(2).map((menu) => (
+                <div
+                  key={menu.id}
+                  className="nav-item"
+                  onMouseEnter={() => menu.hasDropdown && setActiveDropdown(menu.id)}
+                  onMouseLeave={() => menu.hasDropdown && setActiveDropdown(null)}
+                >
+                  <a href={menu.link} className="nav-link">
+                    {menu.label}
+                  </a>
+                  
+                  {menu.hasDropdown && activeDropdown === menu.id && (
+                    <div className="dropdown-menu">
+                      {menu.dropdown.map((section, idx) => (
+                        <div className="dropdown-column" key={idx}>
+                          <h3 className="dropdown-title">{section.title}</h3>
+                          <ul className="dropdown-list">
+                            {section.items.map((item, itemIdx) => (
+                              <li key={itemIdx}>
+                                <a href={item.link} className={item.highlight ? "highlight" : ""}>
+                                  {item.name}
+                                  {item.subtitle && <span className="subtitle">{item.subtitle}</span>}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+              
+              {/* Search icon */}
+              <button className="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
