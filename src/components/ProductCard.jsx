@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
 function ProductCard({ product }) {
@@ -13,13 +14,14 @@ function ProductCard({ product }) {
   );
 
   return (
-    <div className="product-card">
-      <div className="product-image">
-        <img src={product.image} alt={product.name} />
-        {discount > 0 && <div className="discount-badge">-{discount}%</div>}
-      </div>
+    <Link to={`/product/${product.id}`} className="product-card-link">
+      <div className="product-card">
+        <div className="product-image">
+          <img src={product.image} alt={product.name} />
+          {discount > 0 && <div className="discount-badge">-{discount}%</div>}
+        </div>
 
-      <div className="product-info">
+        <div className="product-info">
         <h3 className="product-name">{product.name}</h3>
         <p className="product-description">{product.description}</p>
 
@@ -67,7 +69,8 @@ function ProductCard({ product }) {
           <button className="add-to-cart-btn">Thêm vào giỏ</button>
         </div>
       </div>
-    </div>
+      </div>
+    </Link>
   );
 }
 

@@ -1,3 +1,10 @@
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
 .product-card {
   background: white;
   border-radius: 12px;
@@ -10,7 +17,7 @@
   flex-direction: column;
 }
 
-.product-card:hover {
+.product-card-link:hover .product-card {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
