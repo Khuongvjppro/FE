@@ -183,7 +183,7 @@
   .nav-link {
     font-size: 14px;
   }
-  
+
   .dropdown-menu {
     min-width: 90vw;
     left: 50%;
@@ -192,7 +192,7 @@
     padding: 20px;
     flex-wrap: wrap;
   }
-  
+
   .dropdown-column {
     min-width: 45%;
   }

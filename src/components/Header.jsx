@@ -30,13 +30,17 @@ function Header() {
                 <div
                   key={menu.id}
                   className="nav-item"
-                  onMouseEnter={() => menu.hasDropdown && setActiveDropdown(menu.id)}
-                  onMouseLeave={() => menu.hasDropdown && setActiveDropdown(null)}
+                  onMouseEnter={() =>
+                    menu.hasDropdown && setActiveDropdown(menu.id)
+                  }
+                  onMouseLeave={() =>
+                    menu.hasDropdown && setActiveDropdown(null)
+                  }
                 >
                   <a href={menu.link} className="nav-link">
                     {menu.label}
                   </a>
-                  
+
                   {menu.hasDropdown && activeDropdown === menu.id && (
                     <div className="dropdown-menu">
                       {menu.dropdown.map((section, idx) => (
@@ -45,9 +49,16 @@ function Header() {
                           <ul className="dropdown-list">
                             {section.items.map((item, itemIdx) => (
                               <li key={itemIdx}>
-                                <a href={item.link} className={item.highlight ? "highlight" : ""}>
+                                <a
+                                  href={item.link}
+                                  className={item.highlight ? "highlight" : ""}
+                                >
                                   {item.name}
-                                  {item.subtitle && <span className="subtitle">{item.subtitle}</span>}
+                                  {item.subtitle && (
+                                    <span className="subtitle">
+                                      {item.subtitle}
+                                    </span>
+                                  )}
                                 </a>
                               </li>
                             ))}
@@ -62,7 +73,10 @@ function Header() {
 
             {/* Logo ở giữa */}
             <a href="/" className="logo">
-              <img src="https://dongphucpanda.com/wp-content/uploads/2020/04/logo-panda.png" alt="Panda Uniform" />
+              <img
+                src="https://dongphucpanda.com/wp-content/uploads/2020/04/logo-panda.png"
+                alt="Panda Uniform"
+              />
             </a>
 
             {/* Menu bên phải */}
@@ -71,13 +85,17 @@ function Header() {
                 <div
                   key={menu.id}
                   className="nav-item"
-                  onMouseEnter={() => menu.hasDropdown && setActiveDropdown(menu.id)}
-                  onMouseLeave={() => menu.hasDropdown && setActiveDropdown(null)}
+                  onMouseEnter={() =>
+                    menu.hasDropdown && setActiveDropdown(menu.id)
+                  }
+                  onMouseLeave={() =>
+                    menu.hasDropdown && setActiveDropdown(null)
+                  }
                 >
                   <a href={menu.link} className="nav-link">
                     {menu.label}
                   </a>
-                  
+
                   {menu.hasDropdown && activeDropdown === menu.id && (
                     <div className="dropdown-menu">
                       {menu.dropdown.map((section, idx) => (
@@ -86,9 +104,16 @@ function Header() {
                           <ul className="dropdown-list">
                             {section.items.map((item, itemIdx) => (
                               <li key={itemIdx}>
-                                <a href={item.link} className={item.highlight ? "highlight" : ""}>
+                                <a
+                                  href={item.link}
+                                  className={item.highlight ? "highlight" : ""}
+                                >
                                   {item.name}
-                                  {item.subtitle && <span className="subtitle">{item.subtitle}</span>}
+                                  {item.subtitle && (
+                                    <span className="subtitle">
+                                      {item.subtitle}
+                                    </span>
+                                  )}
                                 </a>
                               </li>
                             ))}
@@ -99,10 +124,20 @@ function Header() {
                   )}
                 </div>
               ))}
-              
+
               {/* Search icon */}
               <button className="search-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <circle cx="11" cy="11" r="8"></circle>
                   <path d="m21 21-4.35-4.35"></path>
                 </svg>
