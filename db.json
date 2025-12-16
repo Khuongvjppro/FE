@@ -208,25 +208,118 @@
       "label": "SẢN PHẨM",
       "link": "/san-pham",
       "hasDropdown": true,
-      "dropdown": [
+      "productCategories": [
         {
-          "title": "DANH MỤC",
-          "items": [
-            { "name": "Áo lớp có cổ", "link": "/ao-lop-co-co" },
-            { "name": "Áo lớp sơ mi", "link": "/ao-lop-so-mi" },
-            { "name": "Áo phông lớp", "link": "/ao-phong-lop" },
-            { "name": "Đồng phục Hàn Quốc", "link": "/dong-phuc-han-quoc" },
-            { "name": "Đồng phục mùa đông", "link": "/dong-phuc-mua-dong" },
-            { "name": "Đồng phục họp lớp", "link": "/dong-phuc-hop-lop" }
+          "id": "ao-phong-lop",
+          "name": "Áo phông lớp",
+          "link": "/ao-phong-lop",
+          "subcategories": [
+            { "name": "T-shirt cổ V", "link": "/ao-phong-lop/co-v" },
+            { "name": "T-shirt Raglan", "link": "/ao-phong-lop/raglan" },
+            {
+              "name": "T-shirt Ringer Tee",
+              "link": "/ao-phong-lop/ringer-tee"
+            },
+            { "name": "T-shirt Basic", "link": "/ao-phong-lop/basic" },
+            { "name": "T-shirt Oversize", "link": "/ao-phong-lop/oversize" },
+            { "name": "T-shirt Galaxy", "link": "/ao-phong-lop/galaxy" },
+            { "name": "T-shirt Pattern", "link": "/ao-phong-lop/pattern" }
           ]
         },
         {
-          "title": "BỘ SƯU TẬP",
-          "items": [
-            { "name": "BST Crewmate", "link": "/bst-crewmate" },
-            { "name": "BST Coolmix", "link": "/bst-coolmix" },
-            { "name": "BST Verse", "link": "/bst-verse" },
-            { "name": "BST Wash Echo", "link": "/bst-wash-echo" }
+          "id": "ao-lop-co-co",
+          "name": "Áo lớp có cổ",
+          "link": "/ao-lop-co-co",
+          "subcategories": [
+            {
+              "name": "Polo cổ truyền thống",
+              "link": "/ao-lop-co-co/polo-truyen-thong"
+            },
+            { "name": "Polo cổ zip", "link": "/ao-lop-co-co/polo-zip" },
+            { "name": "Polo cổ V", "link": "/ao-lop-co-co/polo-v" },
+            { "name": "Polo Raglan", "link": "/ao-lop-co-co/polo-raglan" },
+            { "name": "Polo phối màu", "link": "/ao-lop-co-co/polo-phoi-mau" }
+          ]
+        },
+        {
+          "id": "ao-lop-so-mi",
+          "name": "Áo Lớp Sơ Mi",
+          "link": "/ao-lop-so-mi",
+          "subcategories": [
+            { "name": "Sơ mi Oxford", "link": "/ao-lop-so-mi/oxford" },
+            { "name": "Sơ mi Kaki", "link": "/ao-lop-so-mi/kaki" },
+            { "name": "Sơ mi Cuba", "link": "/ao-lop-so-mi/cuba" },
+            { "name": "Sơ mi tay ngắn", "link": "/ao-lop-so-mi/tay-ngan" },
+            { "name": "Sơ mi tay dài", "link": "/ao-lop-so-mi/tay-dai" }
+          ]
+        },
+        {
+          "id": "dong-phuc-han-quoc",
+          "name": "Đồng phục Hàn Quốc",
+          "link": "/dong-phuc-han-quoc",
+          "subcategories": [
+            {
+              "name": "Đồng phục nữ Hàn Quốc",
+              "link": "/dong-phuc-han-quoc/nu"
+            },
+            {
+              "name": "Đồng phục nam Hàn Quốc",
+              "link": "/dong-phuc-han-quoc/nam"
+            },
+            {
+              "name": "Set đồng phục couple",
+              "link": "/dong-phuc-han-quoc/couple"
+            }
+          ]
+        },
+        {
+          "id": "combo-dong-phuc",
+          "name": "Combo đồng phục",
+          "link": "/combo-dong-phuc",
+          "subcategories": [
+            { "name": "Combo áo + quần", "link": "/combo-dong-phuc/ao-quan" },
+            { "name": "Combo áo + nón", "link": "/combo-dong-phuc/ao-non" },
+            { "name": "Combo full set", "link": "/combo-dong-phuc/full-set" }
+          ]
+        },
+        {
+          "id": "dong-phuc-mua-dong",
+          "name": "Đồng phục mùa đông",
+          "link": "/dong-phuc-mua-dong",
+          "subcategories": [
+            { "name": "Áo khoác hoodie", "link": "/dong-phuc-mua-dong/hoodie" },
+            { "name": "Áo khoác bomber", "link": "/dong-phuc-mua-dong/bomber" },
+            { "name": "Áo khoác gió", "link": "/dong-phuc-mua-dong/gio" },
+            { "name": "Áo len", "link": "/dong-phuc-mua-dong/len" }
+          ]
+        },
+        {
+          "id": "ao-bong-chay",
+          "name": "Áo bóng chày",
+          "link": "/ao-bong-chay",
+          "subcategories": [
+            {
+              "name": "Áo bóng chày truyền thống",
+              "link": "/ao-bong-chay/truyen-thong"
+            },
+            { "name": "Áo bóng chày Raglan", "link": "/ao-bong-chay/raglan" },
+            { "name": "Áo bóng chày có số", "link": "/ao-bong-chay/co-so" }
+          ]
+        },
+        {
+          "id": "ao-dong-phuc-hop-lop",
+          "name": "Áo đồng phục họp lớp",
+          "link": "/ao-dong-phuc-hop-lop",
+          "subcategories": [
+            {
+              "name": "Áo họp lớp truyền thống",
+              "link": "/ao-dong-phuc-hop-lop/truyen-thong"
+            },
+            {
+              "name": "Áo họp lớp vintage",
+              "link": "/ao-dong-phuc-hop-lop/vintage"
+            },
+            { "name": "Áo kỷ niệm", "link": "/ao-dong-phuc-hop-lop/ky-niem" }
           ]
         }
       ]

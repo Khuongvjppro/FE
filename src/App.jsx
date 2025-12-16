@@ -36,7 +36,7 @@ function App() {
       <section className="hero-banner">
         <div className="container">
           <div className="hero-content">
-            <div className="subtitle">CITY PLAYER 🔥</div>
+            <div className="subtitle">CITY PLAYER </div>
             <h2>
               CITY PLAYERS
               <br />

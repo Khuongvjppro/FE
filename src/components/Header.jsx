@@ -5,6 +5,7 @@ import "./Header.css";
 function Header() {
   const [menuData, setMenuData] = useState([]);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [hoveredCategory, setHoveredCategory] = useState(null);
 
   useEffect(() => {
     fetchMenuData();
@@ -30,12 +31,18 @@ function Header() {
                 <div
                   key={menu.id}
                   className="nav-item"
-                  onMouseEnter={() =>
-                    menu.hasDropdown && setActiveDropdown(menu.id)
-                  }
-                  onMouseLeave={() =>
-                    menu.hasDropdown && setActiveDropdown(null)
-                  }
+                  onMouseEnter={() => {
+                    if (menu.hasDropdown) {
+                      setActiveDropdown(menu.id);
+                      setHoveredCategory(null);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (menu.hasDropdown) {
+                      setActiveDropdown(null);
+                      setHoveredCategory(null);
+                    }
+                  }}
                 >
                   <a href={menu.link} className="nav-link">
                     {menu.label}
@@ -43,28 +50,66 @@ function Header() {
 
                   {menu.hasDropdown && activeDropdown === menu.id && (
                     <div className="dropdown-menu">
-                      {menu.dropdown.map((section, idx) => (
-                        <div className="dropdown-column" key={idx}>
-                          <h3 className="dropdown-title">{section.title}</h3>
-                          <ul className="dropdown-list">
-                            {section.items.map((item, itemIdx) => (
-                              <li key={itemIdx}>
-                                <a
-                                  href={item.link}
-                                  className={item.highlight ? "highlight" : ""}
-                                >
-                                  {item.name}
-                                  {item.subtitle && (
-                                    <span className="subtitle">
-                                      {item.subtitle}
-                                    </span>
-                                  )}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
+                      {/* Dropdown cho Sản Phẩm - 2 cột */}
+                      {menu.productCategories ? (
+                        <div className="dropdown-categories">
+                          {menu.productCategories.map((category) => (
+                            <div
+                              key={category.id}
+                              className={`category-item ${
+                                hoveredCategory === category.id ? "active" : ""
+                              }`}
+                              onMouseEnter={() =>
+                                setHoveredCategory(category.id)
+                              }
+                              onMouseLeave={() => setHoveredCategory(null)}
+                            >
+                              <a href={category.link}>{category.name}</a>
+                              <span className="arrow">›</span>
+
+                              {hoveredCategory === category.id && (
+                                <div className="dropdown-subcategories">
+                                  {category.subcategories.map((sub, subIdx) => (
+                                    <a
+                                      key={subIdx}
+                                      href={sub.link}
+                                      className="subcategory-item"
+                                    >
+                                      {sub.name}
+                                    </a>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ))}
                         </div>
-                      ))}
+                      ) : (
+                        /* Dropdown thông thường cho các menu khác */
+                        menu.dropdown.map((section, idx) => (
+                          <div className="dropdown-column" key={idx}>
+                            <h3 className="dropdown-title">{section.title}</h3>
+                            <ul className="dropdown-list">
+                              {section.items.map((item, itemIdx) => (
+                                <li key={itemIdx}>
+                                  <a
+                                    href={item.link}
+                                    className={
+                                      item.highlight ? "highlight" : ""
+                                    }
+                                  >
+                                    {item.name}
+                                    {item.subtitle && (
+                                      <span className="subtitle">
+                                        {item.subtitle}
+                                      </span>
+                                    )}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))
+                      )}
                     </div>
                   )}
                 </div>
@@ -85,43 +130,51 @@ function Header() {
                 <div
                   key={menu.id}
                   className="nav-item"
-                  onMouseEnter={() =>
-                    menu.hasDropdown && setActiveDropdown(menu.id)
-                  }
-                  onMouseLeave={() =>
-                    menu.hasDropdown && setActiveDropdown(null)
-                  }
+                  onMouseEnter={() => {
+                    if (menu.hasDropdown) {
+                      setActiveDropdown(menu.id);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (menu.hasDropdown) {
+                      setActiveDropdown(null);
+                    }
+                  }}
                 >
                   <a href={menu.link} className="nav-link">
                     {menu.label}
                   </a>
 
-                  {menu.hasDropdown && activeDropdown === menu.id && (
-                    <div className="dropdown-menu">
-                      {menu.dropdown.map((section, idx) => (
-                        <div className="dropdown-column" key={idx}>
-                          <h3 className="dropdown-title">{section.title}</h3>
-                          <ul className="dropdown-list">
-                            {section.items.map((item, itemIdx) => (
-                              <li key={itemIdx}>
-                                <a
-                                  href={item.link}
-                                  className={item.highlight ? "highlight" : ""}
-                                >
-                                  {item.name}
-                                  {item.subtitle && (
-                                    <span className="subtitle">
-                                      {item.subtitle}
-                                    </span>
-                                  )}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                  {menu.hasDropdown &&
+                    activeDropdown === menu.id &&
+                    menu.dropdown && (
+                      <div className="dropdown-menu">
+                        {menu.dropdown.map((section, idx) => (
+                          <div className="dropdown-column" key={idx}>
+                            <h3 className="dropdown-title">{section.title}</h3>
+                            <ul className="dropdown-list">
+                              {section.items.map((item, itemIdx) => (
+                                <li key={itemIdx}>
+                                  <a
+                                    href={item.link}
+                                    className={
+                                      item.highlight ? "highlight" : ""
+                                    }
+                                  >
+                                    {item.name}
+                                    {item.subtitle && (
+                                      <span className="subtitle">
+                                        {item.subtitle}
+                                      </span>
+                                    )}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                 </div>
               ))}
 
