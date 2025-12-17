@@ -90,67 +90,172 @@
   left: 50%;
   transform: translateX(-50%);
   background: white;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  padding: 0;
   display: flex;
-  gap: 50px;
-  min-width: 600px;
+  min-width: 280px;
   z-index: 1000;
-  margin-top: 20px;
+  margin-top: 0;
+  padding-top: 20px;
   animation: fadeInDown 0.2s ease;
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: transparent;
 }
 
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateX(-50%) translateY(-10px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
 }
 
+/* Dropdown 2 cột cho Sản Phẩm */
+.dropdown-categories {
+  background: white;
+  padding: 20px 0;
+  min-width: 280px;
+}
+
+.category-item {
+  padding: 13px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.category-item:hover,
+.category-item.active {
+  background: #f8f8f8;
+}
+
+.category-item a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  flex: 1;
+  transition: color 0.2s;
+}
+
+.category-item:hover > a {
+  color: #ff6600;
+}
+
+.category-item.active {
+  background: #f8f8f8;
+}
+
+.category-item.active > a {
+  color: #333;
+  font-weight: 400;
+}
+
+.category-item .arrow {
+  color: #ccc;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.dropdown-subcategories {
+  position: absolute;
+  left: 100%;
+  top: -13px;
+  background: white;
+  padding: 23px 35px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.15);
+  animation: slideInRight 0.15s ease;
+  z-index: 1001;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.subcategory-item {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 0;
+  transition: all 0.2s;
+  display: block;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.subcategory-item:hover {
+  color: #ff6600;
+  padding-left: 5px;
+}
+
+/* Dropdown thông thường cho các menu khác */
 .dropdown-column {
-  min-width: 160px;
+  min-width: 280px;
+  padding: 0;
 }
 
 .dropdown-title {
   font-size: 13px;
   font-weight: 700;
   color: #000;
-  margin-bottom: 15px;
+  margin-bottom: 0;
   letter-spacing: 0.5px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  display: none;
 }
 
 .dropdown-list {
   list-style: none;
-  padding: 0;
+  padding: 20px 0;
   margin: 0;
 }
 
 .dropdown-list li {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .dropdown-list li a {
-  color: #555;
+  color: #333;
   text-decoration: none;
-  font-size: 14px;
-  transition: color 0.2s;
+  font-size: 16px;
+  transition: all 0.2s;
   display: block;
+  padding: 13px 30px;
+  font-weight: 400;
 }
 
 .dropdown-list li a:hover {
-  color: #6c2eb7;
+  color: #ff6600;
+  background: #f8f8f8;
 }
 
 .dropdown-list li a.highlight {
-  color: #6c2eb7;
+  color: #ff6600;
   font-weight: 600;
 }
 
@@ -183,17 +288,24 @@
   .nav-link {
     font-size: 14px;
   }
-  
+
   .dropdown-menu {
     min-width: 90vw;
     left: 50%;
-    transform: translateX(-50%);
-    gap: 20px;
-    padding: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
-  
+
+  .dropdown-categories {
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+    min-width: 100%;
+  }
+
+  .dropdown-subcategories {
+    min-width: 100%;
+  }
+
   .dropdown-column {
-    min-width: 45%;
+    min-width: 100%;
   }
 }

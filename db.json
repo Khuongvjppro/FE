@@ -6,7 +6,13 @@
       "category": "ao-lop-co-co",
       "price": 180000,
       "originalPrice": 220000,
-      "image": "https://via.placeholder.com/300x400/4A90E2/ffffff?text=Polo+Co+Zip",
+      "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=500&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop"
+      ],
       "description": "Áo polo cổ zip chất liệu cotton cao cấp, thiết kế trẻ trung cho đồng phục lớp",
       "sizes": ["S", "M", "L", "XL", "XXL"],
       "colors": ["Trắng x Xanh", "Đỏ đô x Trắng", "Nho x Trắng"],
@@ -21,7 +27,13 @@
       "category": "ao-lop-co-co",
       "price": 175000,
       "originalPrice": 210000,
-      "image": "https://via.placeholder.com/300x400/7B68EE/ffffff?text=Polo+Mix",
+      "image": "https://images.unsplash.com/photo-1622445275576-721325763afe?w=400&h=500&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop"
+      ],
       "description": "Áo polo mix màu độc đáo, phối màu sáng tạo cho áo lớp nổi bật",
       "sizes": ["S", "M", "L", "XL", "XXL"],
       "colors": ["Xanh tím than x Xám", "Nho x Trắng"],
@@ -36,7 +48,13 @@
       "category": "ao-lop-so-mi",
       "price": 195000,
       "originalPrice": 240000,
-      "image": "https://via.placeholder.com/300x400/808080/ffffff?text=So+Mi+Oxford",
+      "image": "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=400&h=500&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop"
+      ],
       "description": "Áo sơ mi Oxford cao cấp, form chuẩn, phù hợp làm đồng phục lớp sang trọng",
       "sizes": ["S", "M", "L", "XL", "XXL"],
       "colors": ["Xám", "Hồng", "Xanh nhạt", "Trắng"],
@@ -51,7 +69,13 @@
       "category": "ao-phong-lop",
       "price": 145000,
       "originalPrice": 180000,
-      "image": "https://via.placeholder.com/300x400/A9A9A9/ffffff?text=Tshirt+Wash",
+      "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=500&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop"
+      ],
       "description": "Áo thun wash phong cách vintage, chất liệu cotton mềm mại",
       "sizes": ["S", "M", "L", "XL", "XXL"],
       "colors": ["Ghi đá", "Đen", "Xám", "Trắng"],
@@ -65,7 +89,13 @@
       "category": "ao-lop-co-co",
       "price": 185000,
       "originalPrice": 225000,
-      "image": "https://via.placeholder.com/300x400/9932CC/ffffff?text=Polo+Co+V",
+      "image": "https://images.unsplash.com/photo-1622445275576-721325763afe?w=400&h=500&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop"
+      ],
       "description": "Áo polo cổ V phối màu, thiết kế năng động cho hoạt động nhóm",
       "sizes": ["S", "M", "L", "XL", "XXL"],
       "colors": ["Nho x Trắng", "Xanh x Trắng"],
@@ -79,7 +109,13 @@
       "category": "ao-phong-lop",
       "price": 120000,
       "originalPrice": 150000,
-      "image": "https://via.placeholder.com/300x400/FF6347/ffffff?text=Ao+Phong",
+      "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=500&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop"
+      ],
       "description": "Áo phông cotton 100% cao cấp, form đẹp, phù hợp mọi hoạt động",
       "sizes": ["S", "M", "L", "XL", "XXL"],
       "colors": ["Đen", "Trắng", "Xám", "Xanh Navy"],
@@ -93,7 +129,13 @@
       "category": "dong-phuc-han-quoc",
       "price": 280000,
       "originalPrice": 350000,
-      "image": "https://via.placeholder.com/300x400/FF69B4/ffffff?text=Han+Quoc",
+      "image": "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=400&h=500&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop"
+      ],
       "description": "Đồng phục phong cách Hàn Quốc, thiết kế trẻ trung, hiện đại",
       "sizes": ["S", "M", "L", "XL"],
       "colors": ["Trắng x Đen", "Xanh x Trắng"],
@@ -107,7 +149,13 @@
       "category": "dong-phuc-mua-dong",
       "price": 320000,
       "originalPrice": 400000,
-      "image": "https://via.placeholder.com/300x400/1E90FF/ffffff?text=Ao+Khoac",
+      "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=500&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
+        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop"
+      ],
       "description": "Áo khoác ấm áp cho mùa đông, chất liệu dày dặn, giữ nhiệt tốt",
       "sizes": ["M", "L", "XL", "XXL"],
       "colors": ["Đen", "Xanh Navy", "Xám"],
@@ -160,25 +208,118 @@
       "label": "SẢN PHẨM",
       "link": "/san-pham",
       "hasDropdown": true,
-      "dropdown": [
+      "productCategories": [
         {
-          "title": "DANH MỤC",
-          "items": [
-            { "name": "Áo lớp có cổ", "link": "/ao-lop-co-co" },
-            { "name": "Áo lớp sơ mi", "link": "/ao-lop-so-mi" },
-            { "name": "Áo phông lớp", "link": "/ao-phong-lop" },
-            { "name": "Đồng phục Hàn Quốc", "link": "/dong-phuc-han-quoc" },
-            { "name": "Đồng phục mùa đông", "link": "/dong-phuc-mua-dong" },
-            { "name": "Đồng phục họp lớp", "link": "/dong-phuc-hop-lop" }
+          "id": "ao-phong-lop",
+          "name": "Áo phông lớp",
+          "link": "/ao-phong-lop",
+          "subcategories": [
+            { "name": "T-shirt cổ V", "link": "/ao-phong-lop/co-v" },
+            { "name": "T-shirt Raglan", "link": "/ao-phong-lop/raglan" },
+            {
+              "name": "T-shirt Ringer Tee",
+              "link": "/ao-phong-lop/ringer-tee"
+            },
+            { "name": "T-shirt Basic", "link": "/ao-phong-lop/basic" },
+            { "name": "T-shirt Oversize", "link": "/ao-phong-lop/oversize" },
+            { "name": "T-shirt Galaxy", "link": "/ao-phong-lop/galaxy" },
+            { "name": "T-shirt Pattern", "link": "/ao-phong-lop/pattern" }
           ]
         },
         {
-          "title": "BỘ SƯU TẬP",
-          "items": [
-            { "name": "BST Crewmate", "link": "/bst-crewmate" },
-            { "name": "BST Coolmix", "link": "/bst-coolmix" },
-            { "name": "BST Verse", "link": "/bst-verse" },
-            { "name": "BST Wash Echo", "link": "/bst-wash-echo" }
+          "id": "ao-lop-co-co",
+          "name": "Áo lớp có cổ",
+          "link": "/ao-lop-co-co",
+          "subcategories": [
+            {
+              "name": "Polo cổ truyền thống",
+              "link": "/ao-lop-co-co/polo-truyen-thong"
+            },
+            { "name": "Polo cổ zip", "link": "/ao-lop-co-co/polo-zip" },
+            { "name": "Polo cổ V", "link": "/ao-lop-co-co/polo-v" },
+            { "name": "Polo Raglan", "link": "/ao-lop-co-co/polo-raglan" },
+            { "name": "Polo phối màu", "link": "/ao-lop-co-co/polo-phoi-mau" }
+          ]
+        },
+        {
+          "id": "ao-lop-so-mi",
+          "name": "Áo Lớp Sơ Mi",
+          "link": "/ao-lop-so-mi",
+          "subcategories": [
+            { "name": "Sơ mi Oxford", "link": "/ao-lop-so-mi/oxford" },
+            { "name": "Sơ mi Kaki", "link": "/ao-lop-so-mi/kaki" },
+            { "name": "Sơ mi Cuba", "link": "/ao-lop-so-mi/cuba" },
+            { "name": "Sơ mi tay ngắn", "link": "/ao-lop-so-mi/tay-ngan" },
+            { "name": "Sơ mi tay dài", "link": "/ao-lop-so-mi/tay-dai" }
+          ]
+        },
+        {
+          "id": "dong-phuc-han-quoc",
+          "name": "Đồng phục Hàn Quốc",
+          "link": "/dong-phuc-han-quoc",
+          "subcategories": [
+            {
+              "name": "Đồng phục nữ Hàn Quốc",
+              "link": "/dong-phuc-han-quoc/nu"
+            },
+            {
+              "name": "Đồng phục nam Hàn Quốc",
+              "link": "/dong-phuc-han-quoc/nam"
+            },
+            {
+              "name": "Set đồng phục couple",
+              "link": "/dong-phuc-han-quoc/couple"
+            }
+          ]
+        },
+        {
+          "id": "combo-dong-phuc",
+          "name": "Combo đồng phục",
+          "link": "/combo-dong-phuc",
+          "subcategories": [
+            { "name": "Combo áo + quần", "link": "/combo-dong-phuc/ao-quan" },
+            { "name": "Combo áo + nón", "link": "/combo-dong-phuc/ao-non" },
+            { "name": "Combo full set", "link": "/combo-dong-phuc/full-set" }
+          ]
+        },
+        {
+          "id": "dong-phuc-mua-dong",
+          "name": "Đồng phục mùa đông",
+          "link": "/dong-phuc-mua-dong",
+          "subcategories": [
+            { "name": "Áo khoác hoodie", "link": "/dong-phuc-mua-dong/hoodie" },
+            { "name": "Áo khoác bomber", "link": "/dong-phuc-mua-dong/bomber" },
+            { "name": "Áo khoác gió", "link": "/dong-phuc-mua-dong/gio" },
+            { "name": "Áo len", "link": "/dong-phuc-mua-dong/len" }
+          ]
+        },
+        {
+          "id": "ao-bong-chay",
+          "name": "Áo bóng chày",
+          "link": "/ao-bong-chay",
+          "subcategories": [
+            {
+              "name": "Áo bóng chày truyền thống",
+              "link": "/ao-bong-chay/truyen-thong"
+            },
+            { "name": "Áo bóng chày Raglan", "link": "/ao-bong-chay/raglan" },
+            { "name": "Áo bóng chày có số", "link": "/ao-bong-chay/co-so" }
+          ]
+        },
+        {
+          "id": "ao-dong-phuc-hop-lop",
+          "name": "Áo đồng phục họp lớp",
+          "link": "/ao-dong-phuc-hop-lop",
+          "subcategories": [
+            {
+              "name": "Áo họp lớp truyền thống",
+              "link": "/ao-dong-phuc-hop-lop/truyen-thong"
+            },
+            {
+              "name": "Áo họp lớp vintage",
+              "link": "/ao-dong-phuc-hop-lop/vintage"
+            },
+            { "name": "Áo kỷ niệm", "link": "/ao-dong-phuc-hop-lop/ky-niem" }
           ]
         }
       ]
@@ -190,12 +331,16 @@
       "hasDropdown": true,
       "dropdown": [
         {
-          "title": "HỖ TRỢ",
+          "title": "",
           "items": [
-            { "name": "Quy trình đặt hàng", "link": "/quy-trinh-dat-hang" },
-            { "name": "Bảng size", "link": "/bang-size" },
-            { "name": "Chính sách bảo hành", "link": "/chinh-sach-bao-hanh" },
-            { "name": "Hình thức thanh toán", "link": "/thanh-toan" }
+            { "name": "Quy trình đặt áo", "link": "/quy-trinh-dat-ao" },
+            { "name": "Size Áo", "link": "/size-ao" },
+            { "name": "Bảng màu", "link": "/bang-mau" },
+            { "name": "Chất liệu vải", "link": "/chat-lieu-vai" },
+            { "name": "Công nghệ in", "link": "/cong-nghe-in" },
+            { "name": "Chính sách", "link": "/chinh-sach" },
+            { "name": "Câu hỏi thường gặp", "link": "/cau-hoi-thuong-gap" },
+            { "name": "Hình thức thanh toán", "link": "/hinh-thuc-thanh-toan" }
           ]
         }
       ]
