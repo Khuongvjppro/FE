@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "./components/Header";
 import ProductList from "./components/ProductList";
+import About from "./components/About";
+import CategorySection from "./components/CategorySection";
+import Testimonials from "./components/Testimonials";
 import "./App.css";
 
 function App() {
@@ -66,6 +69,12 @@ function App() {
           )}
         </div>
       </main>
+
+      <About />
+
+      <CategorySection products={products} categories={categories} />
+
+      <Testimonials />
 
       <footer className="footer">
         <div className="container">

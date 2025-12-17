@@ -5,9 +5,9 @@
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 60px;
 }
 
 .hero-banner {
@@ -97,7 +97,9 @@
   margin-bottom: 40px;
   text-transform: uppercase;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
+  color: #ff6600;
+  letter-spacing: 2px;
 }
 
 .section-title::after {
@@ -106,13 +108,10 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
+  width: 100px;
+  height: 4px;
   background: #ff6600;
-  color: #333;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  border-radius: 2px;
 }
 
 .category-tabs {

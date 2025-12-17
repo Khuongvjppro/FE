@@ -331,12 +331,16 @@
       "hasDropdown": true,
       "dropdown": [
         {
-          "title": "HỖ TRỢ",
+          "title": "",
           "items": [
-            { "name": "Quy trình đặt hàng", "link": "/quy-trinh-dat-hang" },
-            { "name": "Bảng size", "link": "/bang-size" },
-            { "name": "Chính sách bảo hành", "link": "/chinh-sach-bao-hanh" },
-            { "name": "Hình thức thanh toán", "link": "/thanh-toan" }
+            { "name": "Quy trình đặt áo", "link": "/quy-trinh-dat-ao" },
+            { "name": "Size Áo", "link": "/size-ao" },
+            { "name": "Bảng màu", "link": "/bang-mau" },
+            { "name": "Chất liệu vải", "link": "/chat-lieu-vai" },
+            { "name": "Công nghệ in", "link": "/cong-nghe-in" },
+            { "name": "Chính sách", "link": "/chinh-sach" },
+            { "name": "Câu hỏi thường gặp", "link": "/cau-hoi-thuong-gap" },
+            { "name": "Hình thức thanh toán", "link": "/hinh-thuc-thanh-toan" }
           ]
         }
       ]
