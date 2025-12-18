@@ -13,6 +13,8 @@ export const ROUTES = {
   HOME: "/",
   PRODUCTS: "/products",
   PRODUCT_DETAIL: "/product/:id",
+  NEWS: "/news",
+  NEWS_DETAIL: "/news/:id",
   ABOUT: "/about",
   CONTACT: "/contact",
 };

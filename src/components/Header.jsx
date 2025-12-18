@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Header.css";
 
@@ -44,9 +45,15 @@ function Header() {
                     }
                   }}
                 >
-                  <a href={menu.link} className="nav-link">
-                    {menu.label}
-                  </a>
+                  {menu.label === "TIN TỨC" ? (
+                    <Link to="/news" className="nav-link">
+                      {menu.label}
+                    </Link>
+                  ) : (
+                    <a href={menu.link} className="nav-link">
+                      {menu.label}
+                    </a>
+                  )}
 
                   {menu.hasDropdown && activeDropdown === menu.id && (
                     <div className="dropdown-menu">
@@ -117,12 +124,12 @@ function Header() {
             </div>
 
             {/* Logo ở giữa */}
-            <a href="/" className="logo">
+            <Link to="/" className="logo">
               <img
                 src="https://dongphucpanda.com/wp-content/uploads/2020/04/logo-panda.png"
                 alt="Panda Uniform"
               />
-            </a>
+            </Link>
 
             {/* Menu bên phải */}
             <div className="nav-right">
@@ -141,9 +148,15 @@ function Header() {
                     }
                   }}
                 >
-                  <a href={menu.link} className="nav-link">
-                    {menu.label}
-                  </a>
+                  {menu.label === "TIN TỨC" ? (
+                    <Link to="/news" className="nav-link">
+                      {menu.label}
+                    </Link>
+                  ) : (
+                    <a href={menu.link} className="nav-link">
+                      {menu.label}
+                    </a>
+                  )}
 
                   {menu.hasDropdown &&
                     activeDropdown === menu.id &&
