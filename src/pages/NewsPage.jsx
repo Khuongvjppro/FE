@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import "./NewsPage.css";
 
@@ -75,7 +76,7 @@ function NewsPage() {
           <div className="container">
             <h1 className="news-hero-title">Tin tức</h1>
             <div className="breadcrumb">
-              <a href="/">Trang chủ</a>
+              <Link to="/">Trang chủ</Link>
               <span className="separator">›</span>
               <span>Tin tức</span>
             </div>
@@ -113,12 +114,12 @@ function NewsPage() {
                       <span className="news-card-date">
                         {new Date(article.date).toLocaleDateString("vi-VN")}
                       </span>
-                      <a
-                        href={`/news/${article.id}`}
+                      <Link
+                        to={`/news/${article.id}`}
                         className="news-card-link"
                       >
                         Xem chi tiết →
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </article>
