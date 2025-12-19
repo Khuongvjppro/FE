@@ -1,19 +1,24 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { CartProvider } from "./contexts/CartContext";
 import HomePage from "./pages/HomePage";
 import ProductDetail from "./pages/ProductDetail";
 import NewsPage from "./pages/NewsPage";
+import Cart from "./pages/Cart";
 import { ROUTES } from "./constants";
 import "./styles/global.css";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path={ROUTES.HOME} element={<HomePage />} />
-        <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
-        <Route path="/news" element={<NewsPage />} />
-      </Routes>
-    </Router>
+    <CartProvider>
+      <Router>
+        <Routes>
+          <Route path={ROUTES.HOME} element={<HomePage />} />
+          <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
+          <Route path="/news" element={<NewsPage />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </Router>
+    </CartProvider>
   );
 }
 

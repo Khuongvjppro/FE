@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { FiShoppingCart, FiUser, FiSearch } from "react-icons/fi";
+import { useCart } from "../contexts/CartContext";
 import "./Header.css";
 
 function Header() {
@@ -9,6 +10,7 @@ function Header() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [hoveredCategory, setHoveredCategory] = useState(null);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
+  const { getTotalItems } = useCart();
 
   useEffect(() => {
     fetchMenuData();
@@ -199,10 +201,12 @@ function Header() {
               </button>
 
               {/* Cart icon */}
-              <button className="header-icon cart-icon">
+              <Link to="/cart" className="header-icon cart-icon">
                 <FiShoppingCart size={22} />
-                <span className="cart-badge">0</span>
-              </button>
+                {getTotalItems() > 0 && (
+                  <span className="cart-badge">{getTotalItems()}</span>
+                )}
+              </Link>
 
               {/* User icon không dropdown */}
               <button className="header-icon">

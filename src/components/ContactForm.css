@@ -1,4 +1,3 @@
-
 .contact-bg {
   background: #ffc24b;
   width: 100%;
@@ -7,15 +6,13 @@
   align-items: center;
   justify-content: center;
   padding: 60px 0;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
 }
-
-
 
 .contact-form-wrapper {
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   padding: 56px 48px 48px 48px;
   max-width: 700px;
   width: 100%;
@@ -23,9 +20,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
 }
-
 
 .contact-title {
   font-size: 2.5rem;
@@ -52,7 +48,6 @@
   gap: 18px;
 }
 
-
 .contact-input {
   flex: 1;
   padding: 18px 22px;
@@ -66,7 +61,6 @@
 .contact-input:focus {
   border-color: #ff6600;
 }
-
 
 .contact-textarea {
   width: 100%;
@@ -83,7 +77,6 @@
 .contact-textarea:focus {
   border-color: #ff6600;
 }
-
 
 .contact-btn {
   width: 100%;

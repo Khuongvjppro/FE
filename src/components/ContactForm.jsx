@@ -5,7 +5,7 @@ function ContactForm() {
   const [form, setForm] = useState({
     name: "",
     phone: "",
-    message: ""
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -23,7 +23,8 @@ function ContactForm() {
     <div className="contact-bg">
       <div className="contact-form-wrapper">
         <h2 className="contact-title">
-          <span className="contact-title-highlight">LIÊN HỆ</span> VỚI PANDA ĐỂ NHẬN TƯ VẤN
+          <span className="contact-title-highlight">LIÊN HỆ</span> VỚI PANDA ĐỂ
+          NHẬN TƯ VẤN
         </h2>
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="contact-row">
