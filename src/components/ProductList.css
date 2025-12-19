@@ -1,7 +1,30 @@
 .product-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+  margin-bottom: 50px;
+}
+
+.view-more-btn {
+  background: #ff6600;
+  color: white;
+  padding: 16px 60px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.3);
+  text-transform: capitalize;
+  display: block;
+  margin: 0 auto;
+}
+
+.view-more-btn:hover {
+  background: #e55a00;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 102, 0, 0.4);
 }
 
 .no-products {
