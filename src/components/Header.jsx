@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { FiShoppingCart, FiUser, FiSearch } from "react-icons/fi";
 import "./Header.css";
 
 function Header() {
   const [menuData, setMenuData] = useState([]);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [hoveredCategory, setHoveredCategory] = useState(null);
+  const [showUserDropdown, setShowUserDropdown] = useState(false);
 
   useEffect(() => {
     fetchMenuData();
@@ -192,21 +194,19 @@ function Header() {
               ))}
 
               {/* Search icon */}
-              <button className="search-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <path d="m21 21-4.35-4.35"></path>
-                </svg>
+              <button className="header-icon">
+                <FiSearch size={22} />
+              </button>
+
+              {/* Cart icon */}
+              <button className="header-icon cart-icon">
+                <FiShoppingCart size={22} />
+                <span className="cart-badge">0</span>
+              </button>
+
+              {/* User icon không dropdown */}
+              <button className="header-icon">
+                <FiUser size={22} />
               </button>
             </div>
           </div>

@@ -47,18 +47,81 @@
   width: auto;
 }
 
-.search-icon {
+/* Header Icons */
+.header-icon {
   background: transparent;
   border: none;
   color: #000;
   font-size: 22px;
   cursor: pointer;
   padding: 8px;
-  transition: opacity 0.3s;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.search-icon:hover {
-  opacity: 0.5;
+.header-icon:hover {
+  opacity: 0.6;
+  transform: scale(1.05);
+}
+
+/* Cart Icon with Badge */
+.cart-icon {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #ff6600;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 5px;
+  border-radius: 10px;
+  min-width: 16px;
+  text-align: center;
+  line-height: 1;
+}
+
+/* User Menu Dropdown */
+.user-menu {
+  position: relative;
+}
+
+
+/* Dropdown user giống sản phẩm/tư vấn */
+
+
+.user-dropdown-menu {
+  left: auto;
+  right: 0;
+  transform: none;
+  min-width: 140px;
+  max-width: 180px;
+  padding-top: 18px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+  animation: fadeInDown 0.2s ease;
+}
+
+
+
+.user-dropdown-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.2s;
+  display: block;
+  padding: 13px 18px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+.user-dropdown-link:hover {
+  color: #ff6600;
+  background: #f7f7f7;
 }
 
 .nav-item {

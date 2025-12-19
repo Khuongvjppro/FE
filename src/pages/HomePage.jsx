@@ -4,6 +4,7 @@ import ProductList from "../components/ProductList";
 import About from "../components/About";
 import CategorySection from "../components/CategorySection";
 import Testimonials from "../components/Testimonials";
+import ContactForm from "../components/ContactForm";
 import { useFetch } from "../hooks";
 import { productService, categoryService } from "../services/api";
 import "./HomePage.css";
@@ -45,6 +46,7 @@ function HomePage() {
       />
 
       <Testimonials />
+      <ContactForm />
     </MainLayout>
   );
 }
