@@ -2,12 +2,20 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
+
 function Login() {
+  // Fake user data
+  const fakeUsers = [
+    { email: "user1@example.com", password: "123456", name: "User One" },
+    { email: "user2@example.com", password: "abcdef", name: "User Two" },
+  ];
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
   const [isLogin, setIsLogin] = useState(true);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -19,10 +27,29 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Add authentication logic here
-    console.log("Form submitted:", formData);
-    // Navigate to home page after login
-    navigate("/");
+    setError("");
+    if (isLogin) {
+      // Fake login check
+      const found = fakeUsers.find(
+        (u) => u.email === formData.email && u.password === formData.password
+      );
+      if (found) {
+        // Đăng nhập thành công
+        alert("Đăng nhập thành công! Xin chào " + found.name);
+        navigate("/");
+      } else {
+        setError("Email hoặc mật khẩu không đúng!");
+      }
+    } else {
+      // Fake register: chỉ kiểm tra email chưa tồn tại
+      const exists = fakeUsers.some((u) => u.email === formData.email);
+      if (exists) {
+        setError("Email đã tồn tại!");
+      } else {
+        alert("Đăng ký thành công! Bạn có thể đăng nhập.");
+        setIsLogin(true);
+      }
+    }
   };
 
   return (
@@ -30,6 +57,9 @@ function Login() {
       <div className="login-card">
         <h2>{isLogin ? "Đăng Nhập" : "Đăng Ký"}</h2>
         <form onSubmit={handleSubmit}>
+          {error && (
+            <div style={{ color: "red", marginBottom: 10, textAlign: "center" }}>{error}</div>
+          )}
           {!isLogin && (
             <div className="form-group">
               <label htmlFor="name">Họ và tên</label>
