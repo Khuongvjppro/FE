@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
+import { FiShoppingCart, FiUser, FiSearch } from "react-icons/fi";
+import { useCart } from "../contexts/CartContext";
 import "./Header.css";
 
 function Header() {
   const [menuData, setMenuData] = useState([]);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [hoveredCategory, setHoveredCategory] = useState(null);
+  const [showUserDropdown, setShowUserDropdown] = useState(false);
+  const { getTotalItems } = useCart();
 
   useEffect(() => {
     fetchMenuData();
@@ -44,9 +49,15 @@ function Header() {
                     }
                   }}
                 >
-                  <a href={menu.link} className="nav-link">
-                    {menu.label}
-                  </a>
+                  {menu.label === "TIN TỨC" ? (
+                    <Link to="/news" className="nav-link">
+                      {menu.label}
+                    </Link>
+                  ) : (
+                    <a href={menu.link} className="nav-link">
+                      {menu.label}
+                    </a>
+                  )}
 
                   {menu.hasDropdown && activeDropdown === menu.id && (
                     <div className="dropdown-menu">
@@ -117,12 +128,12 @@ function Header() {
             </div>
 
             {/* Logo ở giữa */}
-            <a href="/" className="logo">
+            <Link to="/" className="logo">
               <img
                 src="https://dongphucpanda.com/wp-content/uploads/2020/04/logo-panda.png"
                 alt="Panda Uniform"
               />
-            </a>
+            </Link>
 
             {/* Menu bên phải */}
             <div className="nav-right">
@@ -141,9 +152,15 @@ function Header() {
                     }
                   }}
                 >
-                  <a href={menu.link} className="nav-link">
-                    {menu.label}
-                  </a>
+                  {menu.label === "TIN TỨC" ? (
+                    <Link to="/news" className="nav-link">
+                      {menu.label}
+                    </Link>
+                  ) : (
+                    <a href={menu.link} className="nav-link">
+                      {menu.label}
+                    </a>
+                  )}
 
                   {menu.hasDropdown &&
                     activeDropdown === menu.id &&
@@ -179,21 +196,21 @@ function Header() {
               ))}
 
               {/* Search icon */}
-              <button className="search-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <path d="m21 21-4.35-4.35"></path>
-                </svg>
+              <button className="header-icon">
+                <FiSearch size={22} />
+              </button>
+
+              {/* Cart icon */}
+              <Link to="/cart" className="header-icon cart-icon">
+                <FiShoppingCart size={22} />
+                {getTotalItems() > 0 && (
+                  <span className="cart-badge">{getTotalItems()}</span>
+                )}
+              </Link>
+
+              {/* User icon không dropdown */}
+              <button className="header-icon">
+                <FiUser size={22} />
               </button>
             </div>
           </div>
