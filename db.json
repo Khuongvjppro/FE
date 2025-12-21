@@ -355,7 +355,17 @@
       "id": 4,
       "label": "VỀ CHÚNG TÔI",
       "link": "/ve-chung-toi",
-      "hasDropdown": false
+      "hasDropdown": true,
+      "dropdown": [
+        {
+          "title": "",
+          "items": [
+            { "name": "Giới thiệu", "link": "/gioi-thieu" },
+            { "name": "Tuyển dụng", "link": "/tuyen-dung" },
+            { "name": "Văn hóa doanh nghiệp", "link": "/van-hoa-doanh-nghiep" }
+          ]
+        }
+      ]
     }
   ]
 }

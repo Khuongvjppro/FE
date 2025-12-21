@@ -18,11 +18,13 @@ function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Giả lập gửi dữ liệu
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    alert("✅ Thông tin đã được gửi thành công!\n\nChúng tôi sẽ liên hệ với bạn sớm nhất.");
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    alert(
+      "✅ Thông tin đã được gửi thành công!\n\nChúng tôi sẽ liên hệ với bạn sớm nhất."
+    );
     setForm({ name: "", phone: "", message: "" });
     setIsSubmitting(false);
   };
@@ -35,22 +37,27 @@ function ContactForm() {
         <div className="shape shape-3"></div>
         <div className="shape shape-4"></div>
       </div>
-      
+
       <div className="contact-form-wrapper">
         <div className="contact-panda-icon">🐼</div>
-        
+
         <h2 className="contact-title">
-          <span className="contact-title-highlight">LIÊN HỆ</span> VỚI PANDA ĐỂ<br/>
+          <span className="contact-title-highlight">LIÊN HỆ</span> VỚI PANDA ĐỂ
+          <br />
           NHẬN TƯ VẤN
         </h2>
-        
+
         <p className="contact-subtitle">
           Hãy để lại thông tin, chúng tôi sẽ tư vấn miễn phí cho bạn!
         </p>
-        
+
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="contact-row">
-            <div className={`input-wrapper ${focusedField === 'name' ? 'focused' : ''}`}>
+            <div
+              className={`input-wrapper ${
+                focusedField === "name" ? "focused" : ""
+              }`}
+            >
               <span className="input-icon">👤</span>
               <input
                 type="text"
@@ -58,14 +65,18 @@ function ContactForm() {
                 placeholder="Họ và tên"
                 value={form.name}
                 onChange={handleChange}
-                onFocus={() => setFocusedField('name')}
+                onFocus={() => setFocusedField("name")}
                 onBlur={() => setFocusedField(null)}
                 required
                 className="contact-input"
               />
             </div>
-            
-            <div className={`input-wrapper ${focusedField === 'phone' ? 'focused' : ''}`}>
+
+            <div
+              className={`input-wrapper ${
+                focusedField === "phone" ? "focused" : ""
+              }`}
+            >
               <span className="input-icon">📱</span>
               <input
                 type="tel"
@@ -73,31 +84,35 @@ function ContactForm() {
                 placeholder="Số điện thoại"
                 value={form.phone}
                 onChange={handleChange}
-                onFocus={() => setFocusedField('phone')}
+                onFocus={() => setFocusedField("phone")}
                 onBlur={() => setFocusedField(null)}
                 required
                 className="contact-input"
               />
             </div>
           </div>
-          
-          <div className={`input-wrapper ${focusedField === 'message' ? 'focused' : ''}`}>
+
+          <div
+            className={`input-wrapper ${
+              focusedField === "message" ? "focused" : ""
+            }`}
+          >
             <span className="input-icon textarea-icon">✍️</span>
             <textarea
               name="message"
               placeholder="Số lượng báo giá và yêu cầu của bạn"
               value={form.message}
               onChange={handleChange}
-              onFocus={() => setFocusedField('message')}
+              onFocus={() => setFocusedField("message")}
               onBlur={() => setFocusedField(null)}
               required
               className="contact-textarea"
             />
           </div>
-          
-          <button 
-            type="submit" 
-            className={`contact-btn ${isSubmitting ? 'submitting' : ''}`}
+
+          <button
+            type="submit"
+            className={`contact-btn ${isSubmitting ? "submitting" : ""}`}
             disabled={isSubmitting}
           >
             {isSubmitting ? (
@@ -113,7 +128,7 @@ function ContactForm() {
             )}
           </button>
         </form>
-        
+
         <div className="contact-info-footer">
           <div className="contact-info-item">
             <span className="info-icon">📞</span>
