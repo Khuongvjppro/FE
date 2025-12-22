@@ -6,12 +6,10 @@
       "category": "ao-lop-co-co",
       "price": 180000,
       "originalPrice": 220000,
-      "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=500&fit=crop",
+      "image": "/images/Polo cổ zip BST Crewmate Trắng x Xanh tím than 2.png",
       "images": [
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop"
+        "/images/Polo cổ zip BST Crewmate Trắng x Xanh tím than 2.png",
+        "/images/Polo cổ zip BST Crewmate Đỏ đô x Trắng 1.png"
       ],
       "description": "Áo polo cổ zip chất liệu cotton cao cấp, thiết kế trẻ trung cho đồng phục lớp",
       "sizes": ["S", "M", "L", "XL", "XXL"],
@@ -27,12 +25,10 @@
       "category": "ao-lop-co-co",
       "price": 175000,
       "originalPrice": 210000,
-      "image": "https://images.unsplash.com/photo-1622445275576-721325763afe?w=400&h=500&fit=crop",
+      "image": "/images/Polo mix màu BST Coolmix Xanh tím than x Xám 1.png",
       "images": [
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop"
+        "/images/Polo mix màu BST Coolmix Xanh tím than x Xám 1.png",
+        "/images/Polo mix màu BST Coolmix Xanh tím than x Xám 2.png"
       ],
       "description": "Áo polo mix màu độc đáo, phối màu sáng tạo cho áo lớp nổi bật",
       "sizes": ["S", "M", "L", "XL", "XXL"],
@@ -48,12 +44,10 @@
       "category": "ao-lop-so-mi",
       "price": 195000,
       "originalPrice": 240000,
-      "image": "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=400&h=500&fit=crop",
+      "image": "/images/Sơ mi Oxford BST Verse Plus Xám.jpg",
       "images": [
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop"
+        "/images/Sơ mi Oxford BST Verse Plus Xám.jpg",
+        "/images/Sơ mi Oxford BST Verse Basic Hồng.jpg"
       ],
       "description": "Áo sơ mi Oxford cao cấp, form chuẩn, phù hợp làm đồng phục lớp sang trọng",
       "sizes": ["S", "M", "L", "XL", "XXL"],
@@ -69,12 +63,9 @@
       "category": "ao-phong-lop",
       "price": 145000,
       "originalPrice": 180000,
-      "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=500&fit=crop",
+      "image": "/images/Tshirt Wash BST Wash Echo Ghi Đá.png",
       "images": [
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop"
+        "/images/Tshirt Wash BST Wash Echo Ghi Đá.png"
       ],
       "description": "Áo thun wash phong cách vintage, chất liệu cotton mềm mại",
       "sizes": ["S", "M", "L", "XL", "XXL"],
@@ -89,12 +80,9 @@
       "category": "ao-lop-co-co",
       "price": 185000,
       "originalPrice": 225000,
-      "image": "https://images.unsplash.com/photo-1622445275576-721325763afe?w=400&h=500&fit=crop",
+      "image": "/images/Polo mix cổ V BST Coolmix Nho x Trắng.png",
       "images": [
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop"
+        "/images/Polo mix cổ V BST Coolmix Nho x Trắng.png"
       ],
       "description": "Áo polo cổ V phối màu, thiết kế năng động cho hoạt động nhóm",
       "sizes": ["S", "M", "L", "XL", "XXL"],
@@ -109,12 +97,9 @@
       "category": "ao-phong-lop",
       "price": 120000,
       "originalPrice": 150000,
-      "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=500&fit=crop",
+      "image": "/images/Tshirt Wash BST Wash Echo Ghi Đá.png",
       "images": [
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop"
+        "/images/Tshirt Wash BST Wash Echo Ghi Đá.png"
       ],
       "description": "Áo phông cotton 100% cao cấp, form đẹp, phù hợp mọi hoạt động",
       "sizes": ["S", "M", "L", "XL", "XXL"],
@@ -129,12 +114,9 @@
       "category": "dong-phuc-han-quoc",
       "price": 280000,
       "originalPrice": 350000,
-      "image": "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=400&h=500&fit=crop",
+      "image": "/images/Polo cổ zip BST Crewmate Trắng x Xanh tím than 2.png",
       "images": [
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop"
+        "/images/Polo cổ zip BST Crewmate Trắng x Xanh tím than 2.png"
       ],
       "description": "Đồng phục phong cách Hàn Quốc, thiết kế trẻ trung, hiện đại",
       "sizes": ["S", "M", "L", "XL"],
@@ -149,12 +131,9 @@
       "category": "dong-phuc-mua-dong",
       "price": 320000,
       "originalPrice": 400000,
-      "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=500&fit=crop",
+      "image": "/images/Polo mix màu BST Coolmix Xanh tím than x Xám 1.png",
       "images": [
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop"
+        "/images/Polo mix màu BST Coolmix Xanh tím than x Xám 1.png"
       ],
       "description": "Áo khoác ấm áp cho mùa đông, chất liệu dày dặn, giữ nhiệt tốt",
       "sizes": ["M", "L", "XL", "XXL"],
