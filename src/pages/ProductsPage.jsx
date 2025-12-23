@@ -36,6 +36,14 @@ function ProductsPage() {
     }));
   };
 
+  const getCategoryName = () => {
+    if (selectedCategory === "all") {
+      return "Sản phẩm bán chạy";
+    }
+    const category = CATEGORY_LIST.find(cat => cat.id === selectedCategory);
+    return category ? category.name : "Sản phẩm bán chạy";
+  };
+
   const categorySubItems = {
     "ao-phong-lop": [
       "T-shirt cổ V",
@@ -127,7 +135,15 @@ function ProductsPage() {
                     <div className="category-header">
                       <span
                         className={selectedCategory === category.id ? "active" : ""}
-                        onClick={() => setSelectedCategory(category.id)}
+                        onClick={() => {
+                          setSelectedCategory(category.id);
+                          if (categorySubItems[category.id]) {
+                            setExpandedCategories(prev => ({
+                              ...prev,
+                              [category.id]: true
+                            }));
+                          }
+                        }}
                       >
                         {category.name}
                       </span>
@@ -162,7 +178,7 @@ function ProductsPage() {
           {/* Products Grid */}
           <div className="products-content">
             <div className="products-header">
-              <h2>Sản phẩm bán chạy ({filteredProducts.length} Sản phẩm)</h2>
+              <h2>{getCategoryName()} ({filteredProducts.length} Sản phẩm)</h2>
             </div>
 
             {loading ? (
