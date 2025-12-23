@@ -11,14 +11,18 @@ export const API_ENDPOINTS = {
 // App routes
 export const ROUTES = {
   HOME: "/",
+  LOGIN: "/login",
   PRODUCTS: "/products",
   PRODUCT_DETAIL: "/product/:id",
   NEWS: "/news",
   NEWS_DETAIL: "/news/:id",
   ABOUT: "/about",
   CONTACT: "/contact",
+  CART: "/cart",
   ORDER_PROCESS: "/order-process",
   PAYMENT_METHODS: "/payment-methods",
+  CONSULTATION_ORDER_PROCESS: "/consultation/order-process",
+  CONSULTATION_PAYMENT_METHODS: "/consultation/payment-methods",
 };
 
 // Category mappings
