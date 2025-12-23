@@ -23,9 +23,7 @@ function ProductCard({ product }) {
           >
             Chi tiết
           </Link>
-          <button className="overlay-btn preview-btn">
-            Xem trước
-          </button>
+          <button className="overlay-btn preview-btn">Xem trước</button>
         </div>
       </div>
 
