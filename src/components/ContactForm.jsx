@@ -58,7 +58,7 @@ function ContactForm() {
                 focusedField === "name" ? "focused" : ""
               }`}
             >
-              <span className="input-icon">👤</span>
+              <span className="input-icon"></span>
               <input
                 type="text"
                 name="name"
@@ -77,7 +77,7 @@ function ContactForm() {
                 focusedField === "phone" ? "focused" : ""
               }`}
             >
-              <span className="input-icon">📱</span>
+              <span className="input-icon"></span>
               <input
                 type="tel"
                 name="phone"
@@ -97,7 +97,7 @@ function ContactForm() {
               focusedField === "message" ? "focused" : ""
             }`}
           >
-            <span className="input-icon textarea-icon">✍️</span>
+            <span className="input-icon textarea-icon"></span>
             <textarea
               name="message"
               placeholder="Số lượng báo giá và yêu cầu của bạn"
@@ -123,7 +123,7 @@ function ContactForm() {
             ) : (
               <>
                 GỬI THÔNG TIN NGAY
-                <span className="btn-icon">✈️</span>
+                <span className="btn-icon"></span>
               </>
             )}
           </button>
@@ -131,11 +131,11 @@ function ContactForm() {
 
         <div className="contact-info-footer">
           <div className="contact-info-item">
-            <span className="info-icon">📞</span>
+            <span className="info-icon"></span>
             <span>Hotline: 1900-xxxx</span>
           </div>
           <div className="contact-info-item">
-            <span className="info-icon">✉️</span>
+            <span className="info-icon"></span>
             <span>Email: info@panda.com</span>
           </div>
         </div>

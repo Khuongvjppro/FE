@@ -42,7 +42,7 @@ function OrderProcess() {
       ],
       link: {
         text: "Tham khảo bảng size",
-        url: "/tu-van/bang-size",
+        url: "/consultation/size-chart",
       },
     },
     {
@@ -54,7 +54,7 @@ function OrderProcess() {
       ],
       link: {
         text: "Thông tin thanh toán",
-        url: "/tu-van/hinh-thuc-thanh-toan",
+        url: "/consultation/payment-methods",
       },
     },
     {
@@ -66,7 +66,7 @@ function OrderProcess() {
       ],
       link: {
         text: "Chính sách vận chuyển",
-        url: "/tu-van/van-chuyen",
+        url: "/consultation/shipping",
       },
     },
     {

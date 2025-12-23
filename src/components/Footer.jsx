@@ -23,11 +23,9 @@ function Footer() {
           </div>
           <div className="footer-column">
             <h3>LIÊN HỆ</h3>
-            <p>📞 1900 8697</p>
-            <p>📧 dongphucsangxinmin@gmail.com</p>
-            <p>
-              📍 Số 25, ngách 2, ngõ 208 Trần Cung, phường Nghĩa Đô, TP Hà Nội
-            </p>
+            <p> 1900 8697</p>
+            <p> dongphucsangxinmin@gmail.com</p>
+            <p>Số 25, ngách 2, ngõ 208 Trần Cung, phường Nghĩa Đô, TP Hà Nội</p>
           </div>
           <div className="footer-column">
             <h3>MẠNG XÃ HỘI</h3>

@@ -36,18 +36,18 @@ function About() {
 
           <div className="about-text">
             <div className="about-header">
-              <span className="about-subtitle">Giới thiệu</span>
               <h2 className="about-title">VỀ PANDA</h2>
               <div className="about-divider"></div>
             </div>
 
             <div className="about-body">
               <p className="about-description">
-                <strong>Panda Uniform</strong> tự hào là nhà cung cấp đồng phục uy tín chất lượng
-                hàng đầu miền Bắc với sản phẩm đồng phục <em>Xịn Mịn – 100% cotton cao
-                cấp</em> nhất trên thị trường hiện nay.
+                <strong>Panda Uniform</strong> tự hào là nhà cung cấp đồng phục
+                uy tín chất lượng hàng đầu miền Bắc với sản phẩm đồng phục{" "}
+                <em>Xịn Mịn – 100% cotton cao cấp</em> nhất trên thị trường hiện
+                nay.
               </p>
-              
+
               <div className="about-highlights">
                 <div className="highlight-item">
                   <div className="highlight-icon">✓</div>
@@ -68,10 +68,10 @@ function About() {
               </div>
 
               <p className="about-description">
-                Panda Uniform đã, đang và sẽ luôn nỗ lực hết sức, dùng tất cả tâm
-                huyết và trí lực để mang tới cho bạn sản phẩm
-                tuyệt vời nhất. Chúng tôi gửi gắm niềm tin, sự đoàn kết và bản sắc
-                của cả tập thể cùng chất lượng, dịch vụ trên cả mong đợi.
+                Panda Uniform đã, đang và sẽ luôn nỗ lực hết sức, dùng tất cả
+                tâm huyết và trí lực để mang tới cho bạn sản phẩm tuyệt vời
+                nhất. Chúng tôi gửi gắm niềm tin, sự đoàn kết và bản sắc của cả
+                tập thể cùng chất lượng, dịch vụ trên cả mong đợi.
               </p>
 
               <div className="about-stats">

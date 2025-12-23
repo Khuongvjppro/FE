@@ -292,20 +292,20 @@
     {
       "id": 2,
       "label": "TƯ VẤN",
-      "link": "/tu-van",
+      "link": "/consultation",
       "hasDropdown": true,
       "dropdown": [
         {
           "title": "",
           "items": [
-            { "name": "Quy trình đặt áo", "link": "/quy-trinh-dat-ao" },
-            { "name": "Size Áo", "link": "/size-ao" },
-            { "name": "Bảng màu", "link": "/bang-mau" },
-            { "name": "Chất liệu vải", "link": "/chat-lieu-vai" },
-            { "name": "Công nghệ in", "link": "/cong-nghe-in" },
-            { "name": "Chính sách", "link": "/chinh-sach" },
-            { "name": "Câu hỏi thường gặp", "link": "/cau-hoi-thuong-gap" },
-            { "name": "Hình thức thanh toán", "link": "/hinh-thuc-thanh-toan" }
+            { "name": "Quy trình đặt áo", "link": "/order-process" },
+            { "name": "Size Áo", "link": "/size-chart" },
+            { "name": "Bảng màu", "link": "/color-chart" },
+            { "name": "Chất liệu vải", "link": "/fabric-materials" },
+            { "name": "Công nghệ in", "link": "/printing-technology" },
+            { "name": "Chính sách", "link": "/policy" },
+            { "name": "Câu hỏi thường gặp", "link": "/faq" },
+            { "name": "Hình thức thanh toán", "link": "/payment-methods" }
           ]
         }
       ]

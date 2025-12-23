@@ -1,0 +1,140 @@
+.payment-methods-section {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.payment-title {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+}
+
+.payment-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.payment-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #ff6600;
+}
+
+.payment-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.payment-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.payment-divider {
+  width: 60px;
+  height: 3px;
+  background: #ff6600;
+  margin: 0 auto 25px;
+  border-radius: 2px;
+}
+
+.payment-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+  text-align: center;
+}
+
+.payment-notes {
+  background: #fff5f0;
+  border-left: 4px solid #ff6600;
+  padding: 25px 30px;
+  border-radius: 8px;
+}
+
+.payment-notes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.payment-notes li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.payment-notes li:last-child {
+  margin-bottom: 0;
+}
+
+.payment-notes li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ff6600;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .payment-cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .payment-title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .payment-methods-section {
+    padding: 40px 0;
+  }
+
+  .payment-title {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+
+  .payment-card {
+    padding: 30px 20px;
+  }
+
+  .payment-icon {
+    font-size: 48px;
+  }
+
+  .payment-card-title {
+    font-size: 18px;
+  }
+
+  .payment-notes {
+    padding: 20px;
+  }
+
+  .payment-notes li {
+    font-size: 14px;
+  }
+}

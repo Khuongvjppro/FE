@@ -17,6 +17,8 @@ export const ROUTES = {
   NEWS_DETAIL: "/news/:id",
   ABOUT: "/about",
   CONTACT: "/contact",
+  ORDER_PROCESS: "/order-process",
+  PAYMENT_METHODS: "/payment-methods",
 };
 
 // Category mappings
