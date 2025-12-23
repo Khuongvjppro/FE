@@ -17,8 +17,11 @@ export const ROUTES = {
   NEWS_DETAIL: "/news/:id",
   ABOUT: "/about",
   CONTACT: "/contact",
+  CART: "/cart",
   ORDER_PROCESS: "/order-process",
   PAYMENT_METHODS: "/payment-methods",
+  CONSULTATION_ORDER_PROCESS: "/consultation/order-process",
+  CONSULTATION_PAYMENT_METHODS: "/consultation/payment-methods",
 };
 
 // Category mappings

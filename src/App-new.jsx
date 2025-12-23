@@ -16,16 +16,19 @@ function App() {
         <Routes>
           <Route path={ROUTES.HOME} element={<HomePage />} />
           <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
-          <Route path="/news" element={<NewsPage />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/order-process" element={<OrderProcessPage />} />
+          <Route path={ROUTES.NEWS} element={<NewsPage />} />
+          <Route path={ROUTES.CART} element={<Cart />} />
+          <Route path={ROUTES.ORDER_PROCESS} element={<OrderProcessPage />} />
           <Route
-            path="/consultation/order-process"
+            path={ROUTES.CONSULTATION_ORDER_PROCESS}
             element={<OrderProcessPage />}
           />
-          <Route path="/payment-methods" element={<PaymentMethodsPage />} />
           <Route
-            path="/consultation/payment-methods"
+            path={ROUTES.PAYMENT_METHODS}
+            element={<PaymentMethodsPage />}
+          />
+          <Route
+            path={ROUTES.CONSULTATION_PAYMENT_METHODS}
             element={<PaymentMethodsPage />}
           />
         </Routes>
