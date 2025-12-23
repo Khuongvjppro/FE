@@ -16,6 +16,7 @@ function Login() {
   });
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -35,8 +36,10 @@ function Login() {
       );
       if (found) {
         // Đăng nhập thành công
-        alert("Đăng nhập thành công! Xin chào " + found.name);
-        navigate("/");
+        setSuccess("Đăng nhập thành công! Xin chào " + found.name);
+        setTimeout(() => {
+          navigate("/home");
+        }, 1200);
       } else {
         setError("Email hoặc mật khẩu không đúng!");
       }
@@ -57,7 +60,10 @@ function Login() {
       <div className="login-card">
         <h2>{isLogin ? "Đăng Nhập" : "Đăng Ký"}</h2>
         <form onSubmit={handleSubmit}>
-          {error && (
+          {success && (
+            <div style={{ color: "green", marginBottom: 10, textAlign: "center" }}>{success}</div>
+          )}
+          {error && !success && (
             <div style={{ color: "red", marginBottom: 10, textAlign: "center" }}>{error}</div>
           )}
           {!isLogin && (
