@@ -2,20 +2,17 @@
   "products": [
     {
       "id": 1,
-      "name": "Áo Polo Cổ Zip BST Crewmate Trắng x Xanh",
+      "name": "Polo Cổ Zip BST Crewmate Trắng x Xanh Tím Than",
       "category": "ao-lop-co-co",
       "price": 180000,
       "originalPrice": 220000,
-      "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=500&fit=crop",
+      "image": "/images/Polo cổ zip BST Crewmate Trắng x Xanh tím than 2.png",
       "images": [
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop"
+        "/images/Polo cổ zip BST Crewmate Trắng x Xanh tím than 2.png"
       ],
       "description": "Áo polo cổ zip chất liệu cotton cao cấp, thiết kế trẻ trung cho đồng phục lớp",
       "sizes": ["S", "M", "L", "XL", "XXL"],
-      "colors": ["Trắng x Xanh", "Đỏ đô x Trắng", "Nho x Trắng"],
+      "colors": ["Trắng x Xanh tím than"],
       "stock": 100,
       "rating": 4.8,
       "reviews": 156,
@@ -23,145 +20,113 @@
     },
     {
       "id": 2,
-      "name": "Polo Mix Màu BST Coolmix Xanh tím than x Xám",
+      "name": "Polo Cổ Zip BST Crewmate Đỏ Đô x Trắng",
+      "category": "ao-lop-co-co",
+      "price": 180000,
+      "originalPrice": 220000,
+      "image": "/images/Polo cổ zip BST Crewmate Đỏ đô x Trắng 1.png",
+      "images": ["/images/Polo cổ zip BST Crewmate Đỏ đô x Trắng 1.png"],
+      "description": "Áo polo cổ zip chất liệu cotton cao cấp, thiết kế trẻ trung cho đồng phục lớp",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["Đỏ đô x Trắng"],
+      "stock": 100,
+      "rating": 4.8,
+      "reviews": 145,
+      "badge": "Bán chạy"
+    },
+    {
+      "id": 3,
+      "name": "Polo Mix Cổ V BST Coolmix Nho x Trắng",
+      "category": "ao-lop-co-co",
+      "price": 185000,
+      "originalPrice": 225000,
+      "image": "/images/Polo mix cổ V BST Coolmix Nho x Trắng.png",
+      "images": ["/images/Polo mix cổ V BST Coolmix Nho x Trắng.png"],
+      "description": "Áo polo cổ V phối màu, thiết kế năng động cho hoạt động nhóm",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["Nho x Trắng"],
+      "stock": 90,
+      "rating": 4.7,
+      "reviews": 145
+    },
+    {
+      "id": 4,
+      "name": "Polo Mix Màu BST Coolmix Xanh Tím Than x Xám Phiên Bản 1",
       "category": "ao-lop-co-co",
       "price": 175000,
       "originalPrice": 210000,
-      "image": "https://images.unsplash.com/photo-1622445275576-721325763afe?w=400&h=500&fit=crop",
-      "images": [
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop"
-      ],
+      "image": "/images/Polo mix màu BST Coolmix Xanh tím than x Xám 1.png",
+      "images": ["/images/Polo mix màu BST Coolmix Xanh tím than x Xám 1.png"],
       "description": "Áo polo mix màu độc đáo, phối màu sáng tạo cho áo lớp nổi bật",
       "sizes": ["S", "M", "L", "XL", "XXL"],
-      "colors": ["Xanh tím than x Xám", "Nho x Trắng"],
+      "colors": ["Xanh tím than x Xám"],
       "stock": 80,
       "rating": 4.7,
       "reviews": 132,
       "badge": "Bán chạy"
     },
     {
-      "id": 3,
+      "id": 5,
+      "name": "Polo Mix Màu BST Coolmix Xanh Tím Than x Xám Phiên Bản 2",
+      "category": "ao-lop-co-co",
+      "price": 175000,
+      "originalPrice": 210000,
+      "image": "/images/Polo mix màu BST Coolmix Xanh tím than x Xám 2.png",
+      "images": ["/images/Polo mix màu BST Coolmix Xanh tím than x Xám 2.png"],
+      "description": "Áo polo mix màu độc đáo, phối màu sáng tạo cho áo lớp nổi bật",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["Xanh tím than x Xám"],
+      "stock": 80,
+      "rating": 4.7,
+      "reviews": 128,
+      "badge": "Bán chạy"
+    },
+    {
+      "id": 6,
       "name": "Sơ Mi Oxford BST Verse Plus Xám",
       "category": "ao-lop-so-mi",
       "price": 195000,
       "originalPrice": 240000,
-      "image": "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=400&h=500&fit=crop",
-      "images": [
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop"
-      ],
+      "image": "/images/Sơ mi Oxford BST Verse Plus Xám.jpg",
+      "images": ["/images/Sơ mi Oxford BST Verse Plus Xám.jpg"],
       "description": "Áo sơ mi Oxford cao cấp, form chuẩn, phù hợp làm đồng phục lớp sang trọng",
       "sizes": ["S", "M", "L", "XL", "XXL"],
-      "colors": ["Xám", "Hồng", "Xanh nhạt", "Trắng"],
+      "colors": ["Xám"],
       "stock": 120,
       "rating": 4.9,
       "reviews": 178,
       "badge": "Bán chạy"
     },
     {
-      "id": 4,
+      "id": 7,
+      "name": "Sơ Mi Oxford BST Verse Basic Hồng",
+      "category": "ao-lop-so-mi",
+      "price": 195000,
+      "originalPrice": 240000,
+      "image": "/images/Sơ mi Oxford BST Verse Basic Hồng.jpg",
+      "images": ["/images/Sơ mi Oxford BST Verse Basic Hồng.jpg"],
+      "description": "Áo sơ mi Oxford cao cấp, form chuẩn, phù hợp làm đồng phục lớp sang trọng",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["Hồng"],
+      "stock": 120,
+      "rating": 4.9,
+      "reviews": 165,
+      "badge": "Bán chạy"
+    },
+    {
+      "id": 8,
       "name": "T-shirt Wash BST Wash Echo Ghi Đá",
       "category": "ao-phong-lop",
       "price": 145000,
       "originalPrice": 180000,
-      "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=500&fit=crop",
-      "images": [
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop"
-      ],
+      "image": "/images/Tshirt Wash BST Wash Echo Ghi Đá.png",
+      "images": ["/images/Tshirt Wash BST Wash Echo Ghi Đá.png"],
       "description": "Áo thun wash phong cách vintage, chất liệu cotton mềm mại",
       "sizes": ["S", "M", "L", "XL", "XXL"],
-      "colors": ["Ghi đá", "Đen", "Xám", "Trắng"],
+      "colors": ["Ghi đá"],
       "stock": 200,
       "rating": 4.6,
       "reviews": 98
-    },
-    {
-      "id": 5,
-      "name": "Polo Mix Cổ V BST Coolmix Nho x Trắng",
-      "category": "ao-lop-co-co",
-      "price": 185000,
-      "originalPrice": 225000,
-      "image": "https://images.unsplash.com/photo-1622445275576-721325763afe?w=400&h=500&fit=crop",
-      "images": [
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop"
-      ],
-      "description": "Áo polo cổ V phối màu, thiết kế năng động cho hoạt động nhóm",
-      "sizes": ["S", "M", "L", "XL", "XXL"],
-      "colors": ["Nho x Trắng", "Xanh x Trắng"],
-      "stock": 90,
-      "rating": 4.7,
-      "reviews": 145
-    },
-    {
-      "id": 6,
-      "name": "Áo Phông Cotton Premium",
-      "category": "ao-phong-lop",
-      "price": 120000,
-      "originalPrice": 150000,
-      "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=500&fit=crop",
-      "images": [
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop"
-      ],
-      "description": "Áo phông cotton 100% cao cấp, form đẹp, phù hợp mọi hoạt động",
-      "sizes": ["S", "M", "L", "XL", "XXL"],
-      "colors": ["Đen", "Trắng", "Xám", "Xanh Navy"],
-      "stock": 250,
-      "rating": 4.8,
-      "reviews": 220
-    },
-    {
-      "id": 7,
-      "name": "Đồng Phục Hàn Quốc Style",
-      "category": "dong-phuc-han-quoc",
-      "price": 280000,
-      "originalPrice": 350000,
-      "image": "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=400&h=500&fit=crop",
-      "images": [
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop"
-      ],
-      "description": "Đồng phục phong cách Hàn Quốc, thiết kế trẻ trung, hiện đại",
-      "sizes": ["S", "M", "L", "XL"],
-      "colors": ["Trắng x Đen", "Xanh x Trắng"],
-      "stock": 60,
-      "rating": 4.9,
-      "reviews": 88
-    },
-    {
-      "id": 8,
-      "name": "Áo Khoác Đồng Phục Mùa Đông",
-      "category": "dong-phuc-mua-dong",
-      "price": 320000,
-      "originalPrice": 400000,
-      "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=500&fit=crop",
-      "images": [
-        "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=600&h=700&fit=crop",
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=600&h=700&fit=crop"
-      ],
-      "description": "Áo khoác ấm áp cho mùa đông, chất liệu dày dặn, giữ nhiệt tốt",
-      "sizes": ["M", "L", "XL", "XXL"],
-      "colors": ["Đen", "Xanh Navy", "Xám"],
-      "stock": 70,
-      "rating": 4.8,
-      "reviews": 112
     }
   ],
   "categories": [
@@ -327,20 +292,20 @@
     {
       "id": 2,
       "label": "TƯ VẤN",
-      "link": "/tu-van",
+      "link": "/consultation",
       "hasDropdown": true,
       "dropdown": [
         {
           "title": "",
           "items": [
-            { "name": "Quy trình đặt áo", "link": "/quy-trinh-dat-ao" },
-            { "name": "Size Áo", "link": "/size-ao" },
-            { "name": "Bảng màu", "link": "/bang-mau" },
-            { "name": "Chất liệu vải", "link": "/chat-lieu-vai" },
-            { "name": "Công nghệ in", "link": "/cong-nghe-in" },
-            { "name": "Chính sách", "link": "/chinh-sach" },
-            { "name": "Câu hỏi thường gặp", "link": "/cau-hoi-thuong-gap" },
-            { "name": "Hình thức thanh toán", "link": "/hinh-thuc-thanh-toan" }
+            { "name": "Quy trình đặt áo", "link": "/order-process" },
+            { "name": "Size Áo", "link": "/size-chart" },
+            { "name": "Bảng màu", "link": "/color-chart" },
+            { "name": "Chất liệu vải", "link": "/fabric-materials" },
+            { "name": "Công nghệ in", "link": "/printing-technology" },
+            { "name": "Chính sách", "link": "/policy" },
+            { "name": "Câu hỏi thường gặp", "link": "/faq" },
+            { "name": "Hình thức thanh toán", "link": "/payment-methods" }
           ]
         }
       ]
@@ -355,7 +320,17 @@
       "id": 4,
       "label": "VỀ CHÚNG TÔI",
       "link": "/ve-chung-toi",
-      "hasDropdown": false
+      "hasDropdown": true,
+      "dropdown": [
+        {
+          "title": "",
+          "items": [
+            { "name": "Giới thiệu", "link": "/gioi-thieu" },
+            { "name": "Tuyển dụng", "link": "/tuyen-dung" },
+            { "name": "Văn hóa doanh nghiệp", "link": "/van-hoa-doanh-nghiep" }
+          ]
+        }
+      ]
     }
   ]
 }
