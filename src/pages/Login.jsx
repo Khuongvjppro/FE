@@ -39,11 +39,7 @@ function Login() {
         // Đăng nhập thành công
         setSuccess("Đăng nhập thành công! Xin chào " + found.name);
         setTimeout(() => {
-<<<<<<< HEAD
-          navigate("/");
-=======
           navigate(ROUTES.HOME);
->>>>>>> origin/main
         }, 1200);
       } else {
         setError("Email hoặc mật khẩu không đúng!");
