@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import ProductCard from "../components/ProductCard";
+import ProductFilter from "../components/ProductFilter";
 import { useFetch } from "../hooks";
 import { productService } from "../services/api";
 import { CATEGORY_LIST } from "../constants";
@@ -11,6 +12,12 @@ function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [expandedCategories, setExpandedCategories] = useState({});
+  const [filters, setFilters] = useState({
+    category: "all",
+    priceRange: "all",
+    sortBy: "default",
+    searchTerm: "",
+  });
 
   const { data: products, loading } = useFetch(
     () => productService.getAll(),
@@ -19,21 +26,82 @@ function ProductsPage() {
 
   useEffect(() => {
     if (products) {
-      if (selectedCategory === "all") {
-        setFilteredProducts(products);
-      } else {
-        setFilteredProducts(
-          products.filter((product) => product.category === selectedCategory)
+      let filtered = [...products];
+
+      // Filter by category
+      if (filters.category !== "all") {
+        filtered = filtered.filter(
+          (product) => product.category === filters.category
+        );
+      } else if (selectedCategory !== "all") {
+        filtered = filtered.filter(
+          (product) => product.category === selectedCategory
         );
       }
+
+      // Filter by search term
+      if (filters.searchTerm) {
+        filtered = filtered.filter((product) =>
+          product.name.toLowerCase().includes(filters.searchTerm.toLowerCase())
+        );
+      }
+
+      // Filter by price range
+      if (filters.priceRange !== "all") {
+        filtered = filtered.filter((product) => {
+          const price = product.price;
+          switch (filters.priceRange) {
+            case "under-150":
+              return price < 150000;
+            case "150-200":
+              return price >= 150000 && price <= 200000;
+            case "200-250":
+              return price >= 200000 && price <= 250000;
+            case "above-250":
+              return price > 250000;
+            default:
+              return true;
+          }
+        });
+      }
+
+      // Sort products
+      if (filters.sortBy !== "default") {
+        filtered.sort((a, b) => {
+          switch (filters.sortBy) {
+            case "price-asc":
+              return a.price - b.price;
+            case "price-desc":
+              return b.price - a.price;
+            case "name-asc":
+              return a.name.localeCompare(b.name);
+            case "name-desc":
+              return b.name.localeCompare(a.name);
+            case "rating":
+              return (b.rating || 0) - (a.rating || 0);
+            default:
+              return 0;
+          }
+        });
+      }
+
+      setFilteredProducts(filtered);
     }
-  }, [products, selectedCategory]);
+  }, [products, selectedCategory, filters]);
 
   const toggleCategory = (categoryId) => {
-    setExpandedCategories(prev => ({
+    setExpandedCategories((prev) => ({
       ...prev,
-      [categoryId]: !prev[categoryId]
+      [categoryId]: !prev[categoryId],
     }));
+  };
+
+  const handleFilterChange = (newFilters) => {
+    setFilters(newFilters);
+    // Sync category filter with sidebar
+    if (newFilters.category !== "all") {
+      setSelectedCategory(newFilters.category);
+    }
   };
 
   const getCategoryName = () => {
@@ -128,7 +196,14 @@ function ProductsPage() {
           <aside className="products-sidebar">
             <h3 className="sidebar-title">LỌC SẢN PHẨM</h3>
             
+            {/* Advanced Filter Component */}
+            <ProductFilter
+              onFilterChange={handleFilterChange}
+              categories={CATEGORY_LIST}
+            />
+            
             <div className="filter-group">
+              <h4 style={{ marginTop: "20px", marginBottom: "10px" }}>Danh mục chi tiết</h4>
               <ul className="category-list">
                 {CATEGORY_LIST.map((category) => (
                   <li key={category.id} className="category-item">

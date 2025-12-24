@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./contexts/CartContext";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
@@ -23,8 +18,8 @@ function App() {
         <Routes>
           <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.HOME} element={<HomePage />} />
-          <Route path="/products" element={<ProductsPage />} />
           <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
+          <Route path={ROUTES.PRODUCTS} element={<ProductsPage />} />
           <Route path={ROUTES.NEWS} element={<NewsPage />} />
           <Route path={ROUTES.CART} element={<Cart />} />
           <Route path={ROUTES.ORDER_PROCESS} element={<OrderProcessPage />} />

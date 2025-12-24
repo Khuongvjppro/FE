@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { FiShoppingCart, FiUser, FiSearch } from "react-icons/fi";
 import { useCart } from "../contexts/CartContext";
+import { ROUTES, API_BASE_URL, API_ENDPOINTS } from "../constants";
 import "./Header.css";
 
 function Header() {
@@ -18,7 +19,9 @@ function Header() {
 
   const fetchMenuData = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/menuCategories");
+      const response = await axios.get(
+        `${API_BASE_URL}${API_ENDPOINTS.MENU_CATEGORIES}`
+      );
       setMenuData(response.data);
     } catch (error) {
       console.error("Lỗi khi tải menu:", error);
@@ -50,7 +53,7 @@ function Header() {
                   }}
                 >
                   {menu.label === "TIN TỨC" ? (
-                    <Link to="/news" className="nav-link">
+                    <Link to={ROUTES.NEWS} className="nav-link">
                       {menu.label}
                     </Link>
                   ) : (
@@ -153,7 +156,7 @@ function Header() {
                   }}
                 >
                   {menu.label === "TIN TỨC" ? (
-                    <Link to="/news" className="nav-link">
+                    <Link to={ROUTES.NEWS} className="nav-link">
                       {menu.label}
                     </Link>
                   ) : (
@@ -201,7 +204,7 @@ function Header() {
               </button>
 
               {/* Cart icon */}
-              <Link to="/cart" className="header-icon cart-icon">
+              <Link to={ROUTES.CART} className="header-icon cart-icon">
                 <FiShoppingCart size={22} />
                 {getTotalItems() > 0 && (
                   <span className="cart-badge">{getTotalItems()}</span>
