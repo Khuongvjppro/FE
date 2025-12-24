@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../constants";
 import "./Login.css";
 
 
@@ -38,7 +39,11 @@ function Login() {
         // Đăng nhập thành công
         setSuccess("Đăng nhập thành công! Xin chào " + found.name);
         setTimeout(() => {
+<<<<<<< HEAD
           navigate("/");
+=======
+          navigate(ROUTES.HOME);
+>>>>>>> origin/main
         }, 1200);
       } else {
         setError("Email hoặc mật khẩu không đúng!");

@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { CartProvider } from "./contexts/CartContext";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
@@ -7,6 +12,7 @@ import NewsPage from "./pages/NewsPage";
 import Cart from "./pages/Cart";
 import OrderProcessPage from "./pages/OrderProcessPage";
 import PaymentMethodsPage from "./pages/PaymentMethodsPage";
+import Login from "./pages/Login";
 import { ROUTES } from "./constants";
 import "./styles/global.css";
 
@@ -15,19 +21,23 @@ function App() {
     <CartProvider>
       <Router>
         <Routes>
+          <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.HOME} element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
-          <Route path="/news" element={<NewsPage />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/order-process" element={<OrderProcessPage />} />
+          <Route path={ROUTES.NEWS} element={<NewsPage />} />
+          <Route path={ROUTES.CART} element={<Cart />} />
+          <Route path={ROUTES.ORDER_PROCESS} element={<OrderProcessPage />} />
           <Route
-            path="/consultation/order-process"
+            path={ROUTES.CONSULTATION_ORDER_PROCESS}
             element={<OrderProcessPage />}
           />
-          <Route path="/payment-methods" element={<PaymentMethodsPage />} />
           <Route
-            path="/consultation/payment-methods"
+            path={ROUTES.PAYMENT_METHODS}
+            element={<PaymentMethodsPage />}
+          />
+          <Route
+            path={ROUTES.CONSULTATION_PAYMENT_METHODS}
             element={<PaymentMethodsPage />}
           />
         </Routes>
