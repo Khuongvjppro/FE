@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { CartProvider } from "./contexts/CartContext";
 import HomePage from "./pages/HomePage";
 import ProductDetail from "./pages/ProductDetail";
@@ -17,18 +22,20 @@ function App() {
         <Routes>
           <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.HOME} element={<HomePage />} />
-          <Route path="/home" element={<Navigate to={ROUTES.HOME} replace />} />
           <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
-          <Route path="/news" element={<NewsPage />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/order-process" element={<OrderProcessPage />} />
+          <Route path={ROUTES.NEWS} element={<NewsPage />} />
+          <Route path={ROUTES.CART} element={<Cart />} />
+          <Route path={ROUTES.ORDER_PROCESS} element={<OrderProcessPage />} />
           <Route
-            path="/consultation/order-process"
+            path={ROUTES.CONSULTATION_ORDER_PROCESS}
             element={<OrderProcessPage />}
           />
-          <Route path="/payment-methods" element={<PaymentMethodsPage />} />
           <Route
-            path="/consultation/payment-methods"
+            path={ROUTES.PAYMENT_METHODS}
+            element={<PaymentMethodsPage />}
+          />
+          <Route
+            path={ROUTES.CONSULTATION_PAYMENT_METHODS}
             element={<PaymentMethodsPage />}
           />
         </Routes>
