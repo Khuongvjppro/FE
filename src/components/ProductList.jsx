@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import "./ProductList.css";
 
@@ -14,7 +15,11 @@ function ProductList({ products, showViewMore = true }) {
         ))}
       </div>
       {showViewMore && (
-        <button className="view-more-btn">Xem thêm sản phẩm</button>
+        <div style={{ textAlign: 'center' }}>
+          <Link to="/products" className="view-more-btn">
+            Xem thêm sản phẩm
+          </Link>
+        </div>
       )}
     </>
   );

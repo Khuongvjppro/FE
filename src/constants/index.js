@@ -38,12 +38,16 @@ export const CATEGORY_NAMES = {
 
 // Category list for sidebar
 export const CATEGORY_LIST = [
-  { id: "ao-lop-co-co", name: "ÁO LỚP CÓ CỔ" },
-  { id: "ao-lop-so-mi", name: "ÁO LỚP SƠ MI" },
-  { id: "ao-phong-lop", name: "ÁO PHÔNG LỚP" },
-  { id: "dong-phuc-han-quoc", name: "ĐỒNG PHỤC HÀN QUỐC" },
-  { id: "dong-phuc-mua-dong", name: "ĐỒNG PHỤC MÙA ĐÔNG" },
-  { id: "dong-phuc-hop-lop", name: "ĐỒNG PHỤC HỌP LỚP" },
+  { id: "ao-phong-lop", name: "Áo phông lớp" },
+  { id: "ao-lop-co-co", name: "Áo lớp có cổ" },
+  { id: "ao-lop-so-mi", name: "Áo Lớp Sơ Mi" },
+  { id: "dong-phuc-han-quoc", name: "Đồng phục Hàn Quốc" },
+  { id: "combo-dong-phuc", name: "Combo đồng phục" },
+  { id: "dong-phuc-mua-dong", name: "Đồng phục mùa đông" },
+  { id: "ao-bong-chay", name: "Áo bóng chày" },
+  { id: "dong-phuc-hop-lop", name: "Áo đồng phục họp lớp" },
+  { id: "mau", name: "Màu" },
+  { id: "bst", name: "BST" },
 ];
 
 // Testimonials data

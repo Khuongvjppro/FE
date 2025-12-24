@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { CartProvider } from "./contexts/CartContext";
 import HomePage from "./pages/HomePage";
+import ProductsPage from "./pages/ProductsPage";
 import ProductDetail from "./pages/ProductDetail";
 import NewsPage from "./pages/NewsPage";
 import Cart from "./pages/Cart";
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.HOME} element={<HomePage />} />
+          <Route path="/products" element={<ProductsPage />} />
           <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
           <Route path={ROUTES.NEWS} element={<NewsPage />} />
           <Route path={ROUTES.CART} element={<Cart />} />
