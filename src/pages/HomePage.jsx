@@ -22,6 +22,11 @@ function HomePage() {
 
   const loading = productsLoading || categoriesLoading;
 
+  // Lấy 8 sản phẩm đặc trưng (có badge hoặc rating cao)
+  const featuredProducts = (products || [])
+    .filter(p => p.badge || p.rating >= 4.7)
+    .slice(0, 8);
+
   return (
     <MainLayout>
       <HeroBanner />
@@ -33,7 +38,7 @@ function HomePage() {
           {loading ? (
             <div className="loading">Đang tải...</div>
           ) : (
-            <ProductList products={products || []} />
+            <ProductList products={featuredProducts} />
           )}
         </div>
       </section>
