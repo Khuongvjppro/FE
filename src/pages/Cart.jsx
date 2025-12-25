@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../contexts/CartContext";
+import { useAuth } from "../contexts/AuthContext";
 import {
   FiTrash2,
   FiMinus,
@@ -10,8 +11,9 @@ import {
 import "./Cart.css";
 
 function Cart() {
-  const { cart, removeFromCart, updateQuantity, getTotalPrice, clearCart } =
-    useCart();
+  const { cart, removeFromCart, updateQuantity, getTotalPrice, clearCart } = useCart();
+  const { user } = useAuth();
+  const navigate = useNavigate();
 
   const formatPrice = (price) => {
     return new Intl.NumberFormat("vi-VN", {
@@ -139,7 +141,18 @@ function Cart() {
                 </span>
               </div>
 
-              <button className="checkout-btn">Tiến hành thanh toán</button>
+              <button
+                className="checkout-btn"
+                onClick={() => {
+                  if (!user) {
+                    navigate("/login?redirect=/checkout-info");
+                  } else {
+                    navigate("/checkout-info");
+                  }
+                }}
+              >
+                Tiến hành thanh toán
+              </button>
 
               <Link to="/" className="continue-link">
                 <FiArrowLeft /> Tiếp tục mua sắm

@@ -171,13 +171,13 @@
     {
       "id": 1,
       "label": "SẢN PHẨM",
-      "link": "/san-pham",
+      "link": "/products",
       "hasDropdown": true,
       "productCategories": [
         {
           "id": "ao-phong-lop",
           "name": "Áo phông lớp",
-          "link": "/ao-phong-lop",
+          "link": "/products?category=ao-phong-lop",
           "subcategories": [
             { "name": "T-shirt cổ V", "link": "/ao-phong-lop/co-v" },
             { "name": "T-shirt Raglan", "link": "/ao-phong-lop/raglan" },
@@ -194,7 +194,7 @@
         {
           "id": "ao-lop-co-co",
           "name": "Áo lớp có cổ",
-          "link": "/ao-lop-co-co",
+          "link": "/products?category=ao-lop-co-co",
           "subcategories": [
             {
               "name": "Polo cổ truyền thống",
@@ -209,7 +209,7 @@
         {
           "id": "ao-lop-so-mi",
           "name": "Áo Lớp Sơ Mi",
-          "link": "/ao-lop-so-mi",
+          "link": "/products?category=ao-lop-so-mi",
           "subcategories": [
             { "name": "Sơ mi Oxford", "link": "/ao-lop-so-mi/oxford" },
             { "name": "Sơ mi Kaki", "link": "/ao-lop-so-mi/kaki" },
@@ -221,7 +221,7 @@
         {
           "id": "dong-phuc-han-quoc",
           "name": "Đồng phục Hàn Quốc",
-          "link": "/dong-phuc-han-quoc",
+          "link": "/products?category=dong-phuc-han-quoc",
           "subcategories": [
             {
               "name": "Đồng phục nữ Hàn Quốc",
@@ -240,7 +240,7 @@
         {
           "id": "combo-dong-phuc",
           "name": "Combo đồng phục",
-          "link": "/combo-dong-phuc",
+          "link": "/products?category=combo-dong-phuc",
           "subcategories": [
             { "name": "Combo áo + quần", "link": "/combo-dong-phuc/ao-quan" },
             { "name": "Combo áo + nón", "link": "/combo-dong-phuc/ao-non" },
@@ -250,7 +250,7 @@
         {
           "id": "dong-phuc-mua-dong",
           "name": "Đồng phục mùa đông",
-          "link": "/dong-phuc-mua-dong",
+          "link": "/products?category=dong-phuc-mua-dong",
           "subcategories": [
             { "name": "Áo khoác hoodie", "link": "/dong-phuc-mua-dong/hoodie" },
             { "name": "Áo khoác bomber", "link": "/dong-phuc-mua-dong/bomber" },
@@ -261,7 +261,7 @@
         {
           "id": "ao-bong-chay",
           "name": "Áo bóng chày",
-          "link": "/ao-bong-chay",
+          "link": "/products?category=ao-bong-chay",
           "subcategories": [
             {
               "name": "Áo bóng chày truyền thống",
@@ -274,7 +274,7 @@
         {
           "id": "ao-dong-phuc-hop-lop",
           "name": "Áo đồng phục họp lớp",
-          "link": "/ao-dong-phuc-hop-lop",
+          "link": "/products?category=dong-phuc-hop-lop",
           "subcategories": [
             {
               "name": "Áo họp lớp truyền thống",
