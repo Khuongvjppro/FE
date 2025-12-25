@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { FiShoppingCart, FiUser, FiSearch } from "react-icons/fi";
+import { useRef } from "react";
 import { useCart } from "../contexts/CartContext";
 import "./Header.css";
 
@@ -10,6 +11,24 @@ function Header() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [hoveredCategory, setHoveredCategory] = useState(null);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
+  const userDropdownRef = useRef(null);
+
+  // Đóng dropdown khi click ra ngoài
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (userDropdownRef.current && !userDropdownRef.current.contains(event.target)) {
+        setShowUserDropdown(false);
+      }
+    }
+    if (showUserDropdown) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showUserDropdown]);
   const { getTotalItems } = useCart();
 
   useEffect(() => {
@@ -208,10 +227,27 @@ function Header() {
                 )}
               </Link>
 
-              {/* User icon không dropdown */}
-              <button className="header-icon">
-                <FiUser size={22} />
-              </button>
+              {/* User icon có dropdown */}
+              <div className="user-menu" ref={userDropdownRef}>
+                <button
+                  className="header-icon"
+                  onClick={() => setShowUserDropdown((v) => !v)}
+                  aria-haspopup="true"
+                  aria-expanded={showUserDropdown}
+                >
+                  <FiUser size={22} />
+                </button>
+                {showUserDropdown && (
+                  <div className="user-dropdown-menu">
+                    <Link to="/login" className="user-dropdown-link" onClick={() => setShowUserDropdown(false)}>
+                      Đăng nhập
+                    </Link>
+                    <Link to="/profile" className="user-dropdown-link" onClick={() => setShowUserDropdown(false)}>
+                      profile
+                    </Link>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

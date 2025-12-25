@@ -87,22 +87,26 @@
 }
 
 /* User Menu Dropdown */
+
 .user-menu {
   position: relative;
+  display: inline-block;
 }
 
 /* Dropdown user giống sản phẩm/tư vấn */
 
 .user-dropdown-menu {
-  left: auto;
+  position: absolute;
+  top: 120%;
   right: 0;
-  transform: none;
-  min-width: 140px;
-  max-width: 180px;
-  padding-top: 18px;
-  border-radius: 10px;
+  min-width: 160px;
+  max-width: 200px;
+  background: #fff;
+  border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
   animation: fadeInDown 0.2s ease;
+  padding: 12px 0;
+  z-index: 1100;
 }
 
 .user-dropdown-link {
