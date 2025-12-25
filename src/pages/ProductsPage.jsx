@@ -11,6 +11,8 @@ function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [expandedCategories, setExpandedCategories] = useState({});
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 9;
 
   const { data: products, loading } = useFetch(
     () => productService.getAll(),
@@ -26,22 +28,27 @@ function ProductsPage() {
           products.filter((product) => product.category === selectedCategory)
         );
       }
+      setCurrentPage(1); // Reset về trang 1 khi đổi category
     }
   }, [products, selectedCategory]);
+
+  // Tính toán sản phẩm hiển thị theo trang
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
+  // Chuyển trang
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const toggleCategory = (categoryId) => {
     setExpandedCategories(prev => ({
       ...prev,
       [categoryId]: !prev[categoryId]
     }));
-  };
-
-  const getCategoryName = () => {
-    if (selectedCategory === "all") {
-      return "Sản phẩm bán chạy";
-    }
-    const category = CATEGORY_LIST.find(cat => cat.id === selectedCategory);
-    return category ? category.name : "Sản phẩm bán chạy";
   };
 
   const categorySubItems = {
@@ -178,17 +185,66 @@ function ProductsPage() {
           {/* Products Grid */}
           <div className="products-content">
             <div className="products-header">
-              <h2>{getCategoryName()} ({filteredProducts.length} Sản phẩm)</h2>
+              <h2>Sản phẩm bán chạy ({filteredProducts.length} Sản phẩm)</h2>
             </div>
 
             {loading ? (
               <div className="loading">Đang tải sản phẩm...</div>
             ) : (
-              <div className="products-grid">
-                {filteredProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
-              </div>
+              <>
+                <div className="products-grid">
+                  {currentProducts.map((product) => (
+                    <ProductCard key={product.id} product={product} />
+                  ))}
+                </div>
+
+                {/* Pagination */}
+                {totalPages > 1 && (
+                  <div className="pagination">
+                    <button
+                      className="pagination-btn"
+                      onClick={() => handlePageChange(currentPage - 1)}
+                      disabled={currentPage === 1}
+                    >
+                      ‹ Trước
+                    </button>
+
+                    {[...Array(totalPages)].map((_, index) => {
+                      const pageNumber = index + 1;
+                      // Hiển thị: trang đầu, trang cuối, trang hiện tại và 1 trang trước/sau
+                      if (
+                        pageNumber === 1 ||
+                        pageNumber === totalPages ||
+                        (pageNumber >= currentPage - 1 && pageNumber <= currentPage + 1)
+                      ) {
+                        return (
+                          <button
+                            key={pageNumber}
+                            className={`pagination-btn ${currentPage === pageNumber ? 'active' : ''}`}
+                            onClick={() => handlePageChange(pageNumber)}
+                          >
+                            {pageNumber}
+                          </button>
+                        );
+                      } else if (
+                        pageNumber === currentPage - 2 ||
+                        pageNumber === currentPage + 2
+                      ) {
+                        return <span key={pageNumber} className="pagination-dots">...</span>;
+                      }
+                      return null;
+                    })}
+
+                    <button
+                      className="pagination-btn"
+                      onClick={() => handlePageChange(currentPage + 1)}
+                      disabled={currentPage === totalPages}
+                    >
+                      Sau ›
+                    </button>
+                  </div>
+                )}
+              </>
             )}
 
             {filteredProducts.length === 0 && !loading && (
