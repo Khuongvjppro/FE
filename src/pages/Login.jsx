@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { ROUTES } from "../constants";
+import { useAuth } from "../contexts/AuthContext";
 import "./Login.css";
 
 
@@ -19,6 +20,8 @@ function Login() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const navigate = useNavigate();
+  const { login } = useAuth();
+  const location = useLocation();
 
   const handleChange = (e) => {
     setFormData({
@@ -37,9 +40,12 @@ function Login() {
       );
       if (found) {
         // Đăng nhập thành công
+        login(found); // Lưu user vào context
         setSuccess("Đăng nhập thành công! Xin chào " + found.name);
         setTimeout(() => {
-          navigate(ROUTES.HOME);
+          const params = new URLSearchParams(location.search);
+          const redirect = params.get("redirect");
+          navigate(redirect || ROUTES.HOME);
         }, 1200);
       } else {
         setError("Email hoặc mật khẩu không đúng!");

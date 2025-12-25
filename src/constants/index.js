@@ -10,8 +10,8 @@ export const API_ENDPOINTS = {
 
 // App routes
 export const ROUTES = {
-  LOGIN: "/",
-  HOME: "/home",
+  LOGIN: "/login",
+  HOME: "/",
   PRODUCTS: "/products",
   PRODUCT_DETAIL: "/product/:id",
   NEWS: "/news",
