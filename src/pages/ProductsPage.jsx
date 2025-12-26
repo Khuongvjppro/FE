@@ -15,12 +15,7 @@ function ProductsPage() {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [expandedCategories, setExpandedCategories] = useState({});
   const [selectedSubcategory, setSelectedSubcategory] = useState(null);
-  const [filters, setFilters] = useState({
-    category: "all",
-    priceRange: "all",
-    sortBy: "default",
-    searchTerm: "",
-  });
+  const [searchTerm, setSearchTerm] = useState("");
 
   const { data: products, loading } = useFetch(
     () => productService.getAll(),
@@ -32,7 +27,6 @@ function ProductsPage() {
     const categoryParam = searchParams.get("category");
     if (categoryParam) {
       setSelectedCategory(categoryParam);
-      setFilters((prev) => ({ ...prev, category: categoryParam }));
     }
   }, [searchParams]);
 
@@ -41,65 +35,22 @@ function ProductsPage() {
       let filtered = [...products];
 
       // Filter by category
-      if (filters.category !== "all") {
-        filtered = filtered.filter(
-          (product) => product.category === filters.category
-        );
-      } else if (selectedCategory !== "all") {
+      if (selectedCategory !== "all") {
         filtered = filtered.filter(
           (product) => product.category === selectedCategory
         );
       }
 
       // Filter by search term
-      if (filters.searchTerm) {
+      if (searchTerm) {
         filtered = filtered.filter((product) =>
-          product.name.toLowerCase().includes(filters.searchTerm.toLowerCase())
+          product.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
-      }
-
-      // Filter by price range
-      if (filters.priceRange !== "all") {
-        filtered = filtered.filter((product) => {
-          const price = product.price;
-          switch (filters.priceRange) {
-            case "under-150":
-              return price < 150000;
-            case "150-200":
-              return price >= 150000 && price <= 200000;
-            case "200-250":
-              return price >= 200000 && price <= 250000;
-            case "above-250":
-              return price > 250000;
-            default:
-              return true;
-          }
-        });
-      }
-
-      // Sort products
-      if (filters.sortBy !== "default") {
-        filtered.sort((a, b) => {
-          switch (filters.sortBy) {
-            case "price-asc":
-              return a.price - b.price;
-            case "price-desc":
-              return b.price - a.price;
-            case "name-asc":
-              return a.name.localeCompare(b.name);
-            case "name-desc":
-              return b.name.localeCompare(a.name);
-            case "rating":
-              return (b.rating || 0) - (a.rating || 0);
-            default:
-              return 0;
-          }
-        });
       }
 
       setFilteredProducts(filtered);
     }
-  }, [products, selectedCategory, filters]);
+  }, [products, selectedCategory, searchTerm]);
 
   const toggleCategory = (categoryId) => {
     setExpandedCategories((prev) => ({
@@ -108,12 +59,8 @@ function ProductsPage() {
     }));
   };
 
-  const handleFilterChange = (newFilters) => {
-    setFilters(newFilters);
-    // Sync category filter with sidebar
-    if (newFilters.category !== "all") {
-      setSelectedCategory(newFilters.category);
-    }
+  const handleFilterChange = (filters) => {
+    setSearchTerm(filters.searchTerm || "");
   };
 
   const getCategoryName = () => {
@@ -215,10 +162,7 @@ function ProductsPage() {
             <h3 className="sidebar-title">LỌC SẢN PHẨM</h3>
 
             {/* Advanced Filter Component */}
-            <ProductFilter
-              onFilterChange={handleFilterChange}
-              categories={CATEGORY_LIST}
-            />
+            <ProductFilter onFilterChange={handleFilterChange} />
 
             <div className="filter-group">
               <h4 style={{ marginTop: "20px", marginBottom: "10px" }}>
