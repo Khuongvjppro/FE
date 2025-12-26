@@ -41,6 +41,13 @@ function ProductsPage() {
         );
       }
 
+      // Filter by subcategory
+      if (selectedSubcategory) {
+        filtered = filtered.filter(
+          (product) => product.subcategory === selectedSubcategory
+        );
+      }
+
       // Filter by search term
       if (searchTerm) {
         filtered = filtered.filter((product) =>
@@ -50,7 +57,7 @@ function ProductsPage() {
 
       setFilteredProducts(filtered);
     }
-  }, [products, selectedCategory, searchTerm]);
+  }, [products, selectedCategory, selectedSubcategory, searchTerm]);
 
   const toggleCategory = (categoryId) => {
     setExpandedCategories((prev) => ({
