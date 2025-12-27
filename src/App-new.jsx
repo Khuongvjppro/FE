@@ -13,6 +13,7 @@ import Cart from "./pages/Cart";
 import OrderProcessPage from "./pages/OrderProcessPage";
 import PaymentMethodsPage from "./pages/PaymentMethodsPage";
 import SizePage from "./pages/SizePage";
+import ColorPage from "./pages/ColorPage";
 import Login from "./pages/Login";
 import { ROUTES } from "./constants";
 import "./styles/global.css";
@@ -43,6 +44,7 @@ function App() {
             element={<PaymentMethodsPage />}
           />
           <Route path="/tu-van/bang-size" element={<SizePage />} />
+          <Route path="/tu-van/bang-mau" element={<ColorPage />} />
         </Routes>
       </Router>
     </CartProvider>
