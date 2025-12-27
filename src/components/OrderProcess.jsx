@@ -47,7 +47,7 @@ function OrderProcess() {
       ],
       link: {
         text: "Tham khảo bảng size",
-        url: "#",
+        url: "/tu-van/bang-size",
       },
     },
     {

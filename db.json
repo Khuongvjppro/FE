@@ -2575,14 +2575,14 @@
         {
           "title": "",
           "items": [
-            { "name": "Quy trình đặt áo", "link": "/order-process" },
-            { "name": "Size Áo", "link": "/size-chart" },
-            { "name": "Bảng màu", "link": "/color-chart" },
-            { "name": "Chất liệu vải", "link": "/fabric-materials" },
-            { "name": "Công nghệ in", "link": "/printing-technology" },
-            { "name": "Chính sách", "link": "/policy" },
-            { "name": "Câu hỏi thường gặp", "link": "/faq" },
-            { "name": "Hình thức thanh toán", "link": "/payment-methods" }
+            { "name": "Quy trình đặt áo", "link": "/tu-van/quy-trinh-dat-ao" },
+            { "name": "Size Áo", "link": "/tu-van/bang-size" },
+            { "name": "Bảng màu", "link": "/tu-van/bang-mau" },
+            { "name": "Chất liệu vải", "link": "/tu-van/chat-lieu-vai" },
+            { "name": "Công nghệ in", "link": "/tu-van/cong-nghe-in" },
+            { "name": "Chính sách", "link": "/tu-van/chinh-sach" },
+            { "name": "Câu hỏi thường gặp", "link": "/tu-van/faq" },
+            { "name": "Hình thức thanh toán", "link": "/tu-van/phuong-thuc-thanh-toan" }
           ]
         }
       ]

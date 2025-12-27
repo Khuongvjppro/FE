@@ -12,6 +12,7 @@ import NewsPage from "./pages/NewsPage";
 import Cart from "./pages/Cart";
 import OrderProcessPage from "./pages/OrderProcessPage";
 import PaymentMethodsPage from "./pages/PaymentMethodsPage";
+import SizePage from "./pages/SizePage";
 import Login from "./pages/Login";
 import { ROUTES } from "./constants";
 import "./styles/global.css";
@@ -32,6 +33,7 @@ function App() {
             path={ROUTES.CONSULTATION_ORDER_PROCESS}
             element={<OrderProcessPage />}
           />
+          <Route path="/tu-van/quy-trinh-dat-ao" element={<OrderProcessPage />} />
           <Route
             path={ROUTES.PAYMENT_METHODS}
             element={<PaymentMethodsPage />}
@@ -40,6 +42,7 @@ function App() {
             path={ROUTES.CONSULTATION_PAYMENT_METHODS}
             element={<PaymentMethodsPage />}
           />
+          <Route path="/tu-van/bang-size" element={<SizePage />} />
         </Routes>
       </Router>
     </CartProvider>
