@@ -1,27 +1,35 @@
+import { useState, useEffect } from "react";
 import "./HeroBanner.css";
 
 function HeroBanner() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const bannerImages = [
+    "/images/HomeBanner1.jpg",
+    "/images/HomeBanner2.jpg",
+    "/images/HomeBanner3.jpg",
+    "/images/HomeBanner4.jpg",
+    "/images/HomeBanner5.jpg",
+    "/images/HomeBanner6.jpg"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % bannerImages.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [bannerImages.length]);
+
   return (
     <section className="hero-banner">
-      <div className="container">
-        <div className="hero-content">
-          <div className="subtitle">CITY PLAYER</div>
-          <h2>
-            CITY PLAYERS
-            <br />
-            BST ÁO SƠ MI BÓNG CHÀY CỔ TRÒN
-          </h2>
-          <p>
-            Kêm một chút các cảm xúc cháy hết kiếp diễm cho những trở về, Sống
-            tạo điều ta với mẫu áo Bông chày từ hướng cây về thuyền đây cám
-            hành. BST City Player đãu trung sức xứ dáng bóng chày những động
-            sang thể loại kích thước đã đồ trưng những sụ năng ấu bật môt, Panda
-            Uniform đãu diệt sư dụng chết tiếu với mã giúp chỉ đó đáo trơ nên
-            nhũ, thoải mái, tự kin show chết chạt.
-          </p>
-          <button className="cta-button">Khám phá ngay</button>
-        </div>
-      </div>
+      {bannerImages.map((image, index) => (
+        <div
+          key={index}
+          className={`banner-slide ${index === currentSlide ? 'active' : ''}`}
+          style={{ backgroundImage: `url(${image})` }}
+        />
+      ))}
     </section>
   );
 }

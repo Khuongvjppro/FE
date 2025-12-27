@@ -17,10 +17,6 @@ function ProductCard({ product }) {
       <div className="product-card">
         <div className="product-image">
           <img src={product.image} alt={product.name} />
-          <div className="product-overlay">
-            <button className="overlay-btn detail-btn">Chi tiết</button>
-            <button className="overlay-btn preview-btn">Xem trước</button>
-          </div>
         </div>
 
         <div className="product-info">

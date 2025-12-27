@@ -132,7 +132,7 @@ function ContactForm() {
         <div className="contact-info-footer">
           <div className="contact-info-item">
             <span className="info-icon"></span>
-            <span>Hotline: 1900-xxxx</span>
+            <span>Hotline: 1900-8697</span>
           </div>
           <div className="contact-info-item">
             <span className="info-icon"></span>

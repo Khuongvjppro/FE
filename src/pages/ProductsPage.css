@@ -20,7 +20,7 @@
   overflow: hidden;
   min-height: 250px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .products-banner::before {
