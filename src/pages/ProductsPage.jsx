@@ -1,46 +1,80 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import ProductCard from "../components/ProductCard";
+import ProductFilter from "../components/ProductFilter";
 import { useFetch } from "../hooks";
 import { productService } from "../services/api";
 import { CATEGORY_LIST } from "../constants";
 import "./ProductsPage.css";
 
 function ProductsPage() {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const categoryFromUrl = searchParams.get("category") || "all";
+  const [selectedCategory, setSelectedCategory] = useState(categoryFromUrl);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [expandedCategories, setExpandedCategories] = useState({});
+  const [selectedSubcategory, setSelectedSubcategory] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const { data: products, loading } = useFetch(
     () => productService.getAll(),
     []
   );
 
+  // Update selectedCategory when URL changes
+  useEffect(() => {
+    const categoryParam = searchParams.get("category");
+    if (categoryParam) {
+      setSelectedCategory(categoryParam);
+    }
+  }, [searchParams]);
+
   useEffect(() => {
     if (products) {
-      if (selectedCategory === "all") {
-        setFilteredProducts(products);
-      } else {
-        setFilteredProducts(
-          products.filter((product) => product.category === selectedCategory)
+      let filtered = [...products];
+
+      // Filter by category
+      if (selectedCategory !== "all") {
+        filtered = filtered.filter(
+          (product) => product.category === selectedCategory
         );
       }
+
+      // Filter by subcategory
+      if (selectedSubcategory) {
+        filtered = filtered.filter(
+          (product) => product.subcategory === selectedSubcategory
+        );
+      }
+
+      // Filter by search term
+      if (searchTerm) {
+        filtered = filtered.filter((product) =>
+          product.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      }
+
+      setFilteredProducts(filtered);
     }
-  }, [products, selectedCategory]);
+  }, [products, selectedCategory, selectedSubcategory, searchTerm]);
 
   const toggleCategory = (categoryId) => {
-    setExpandedCategories(prev => ({
+    setExpandedCategories((prev) => ({
       ...prev,
-      [categoryId]: !prev[categoryId]
+      [categoryId]: !prev[categoryId],
     }));
+  };
+
+  const handleFilterChange = (filters) => {
+    setSearchTerm(filters.searchTerm || "");
   };
 
   const getCategoryName = () => {
     if (selectedCategory === "all") {
       return "Sản phẩm bán chạy";
     }
-    const category = CATEGORY_LIST.find(cat => cat.id === selectedCategory);
+    const category = CATEGORY_LIST.find((cat) => cat.id === selectedCategory);
     return category ? category.name : "Sản phẩm bán chạy";
   };
 
@@ -52,7 +86,7 @@ function ProductsPage() {
       "T-shirt Basic",
       "T-shirt Oversize",
       "T-shirt Galaxy",
-      "T-shirt Pattern"
+      "T-shirt Pattern",
     ],
     "ao-lop-co-co": [
       "Polo cổ Zip",
@@ -63,13 +97,13 @@ function ProductsPage() {
       "Polo Tartan",
       "Polo Uni",
       "Polo Lacoste Panu",
-      "Polo cổ tàu"
+      "Polo cổ tàu",
     ],
     "ao-lop-so-mi": [
       "Sơ mi Hàn Quốc",
       "Sơ mi Tie Dye",
       "Sơ mi 3D",
-      "Sơ mi Tartan"
+      "Sơ mi Tartan",
     ],
     "dong-phuc-mua-dong": [
       "Áo gió Mix màu",
@@ -77,9 +111,9 @@ function ProductsPage() {
       "Áo khoác lớp",
       "Áo lớp Hoodie",
       "Áo lớp Sweater",
-      "Polo Sweatshirt"
+      "Polo Sweatshirt",
     ],
-    "mau": [
+    mau: [
       "Áo lớp màu hồng",
       "Áo lớp màu xanh dương",
       "Áo lớp màu xanh",
@@ -91,9 +125,9 @@ function ProductsPage() {
       "Áo lớp màu cam",
       "Áo lớp màu vàng",
       "Áo lớp màu be",
-      "Áo lớp màu nâu"
+      "Áo lớp màu nâu",
     ],
-    "bst": [
+    bst: [
       "Áo lớp phản quang",
       "Áo lớp chất ngầu cá tính",
       "Áo lớp đơn giản",
@@ -103,11 +137,16 @@ function ProductsPage() {
       "Áo lớp 3D",
       "Áo lớp dạ quang",
       "Áo lớp Typography",
-      "Áo lớp dễ thương Chibi"
-    ]
+      "Áo lớp dễ thương Chibi",
+    ],
   };
 
-  const categoriesWithoutSub = ["dong-phuc-han-quoc", "combo-dong-phuc", "ao-bong-chay", "dong-phuc-hop-lop"];
+  const categoriesWithoutSub = [
+    "dong-phuc-han-quoc",
+    "combo-dong-phuc",
+    "ao-bong-chay",
+    "dong-phuc-hop-lop",
+  ];
 
   return (
     <MainLayout>
@@ -115,9 +154,10 @@ function ProductsPage() {
         {/* Banner */}
         <div className="products-banner">
           <div className="banner-content">
-            <h1>Sản phẩm bán chạy</h1>
+            <h1>{getCategoryName()}</h1>
             <div className="breadcrumb">
-              <Link to="/">Trang chủ</Link> &gt; <span>Sản phẩm bán chạy</span>
+              <Link to="/">Trang chủ</Link> &gt;{" "}
+              <span>{getCategoryName()}</span>
             </div>
             <div className="hashtag">#dongphucpanda</div>
           </div>
@@ -127,20 +167,30 @@ function ProductsPage() {
           {/* Sidebar Filter */}
           <aside className="products-sidebar">
             <h3 className="sidebar-title">LỌC SẢN PHẨM</h3>
-            
+
+            {/* Advanced Filter Component */}
+            <ProductFilter onFilterChange={handleFilterChange} />
+
             <div className="filter-group">
+              <h4 style={{ marginTop: "20px", marginBottom: "10px" }}>
+                Danh mục chi tiết
+              </h4>
               <ul className="category-list">
                 {CATEGORY_LIST.map((category) => (
                   <li key={category.id} className="category-item">
                     <div className="category-header">
                       <span
-                        className={selectedCategory === category.id ? "active" : ""}
+                        className={
+                          selectedCategory === category.id ? "active" : ""
+                        }
                         onClick={() => {
                           setSelectedCategory(category.id);
+                          setSearchParams({ category: category.id });
+                          setSelectedSubcategory(null);
                           if (categorySubItems[category.id]) {
-                            setExpandedCategories(prev => ({
+                            setExpandedCategories((prev) => ({
                               ...prev,
-                              [category.id]: true
+                              [category.id]: true,
                             }));
                           }
                         }}
@@ -149,26 +199,37 @@ function ProductsPage() {
                       </span>
                       {categorySubItems[category.id] && (
                         <button
-                          className={`toggle-btn ${expandedCategories[category.id] ? "expanded" : ""}`}
+                          className={`toggle-btn ${
+                            expandedCategories[category.id] ? "expanded" : ""
+                          }`}
                           onClick={() => toggleCategory(category.id)}
                         >
                           ›
                         </button>
                       )}
                     </div>
-                    
-                    {categorySubItems[category.id] && expandedCategories[category.id] && (
-                      <ul className="subcategory-list">
-                        {categorySubItems[category.id].map((sub, idx) => (
-                          <li key={idx}>
-                            <label className="checkbox-label">
-                              <input type="checkbox" />
-                              <span>{sub}</span>
-                            </label>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+
+                    {categorySubItems[category.id] &&
+                      expandedCategories[category.id] && (
+                        <ul className="subcategory-list">
+                          {categorySubItems[category.id].map((sub, idx) => (
+                            <li key={idx}>
+                              <label className="checkbox-label">
+                                <input
+                                  type="checkbox"
+                                  checked={selectedSubcategory === sub}
+                                  onChange={() => {
+                                    setSelectedSubcategory(
+                                      selectedSubcategory === sub ? null : sub
+                                    );
+                                  }}
+                                />
+                                <span>{sub}</span>
+                              </label>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                   </li>
                 ))}
               </ul>
@@ -178,7 +239,9 @@ function ProductsPage() {
           {/* Products Grid */}
           <div className="products-content">
             <div className="products-header">
-              <h2>{getCategoryName()} ({filteredProducts.length} Sản phẩm)</h2>
+              <h2>
+                {getCategoryName()} ({filteredProducts.length} Sản phẩm)
+              </h2>
             </div>
 
             {loading ? (

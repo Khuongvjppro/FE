@@ -74,11 +74,8 @@ function NewsPage() {
       <div className="news-page">
         <div className="news-hero">
           <div className="container">
-            <h1 className="news-hero-title">Tin tức</h1>
-            <div className="breadcrumb">
-              <Link to="/">Trang chủ</Link>
-              <span className="separator">›</span>
-              <span>Tin tức</span>
+            <div className="news-hero-content">
+              <h1 className="news-hero-title">Tin Tức</h1>
             </div>
           </div>
           <div className="news-hashtag">#dongphucpanda</div>

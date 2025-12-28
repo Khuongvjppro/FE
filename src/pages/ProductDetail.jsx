@@ -10,6 +10,7 @@ import {
   FiZoomIn,
 } from "react-icons/fi";
 import { useCart } from "../contexts/CartContext";
+import { API_BASE_URL, API_ENDPOINTS } from "../constants";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./ProductDetail.css";
@@ -35,7 +36,9 @@ function ProductDetail() {
 
   const fetchProduct = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/products/${id}`);
+      const response = await axios.get(
+        `${API_BASE_URL}${API_ENDPOINTS.PRODUCTS}/${id}`
+      );
       const productData = response.data;
       setProduct(productData);
       setSelectedSize(productData.sizes?.[0] || null);
@@ -49,7 +52,9 @@ function ProductDetail() {
 
   const fetchRelatedProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/products");
+      const response = await axios.get(
+        `${API_BASE_URL}${API_ENDPOINTS.PRODUCTS}`
+      );
       const filtered = response.data
         .filter((p) => p.id !== parseInt(id))
         .slice(0, 4);

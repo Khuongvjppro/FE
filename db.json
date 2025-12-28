@@ -4,6 +4,7 @@
       "id": 1,
       "name": "Polo Cổ Zip BST Crewmate Trắng x Xanh Tím Than",
       "category": "ao-lop-co-co",
+      "subcategory": "Polo cổ Zip",
       "price": 180000,
       "originalPrice": 220000,
       "image": "/images/Polo cổ zip BST Crewmate Trắng x Xanh tím than 2.png",
@@ -22,6 +23,7 @@
       "id": 2,
       "name": "Polo Cổ Zip BST Crewmate Đỏ Đô x Trắng",
       "category": "ao-lop-co-co",
+      "subcategory": "Polo cổ Zip",
       "price": 180000,
       "originalPrice": 220000,
       "image": "/images/Polo cổ zip BST Crewmate Đỏ đô x Trắng 1.png",
@@ -38,6 +40,7 @@
       "id": 3,
       "name": "Polo Mix Cổ V BST Coolmix Nho x Trắng",
       "category": "ao-lop-co-co",
+      "subcategory": "Polo Mix cổ V",
       "price": 185000,
       "originalPrice": 225000,
       "image": "/images/Polo mix cổ V BST Coolmix Nho x Trắng.png",
@@ -52,6 +55,7 @@
     {
       "id": 4,
       "name": "Polo Mix Màu BST Coolmix Xanh Tím Than x Xám Phiên Bản 1",
+      "subcategory": "Polo mix màu",
       "category": "ao-lop-co-co",
       "price": 175000,
       "originalPrice": 210000,
@@ -68,6 +72,7 @@
     {
       "id": 5,
       "name": "Polo Mix Màu BST Coolmix Xanh Tím Than x Xám Phiên Bản 2",
+      "subcategory": "Polo mix màu",
       "category": "ao-lop-co-co",
       "price": 175000,
       "originalPrice": 210000,
@@ -84,6 +89,7 @@
     {
       "id": 6,
       "name": "Sơ Mi Oxford BST Verse Plus Xám",
+      "subcategory": "Sơ mi Hàn Quốc",
       "category": "ao-lop-so-mi",
       "price": 195000,
       "originalPrice": 240000,
@@ -100,6 +106,7 @@
     {
       "id": 7,
       "name": "Sơ Mi Oxford BST Verse Basic Hồng",
+      "subcategory": "Sơ mi Hàn Quốc",
       "category": "ao-lop-so-mi",
       "price": 195000,
       "originalPrice": 240000,
@@ -116,6 +123,7 @@
     {
       "id": 8,
       "name": "T-shirt Wash BST Wash Echo Ghi Đá",
+      "subcategory": "T-shirt Oversize",
       "category": "ao-phong-lop",
       "price": 145000,
       "originalPrice": 180000,
@@ -171,13 +179,13 @@
     {
       "id": 1,
       "label": "SẢN PHẨM",
-      "link": "/san-pham",
+      "link": "/products",
       "hasDropdown": true,
       "productCategories": [
         {
           "id": "ao-phong-lop",
           "name": "Áo phông lớp",
-          "link": "/ao-phong-lop",
+          "link": "/products?category=ao-phong-lop",
           "subcategories": [
             { "name": "T-shirt cổ V", "link": "/ao-phong-lop/co-v" },
             { "name": "T-shirt Raglan", "link": "/ao-phong-lop/raglan" },
@@ -194,7 +202,7 @@
         {
           "id": "ao-lop-co-co",
           "name": "Áo lớp có cổ",
-          "link": "/ao-lop-co-co",
+          "link": "/products?category=ao-lop-co-co",
           "subcategories": [
             {
               "name": "Polo cổ truyền thống",
@@ -209,7 +217,7 @@
         {
           "id": "ao-lop-so-mi",
           "name": "Áo Lớp Sơ Mi",
-          "link": "/ao-lop-so-mi",
+          "link": "/products?category=ao-lop-so-mi",
           "subcategories": [
             { "name": "Sơ mi Oxford", "link": "/ao-lop-so-mi/oxford" },
             { "name": "Sơ mi Kaki", "link": "/ao-lop-so-mi/kaki" },
@@ -221,7 +229,7 @@
         {
           "id": "dong-phuc-han-quoc",
           "name": "Đồng phục Hàn Quốc",
-          "link": "/dong-phuc-han-quoc",
+          "link": "/products?category=dong-phuc-han-quoc",
           "subcategories": [
             {
               "name": "Đồng phục nữ Hàn Quốc",
@@ -240,7 +248,7 @@
         {
           "id": "combo-dong-phuc",
           "name": "Combo đồng phục",
-          "link": "/combo-dong-phuc",
+          "link": "/products?category=combo-dong-phuc",
           "subcategories": [
             { "name": "Combo áo + quần", "link": "/combo-dong-phuc/ao-quan" },
             { "name": "Combo áo + nón", "link": "/combo-dong-phuc/ao-non" },
@@ -250,7 +258,7 @@
         {
           "id": "dong-phuc-mua-dong",
           "name": "Đồng phục mùa đông",
-          "link": "/dong-phuc-mua-dong",
+          "link": "/products?category=dong-phuc-mua-dong",
           "subcategories": [
             { "name": "Áo khoác hoodie", "link": "/dong-phuc-mua-dong/hoodie" },
             { "name": "Áo khoác bomber", "link": "/dong-phuc-mua-dong/bomber" },
@@ -261,7 +269,7 @@
         {
           "id": "ao-bong-chay",
           "name": "Áo bóng chày",
-          "link": "/ao-bong-chay",
+          "link": "/products?category=ao-bong-chay",
           "subcategories": [
             {
               "name": "Áo bóng chày truyền thống",
@@ -274,7 +282,7 @@
         {
           "id": "ao-dong-phuc-hop-lop",
           "name": "Áo đồng phục họp lớp",
-          "link": "/ao-dong-phuc-hop-lop",
+          "link": "/products?category=dong-phuc-hop-lop",
           "subcategories": [
             {
               "name": "Áo họp lớp truyền thống",
@@ -319,18 +327,8 @@
     {
       "id": 4,
       "label": "VỀ CHÚNG TÔI",
-      "link": "/ve-chung-toi",
-      "hasDropdown": true,
-      "dropdown": [
-        {
-          "title": "",
-          "items": [
-            { "name": "Giới thiệu", "link": "/gioi-thieu" },
-            { "name": "Tuyển dụng", "link": "/tuyen-dung" },
-            { "name": "Văn hóa doanh nghiệp", "link": "/van-hoa-doanh-nghiep" }
-          ]
-        }
-      ]
+      "link": "/about",
+      "hasDropdown": false
     }
   ]
 }

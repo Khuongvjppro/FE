@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./contexts/CartContext";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import HomePage from "./pages/HomePage";
@@ -14,6 +9,7 @@ import Cart from "./pages/Cart";
 import OrderProcessPage from "./pages/OrderProcessPage";
 import PaymentMethodsPage from "./pages/PaymentMethodsPage";
 import Login from "./pages/Login";
+import AboutPage from "./pages/AboutPage";
 import { ROUTES } from "./constants";
 import OrderConfirm from "./pages/OrderConfirm";
 import CheckoutInfo from "./pages/CheckoutInfo";
@@ -36,17 +32,59 @@ function App() {
           <Routes>
             <Route path={ROUTES.HOME} element={<HomePage />} />
             <Route path={ROUTES.LOGIN} element={<Login />} />
+            <Route path={ROUTES.ABOUT} element={<AboutPage />} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
             <Route path={ROUTES.NEWS} element={<NewsPage />} />
             <Route path={ROUTES.CART} element={<Cart />} />
-            <Route path={ROUTES.ORDER_PROCESS} element={<RequireAuth><OrderProcessPage /></RequireAuth>} />
-            <Route path="/order-confirm" element={<RequireAuth><OrderConfirm /></RequireAuth>} />
-            <Route path={ROUTES.CONSULTATION_ORDER_PROCESS} element={<RequireAuth><OrderProcessPage /></RequireAuth>} />
-            <Route path={ROUTES.PAYMENT_METHODS} element={<RequireAuth><PaymentMethodsPage /></RequireAuth>} />
-            <Route path={ROUTES.CONSULTATION_PAYMENT_METHODS} element={<RequireAuth><PaymentMethodsPage /></RequireAuth>} />
-              <Route path="/checkout-info" element={<RequireAuth><CheckoutInfo /></RequireAuth>} />
-            <Route path="/checkout-confirm" element={<RequireAuth><CheckoutConfirm /></RequireAuth>} />
+            <Route
+              path={ROUTES.ORDER_PROCESS}
+              element={
+                <RequireAuth>
+                  <OrderProcessPage />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="/order-confirm"
+              element={
+                <RequireAuth>
+                  <OrderConfirm />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path={ROUTES.CONSULTATION_ORDER_PROCESS}
+              element={
+                <RequireAuth>
+                  <OrderProcessPage />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path={ROUTES.PAYMENT_METHODS}
+              element={<PaymentMethodsPage />}
+            />
+            <Route
+              path={ROUTES.CONSULTATION_PAYMENT_METHODS}
+              element={<PaymentMethodsPage />}
+            />
+            <Route
+              path="/checkout-info"
+              element={
+                <RequireAuth>
+                  <CheckoutInfo />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="/checkout-confirm"
+              element={
+                <RequireAuth>
+                  <CheckoutConfirm />
+                </RequireAuth>
+              }
+            />
           </Routes>
         </Router>
       </CartProvider>

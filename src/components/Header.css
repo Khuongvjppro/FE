@@ -157,7 +157,7 @@
   border-radius: 0;
   padding: 0;
   display: flex;
-  min-width: 280px;
+  min-width: 300px;
   z-index: 1000;
   margin-top: 0;
   padding-top: 20px;
@@ -185,21 +185,24 @@
   }
 }
 
-/* Dropdown 2 cột cho Sản Phẩm */
+/* Dropdown cho Sản Phẩm */
 .dropdown-categories {
   background: white;
-  padding: 20px 0;
-  min-width: 280px;
+  padding: 15px 0;
+  min-width: 300px;
 }
 
 .category-item {
-  padding: 13px 30px;
+  padding: 12px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   transition: all 0.2s;
   position: relative;
+  flex-wrap: nowrap;
+  gap: 10px;
+  white-space: nowrap;
 }
 
 .category-item:hover,
@@ -210,10 +213,11 @@
 .category-item a {
   color: #333;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 500;
   flex: 1;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 
 .category-item:hover > a {
@@ -232,7 +236,8 @@
 .category-item .arrow {
   color: #ccc;
   font-size: 18px;
-  margin-left: 10px;
+  margin-left: 12px;
+  flex-shrink: 0;
 }
 
 .dropdown-subcategories {
