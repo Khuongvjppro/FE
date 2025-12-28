@@ -82,6 +82,10 @@ function Header() {
                     <Link to={ROUTES.PRODUCTS} className="nav-link">
                       {menu.label}
                     </Link>
+                  ) : menu.label === "VỀ CHÚNG TÔI" ? (
+                    <Link to={ROUTES.ABOUT} className="nav-link">
+                      {menu.label}
+                    </Link>
                   ) : (
                     <a href={menu.link} className="nav-link">
                       {menu.label}

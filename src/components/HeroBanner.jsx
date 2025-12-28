@@ -3,14 +3,14 @@ import "./HeroBanner.css";
 
 function HeroBanner() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   const bannerImages = [
     "/images/HomeBanner1.jpg",
     "/images/HomeBanner2.jpg",
     "/images/HomeBanner3.jpg",
     "/images/HomeBanner4.jpg",
     "/images/HomeBanner5.jpg",
-    "/images/HomeBanner6.jpg"
+    "/images/HomeBanner6.jpg",
   ];
 
   useEffect(() => {
@@ -26,7 +26,7 @@ function HeroBanner() {
       {bannerImages.map((image, index) => (
         <div
           key={index}
-          className={`banner-slide ${index === currentSlide ? 'active' : ''}`}
+          className={`banner-slide ${index === currentSlide ? "active" : ""}`}
           style={{ backgroundImage: `url(${image})` }}
         />
       ))}

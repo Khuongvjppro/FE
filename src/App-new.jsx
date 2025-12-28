@@ -9,6 +9,7 @@ import Cart from "./pages/Cart";
 import OrderProcessPage from "./pages/OrderProcessPage";
 import PaymentMethodsPage from "./pages/PaymentMethodsPage";
 import Login from "./pages/Login";
+import AboutPage from "./pages/AboutPage";
 import { ROUTES } from "./constants";
 import OrderConfirm from "./pages/OrderConfirm";
 import CheckoutInfo from "./pages/CheckoutInfo";
@@ -31,6 +32,7 @@ function App() {
           <Routes>
             <Route path={ROUTES.HOME} element={<HomePage />} />
             <Route path={ROUTES.LOGIN} element={<Login />} />
+            <Route path={ROUTES.ABOUT} element={<AboutPage />} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
             <Route path={ROUTES.NEWS} element={<NewsPage />} />
