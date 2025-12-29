@@ -163,7 +163,7 @@ function Header() {
             {/* Logo ở giữa */}
             <Link to="/" className="logo">
               <img
-                src="https://dongphucpanda.com/wp-content/uploads/2020/04/logo-panda.png"
+                src="/images/MainLogo.png"
                 alt="Panda Uniform"
               />
             </Link>
