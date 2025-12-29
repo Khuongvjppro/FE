@@ -1,0 +1,395 @@
+/* Hero Section */
+.fabric-material {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.fabric-hero {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  background: linear-gradient(90deg, #ff5722 0%, #ff6b4a 25%, #ff8a65 50%, #ffb3a7 75%, #e1bee7 100%);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fabric-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(255, 87, 34, 0.7) 0%, rgba(255, 107, 74, 0.5) 40%, rgba(255, 179, 167, 0.2) 100%);
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  opacity: 1;
+}
+
+.breadcrumb .separator {
+  font-size: 1.2rem;
+}
+
+.breadcrumb-link {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Intro Section Inside Hero */
+.intro-text {
+  font-size: 1.1rem;
+  color: white;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  font-weight: 400;
+}
+
+.experience-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none;
+}
+
+.experience-btn:hover {
+  background: white;
+  color: #ff5722;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Tabs Section */
+.fabric-tabs {
+  background: #f8f8f8;
+  padding: 3rem 0;
+}
+
+.fabric-tabs .container {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 280px;
+  flex-shrink: 0;
+}
+
+.tab-btn {
+  padding: 1.2rem 2rem;
+  background: #ddd;
+  color: #666;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  border-radius: 0;
+}
+
+.tab-btn:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.tab-btn:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.tab-btn.active {
+  background: #ff6b4a;
+  color: white;
+}
+
+.tab-btn:hover:not(.active) {
+  background: #ccc;
+}
+
+/* Fabric Grid */
+.fabric-grid {
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.fabric-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.fabric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.fabric-image {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f0ff 0%, #ffe8f0 100%);
+  flex-shrink: 0;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fabric-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.fabric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.fabric-card:hover .fabric-image img {
+  transform: scale(1.03);
+}
+
+.fabric-content {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+}
+
+.fabric-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ff6b4a;
+  margin: 0 0 0.8rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fabric-description {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.7;
+  white-space: pre-line;
+  margin: 0;
+}
+
+/* Brand Section */
+.brand-section {
+  padding: 4rem 0;
+  background: white;
+  text-align: center;
+}
+
+.brand-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff7f6e;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 1px;
+}
+
+.brand-text {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .grid {
+    gap: 1.5rem;
+  }
+
+  .fabric-image {
+    height: 320px;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .fabric-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .fabric-hero {
+    min-height: 320px;
+  }
+
+  .hero-overlay {
+    padding: 2rem 1.5rem;
+  }
+
+  .breadcrumb {
+    margin-bottom: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .fabric-tabs .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .tab-buttons {
+    flex-direction: row;
+    min-width: 100%;
+  }
+
+  .tab-btn {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .tab-btn:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0;
+  }
+
+  .tab-btn:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .fabric-image {
+    height: 280px;
+    padding: 1rem;
+  }
+
+  .experience-btn {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .fabric-content {
+    padding: 1.5rem;
+  }
+
+  .fabric-title {
+    font-size: 1.3rem;
+  }
+
+  .fabric-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.85rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .fabric-intro {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+  }
+
+  .fabric-image {
+    height: 250px;
+  }
+
+  .tab-btn {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .brand-title {
+    font-size: 1.6rem;
+  }
+
+  .brand-text {
+    font-size: 1rem;
+  }
+}

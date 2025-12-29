@@ -23,6 +23,7 @@ export const ROUTES = {
   PAYMENT_METHODS: "/payment-methods",
   CONSULTATION_ORDER_PROCESS: "/consultation/order-process",
   CONSULTATION_PAYMENT_METHODS: "/consultation/payment-methods",
+  FABRIC_MATERIAL: "/tu-van/chat-lieu-vai",
 };
 
 // Category mappings
