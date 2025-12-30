@@ -154,10 +154,6 @@ function ProductDetail() {
 
             {/* Product Info Section */}
             <div className="product-info-detail">
-              {product.badge && (
-                <span className="product-badge">{product.badge}</span>
-              )}
-
               <h1 className="product-title">{product.name}</h1>
 
               <div className="product-rating">
@@ -471,9 +467,6 @@ function ProductDetail() {
                   >
                     <div className="related-product-image">
                       <img src={item.image} alt={item.name} />
-                      {item.badge && (
-                        <span className="related-badge">{item.badge}</span>
-                      )}
                     </div>
                     <div className="related-product-info">
                       <h4>{item.name}</h4>

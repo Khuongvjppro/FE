@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { CartProvider } from "./contexts/CartContext";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import HomePage from "./pages/HomePage";
@@ -14,6 +14,7 @@ import { ROUTES } from "./constants";
 import OrderConfirm from "./pages/OrderConfirm";
 import CheckoutInfo from "./pages/CheckoutInfo";
 import CheckoutConfirm from "./pages/CheckoutConfirm";
+import BulkOrder from "./pages/BulkOrder";
 import "./styles/global.css";
 
 function RequireAuth({ children }) {
@@ -34,6 +35,7 @@ function App() {
             <Route path={ROUTES.LOGIN} element={<Login />} />
             <Route path={ROUTES.ABOUT} element={<AboutPage />} />
             <Route path="/products" element={<ProductsPage />} />
+            <Route path={ROUTES.BULK_ORDER} element={<BulkOrder />} />
             <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
             <Route path={ROUTES.NEWS} element={<NewsPage />} />
             <Route path={ROUTES.CART} element={<Cart />} />

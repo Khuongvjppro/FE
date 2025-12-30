@@ -19,6 +19,7 @@ export const ROUTES = {
   ABOUT: "/about",
   CONTACT: "/contact",
   CART: "/cart",
+  BULK_ORDER: "/bulk-order",
   ORDER_PROCESS: "/order-process",
   PAYMENT_METHODS: "/payment-methods",
   CONSULTATION_ORDER_PROCESS: "/consultation/order-process",
