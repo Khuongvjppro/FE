@@ -15,6 +15,7 @@ import PaymentMethodsPage from "./pages/PaymentMethodsPage";
 import SizePage from "./pages/SizePage";
 import ColorPage from "./pages/ColorPage";
 import FabricMaterial from "./pages/FabricMaterial";
+import PolicyPage from "./pages/PolicyPage";
 import PrintTechnologyPage from "./pages/PrintTechnologyPage";
 import Login from "./pages/Login";
 import { ROUTES } from "./constants";
@@ -48,6 +49,8 @@ function App() {
           <Route path="/tu-van/bang-size" element={<SizePage />} />
           <Route path="/tu-van/bang-mau" element={<ColorPage />} />
           <Route path={ROUTES.FABRIC_MATERIAL} element={<FabricMaterial />} />
+          <Route path={ROUTES.POLICY_GIFT} element={<PolicyPage />} />
+          <Route path="/tu-van/chinh-sach" element={<PolicyPage />} />
           <Route path="/tu-van/cong-nghe-in" element={<PrintTechnologyPage />} />
         </Routes>
       </Router>

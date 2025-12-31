@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import MainLayout from '../layouts/MainLayout';
 import './FabricMaterial.css';
 
 const FabricMaterial = () => {
@@ -74,9 +75,10 @@ const FabricMaterial = () => {
   const filteredFabrics = fabricData.filter(fabric => fabric.season === activeTab);
 
   return (
-    <div className="fabric-material">
-      {/* Hero Section */}
-      <div className="fabric-hero">
+    <MainLayout>
+      <div className="fabric-material">
+        {/* Hero Section */}
+        <div className="fabric-hero">
         <div className="hero-overlay">
           <h1 className="hero-title">Chất liệu vải</h1>
           <div className="breadcrumb">
@@ -146,6 +148,7 @@ const FabricMaterial = () => {
         </div>
       </div>
     </div>
+    </MainLayout>
   );
 };
 
