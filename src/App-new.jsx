@@ -46,6 +46,7 @@ function App() {
             path={ROUTES.CONSULTATION_PAYMENT_METHODS}
             element={<PaymentMethodsPage />}
           />
+          <Route path="/tu-van/phuong-thuc-thanh-toan" element={<PaymentMethodsPage />} />
           <Route path="/tu-van/bang-size" element={<SizePage />} />
           <Route path="/tu-van/bang-mau" element={<ColorPage />} />
           <Route path={ROUTES.FABRIC_MATERIAL} element={<FabricMaterial />} />

@@ -21,6 +21,7 @@ export const ROUTES = {
   CART: "/cart",
   ORDER_PROCESS: "/order-process",
   PAYMENT_METHODS: "/payment-methods",
+  PAYMENT_METHODS_PAGE: "/tu-van/phuong-thuc-thanh-toan",
   CONSULTATION_ORDER_PROCESS: "/consultation/order-process",
   CONSULTATION_PAYMENT_METHODS: "/consultation/payment-methods",
   FABRIC_MATERIAL: "/tu-van/chat-lieu-vai",
