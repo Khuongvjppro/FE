@@ -15,7 +15,8 @@ function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState(categoryFromUrl);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [expandedCategories, setExpandedCategories] = useState({});
-  const [selectedSubcategory, setSelectedSubcategory] = useState(subcategoryFromUrl);
+  const [selectedSubcategory, setSelectedSubcategory] =
+    useState(subcategoryFromUrl);
   const [searchTerm, setSearchTerm] = useState("");
 
   const { data: products, loading } = useFetch(

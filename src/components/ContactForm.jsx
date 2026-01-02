@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FiShoppingCart, FiPackage, FiTrendingUp } from "react-icons/fi";
+import { FiShoppingCart, FiPackage, FiTrendingUp, FiStar } from "react-icons/fi";
 import "./ContactForm.css";
 
 function ContactForm() {
@@ -14,7 +14,7 @@ function ContactForm() {
       </div>
 
       <div className="contact-form-wrapper">
-        <div className="contact-panda-icon">🐼</div>
+        <div className="contact-panda-icon"><FiStar /></div>
 
         <h2 className="contact-title">
           <span className="contact-title-highlight">ĐẶT HÀNG</span> SỐ LƯỢNG LỚN
@@ -47,7 +47,7 @@ function ContactForm() {
             <span>Đặt hàng ngay</span>
           </Link>
           <p className="cta-note">
-            ⚡ Xử lý đơn hàng nhanh chóng - Giao hàng đúng hẹn
+            <FiPackage /> Xử lý đơn hàng nhanh chóng - Giao hàng đúng hẹn
           </p>
         </div>
       </div>

@@ -108,7 +108,7 @@ function Header() {
                               }
                               onMouseLeave={() => setHoveredCategory(null)}
                             >
-                              <Link 
+                              <Link
                                 to={`/products?category=${category.id}`}
                                 onClick={() => {
                                   setActiveDropdown(null);
@@ -124,7 +124,11 @@ function Header() {
                                   {category.subcategories.map((sub, subIdx) => (
                                     <Link
                                       key={subIdx}
-                                      to={`/products?category=${category.id}&subcategory=${encodeURIComponent(sub.name)}`}
+                                      to={`/products?category=${
+                                        category.id
+                                      }&subcategory=${encodeURIComponent(
+                                        sub.name
+                                      )}`}
                                       className="subcategory-item"
                                       onClick={() => {
                                         setActiveDropdown(null);

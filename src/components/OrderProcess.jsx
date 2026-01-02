@@ -1,10 +1,11 @@
+import { FiPhone, FiShoppingBag, FiClipboard, FiUsers, FiPackage, FiThumbsUp } from "react-icons/fi";
 import "./OrderProcess.css";
 
 function OrderProcess() {
   const steps = [
     {
       id: 1,
-      icon: "🏪",
+      icon: <FiPhone />,
       title: "Liên hệ qua các kênh",
       description: [
         "Hotline: 1900 8697",
@@ -19,7 +20,7 @@ function OrderProcess() {
     },
     {
       id: 2,
-      icon: "👕",
+      icon: <FiShoppingBag />,
       title: "Nghe tư vấn và chọn kiểu áo",
       description: [
         "Chọn màu áo, chúng mình có thể tham khảo từ bảng màu PANDA cung cấp",
@@ -33,7 +34,7 @@ function OrderProcess() {
     },
     {
       id: 3,
-      icon: "📋",
+      icon: <FiClipboard />,
       title: "Chốt thiết kế và size áo",
       description: [
         "PANDA sẽ gửi tới chúng mình bảng size áo để các bạn đăng ký size phù hợp cho bản thân",
@@ -47,7 +48,7 @@ function OrderProcess() {
     },
     {
       id: 4,
-      icon: "🤝",
+      icon: <FiUsers />,
       title: "Thỏa thuận và chốt hợp đồng",
       description: [
         "Sau khi đã chốt thiết kế, để tiến hành sản xuất, chúng mình cần đặt cọc 50% giá trị đơn hàng.",
@@ -59,7 +60,7 @@ function OrderProcess() {
     },
     {
       id: 5,
-      icon: "📦",
+      icon: <FiPackage />,
       title: "Nhận hàng và thanh toán",
       description: [
         "Khi nhận được hàng chúng mình hãy kiểm tra đã nhận đủ hàng hay chưa, nếu xảy ra chút sai sót do sản xuất thì hãy liên hệ ngay lại với Panda và hưởng chính sách bảo hành từ Panda nha.",
@@ -71,7 +72,7 @@ function OrderProcess() {
     },
     {
       id: 6,
-      icon: "👍",
+      icon: <FiThumbsUp />,
       title: "Gửi feedback",
       description: [
         "Panda sẽ giúp lớp mình lưu giữ những khoảnh khắc đẹp đẽ nhất thời thanh xuân. Vì vậy, đừng quên gửi cho Panda những bức hình diện áo xịn mịn của lớp mình nha.",

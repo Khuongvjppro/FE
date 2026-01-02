@@ -1,14 +1,19 @@
 import { useState, useEffect, useRef } from "react";
 import "./LazyImage.css";
 
-function LazyImage({ src, alt, className, placeholder = "/images/placeholder.png" }) {
+function LazyImage({
+  src,
+  alt,
+  className,
+  placeholder = "/images/placeholder.png",
+}) {
   const [imageSrc, setImageSrc] = useState(placeholder);
   const [imageLoaded, setImageLoaded] = useState(false);
   const imgRef = useRef();
 
   useEffect(() => {
     let observer;
-    
+
     if (imgRef.current) {
       observer = new IntersectionObserver(
         (entries) => {
@@ -39,7 +44,9 @@ function LazyImage({ src, alt, className, placeholder = "/images/placeholder.png
       ref={imgRef}
       src={imageSrc}
       alt={alt}
-      className={`lazy-image ${imageLoaded ? "loaded" : "loading"} ${className || ""}`}
+      className={`lazy-image ${imageLoaded ? "loaded" : "loading"} ${
+        className || ""
+      }`}
       onLoad={() => setImageLoaded(true)}
     />
   );

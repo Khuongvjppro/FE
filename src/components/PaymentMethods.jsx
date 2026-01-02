@@ -1,24 +1,25 @@
+import { FiCreditCard, FiMapPin, FiHome } from "react-icons/fi";
 import "./PaymentMethods.css";
 
 function PaymentMethods() {
   const paymentOptions = [
     {
       id: 1,
-      icon: "🏦",
+      icon: <FiCreditCard />,
       title: "Internet Banking",
       description:
         "Bạn chỉ cần gửi tiền đến 1 trong những STK mà PANDA đã gửi bạn bằng các ứng dụng chuyển tiền của ngân hàng hoặc ứng dụng Viettel Pay.",
     },
     {
       id: 2,
-      icon: "🏪",
+      icon: <FiMapPin />,
       title: "Trực tiếp tại các sổ giao dịch",
       description:
         "Bạn đến trực tiếp ngân hàng/bưu điện/viettel store/ Thẻ giới đi đông store gần nhất để chuyển khoản vào STK PANDA đã gửi bạn.",
     },
     {
       id: 3,
-      icon: "🏢",
+      icon: <FiHome />,
       title: "Trực tiếp tại văn phòng Panda",
       description:
         "Chuyển tiền trực tiếp tại văn phòng trụ sở của PANDA Uniform hoặc gửi đến nhân viên kinh doanh phụ trách đơn hàng của mình.",
