@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LazyImage from "./LazyImage";
 import "./ProductCard.css";
 
 function ProductCard({ product }) {
@@ -16,7 +17,7 @@ function ProductCard({ product }) {
     <Link to={`/product/${product.id}`} className="product-card-wrapper">
       <div className="product-card">
         <div className="product-image">
-          <img src={product.image} alt={product.name} />
+          <LazyImage src={product.image} alt={product.name} />
         </div>
 
         <div className="product-info">

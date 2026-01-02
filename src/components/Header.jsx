@@ -108,19 +108,31 @@ function Header() {
                               }
                               onMouseLeave={() => setHoveredCategory(null)}
                             >
-                              <a href={category.link}>{category.name}</a>
+                              <Link 
+                                to={`/products?category=${category.id}`}
+                                onClick={() => {
+                                  setActiveDropdown(null);
+                                  setHoveredCategory(null);
+                                }}
+                              >
+                                {category.name}
+                              </Link>
                               <span className="arrow">›</span>
 
                               {hoveredCategory === category.id && (
                                 <div className="dropdown-subcategories">
                                   {category.subcategories.map((sub, subIdx) => (
-                                    <a
+                                    <Link
                                       key={subIdx}
-                                      href={sub.link}
+                                      to={`/products?category=${category.id}&subcategory=${encodeURIComponent(sub.name)}`}
                                       className="subcategory-item"
+                                      onClick={() => {
+                                        setActiveDropdown(null);
+                                        setHoveredCategory(null);
+                                      }}
                                     >
                                       {sub.name}
-                                    </a>
+                                    </Link>
                                   ))}
                                 </div>
                               )}
@@ -162,10 +174,7 @@ function Header() {
 
             {/* Logo ở giữa */}
             <Link to="/" className="logo">
-              <img
-                src="/images/MainLogo.png"
-                alt="Panda Uniform"
-              />
+              <img src="/images/MainLogo.png" alt="Panda Uniform" />
             </Link>
 
             {/* Menu bên phải */}

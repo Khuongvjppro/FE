@@ -1,21 +1,30 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { CartProvider } from "./contexts/CartContext";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
-import HomePage from "./pages/HomePage";
-import ProductsPage from "./pages/ProductsPage";
-import ProductDetail from "./pages/ProductDetail";
-import NewsPage from "./pages/NewsPage";
-import Cart from "./pages/Cart";
-import OrderProcessPage from "./pages/OrderProcessPage";
-import PaymentMethodsPage from "./pages/PaymentMethodsPage";
-import Login from "./pages/Login";
-import AboutPage from "./pages/AboutPage";
+import LoadingSpinner from "./components/LoadingSpinner";
 import { ROUTES } from "./constants";
-import OrderConfirm from "./pages/OrderConfirm";
-import CheckoutInfo from "./pages/CheckoutInfo";
-import CheckoutConfirm from "./pages/CheckoutConfirm";
-import BulkOrder from "./pages/BulkOrder";
 import "./styles/global.css";
+
+// Lazy load pages
+const HomePage = lazy(() => import("./pages/HomePage"));
+const ProductsPage = lazy(() => import("./pages/ProductsPage"));
+const ProductDetail = lazy(() => import("./pages/ProductDetail"));
+const NewsPage = lazy(() => import("./pages/NewsPage"));
+const Cart = lazy(() => import("./pages/Cart"));
+const OrderProcessPage = lazy(() => import("./pages/OrderProcessPage"));
+const PaymentMethodsPage = lazy(() => import("./pages/PaymentMethodsPage"));
+const Login = lazy(() => import("./pages/Login"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const OrderConfirm = lazy(() => import("./pages/OrderConfirm"));
+const CheckoutInfo = lazy(() => import("./pages/CheckoutInfo"));
+const CheckoutConfirm = lazy(() => import("./pages/CheckoutConfirm"));
+const BulkOrder = lazy(() => import("./pages/BulkOrder"));
 
 function RequireAuth({ children }) {
   const { user } = useAuth();
@@ -30,64 +39,66 @@ function App() {
     <AuthProvider>
       <CartProvider>
         <Router>
-          <Routes>
-            <Route path={ROUTES.HOME} element={<HomePage />} />
-            <Route path={ROUTES.LOGIN} element={<Login />} />
-            <Route path={ROUTES.ABOUT} element={<AboutPage />} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path={ROUTES.BULK_ORDER} element={<BulkOrder />} />
-            <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
-            <Route path={ROUTES.NEWS} element={<NewsPage />} />
-            <Route path={ROUTES.CART} element={<Cart />} />
-            <Route
-              path={ROUTES.ORDER_PROCESS}
-              element={
-                <RequireAuth>
-                  <OrderProcessPage />
-                </RequireAuth>
-              }
-            />
-            <Route
-              path="/order-confirm"
-              element={
-                <RequireAuth>
-                  <OrderConfirm />
-                </RequireAuth>
-              }
-            />
-            <Route
-              path={ROUTES.CONSULTATION_ORDER_PROCESS}
-              element={
-                <RequireAuth>
-                  <OrderProcessPage />
-                </RequireAuth>
-              }
-            />
-            <Route
-              path={ROUTES.PAYMENT_METHODS}
-              element={<PaymentMethodsPage />}
-            />
-            <Route
-              path={ROUTES.CONSULTATION_PAYMENT_METHODS}
-              element={<PaymentMethodsPage />}
-            />
-            <Route
-              path="/checkout-info"
-              element={
-                <RequireAuth>
-                  <CheckoutInfo />
-                </RequireAuth>
-              }
-            />
-            <Route
-              path="/checkout-confirm"
-              element={
-                <RequireAuth>
-                  <CheckoutConfirm />
-                </RequireAuth>
-              }
-            />
-          </Routes>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path={ROUTES.HOME} element={<HomePage />} />
+              <Route path={ROUTES.LOGIN} element={<Login />} />
+              <Route path={ROUTES.ABOUT} element={<AboutPage />} />
+              <Route path="/products" element={<ProductsPage />} />
+              <Route path={ROUTES.BULK_ORDER} element={<BulkOrder />} />
+              <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
+              <Route path={ROUTES.NEWS} element={<NewsPage />} />
+              <Route path={ROUTES.CART} element={<Cart />} />
+              <Route
+                path={ROUTES.ORDER_PROCESS}
+                element={
+                  <RequireAuth>
+                    <OrderProcessPage />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="/order-confirm"
+                element={
+                  <RequireAuth>
+                    <OrderConfirm />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path={ROUTES.CONSULTATION_ORDER_PROCESS}
+                element={
+                  <RequireAuth>
+                    <OrderProcessPage />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path={ROUTES.PAYMENT_METHODS}
+                element={<PaymentMethodsPage />}
+              />
+              <Route
+                path={ROUTES.CONSULTATION_PAYMENT_METHODS}
+                element={<PaymentMethodsPage />}
+              />
+              <Route
+                path="/checkout-info"
+                element={
+                  <RequireAuth>
+                    <CheckoutInfo />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="/checkout-confirm"
+                element={
+                  <RequireAuth>
+                    <CheckoutConfirm />
+                  </RequireAuth>
+                }
+              />
+            </Routes>
+          </Suspense>
         </Router>
       </CartProvider>
     </AuthProvider>
