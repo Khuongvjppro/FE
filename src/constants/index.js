@@ -26,6 +26,7 @@ export const ROUTES = {
   CONSULTATION_PAYMENT_METHODS: "/consultation/payment-methods",
   FABRIC_MATERIAL: "/tu-van/chat-lieu-vai",
   POLICY_GIFT: "/tu-van/chinh-sach-qua-tang",
+  FAQ: "/tu-van/cau-hoi-thuong-gap",
 };
 
 // Category mappings
