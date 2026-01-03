@@ -17,50 +17,56 @@ function NewsPage() {
     {
       id: 1,
       title: 'Panda Uniform 8 năm kiến tạo đồng phục "Xịn Mịn"',
-      image:
-        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop",
+      image: "/images/news-logo.jpg",
       category: "featured",
-      date: "2024-01-15",
+      date: "2024-12-20",
+      excerpt:
+        "Hành trình 8 năm xây dựng thương hiệu đồng phục chất lượng cao, mang đến giá trị tốt nhất cho khách hàng.",
     },
     {
       id: 2,
       title: "Tổng hợp mẫu logo áo lớp chuyên toán nổi bật nhất hiện nay",
-      image:
-        "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=400&fit=crop",
+      image: "/images/news-logoMath.jpg",
       category: "featured",
-      date: "2024-01-10",
+      date: "2024-12-15",
+      excerpt:
+        "Những thiết kế logo độc đáo, sáng tạo dành riêng cho các lớp chuyên toán, thể hiện đam mê và tài năng.",
     },
     {
       id: 3,
-      title: "Top 15 màu áo lớp đẹp được yêu thích nhất hiện nay",
-      image:
-        "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&h=400&fit=crop",
+      title: "Bộ sưu tập áo lớp mới nhất - Phong cách trẻ trung",
+      image: "/images/news-shirt.jpg",
       category: "new-product",
-      date: "2024-01-08",
+      date: "2024-12-10",
+      excerpt:
+        "Khám phá những mẫu áo lớp với kiểu dáng hiện đại, chất liệu cao cấp, phù hợp với mọi phong cách.",
     },
     {
       id: 4,
-      title: "10+ mẫu logo áo lớp chuyên hóa không nên bỏ lỡ",
-      image:
-        "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=400&fit=crop",
-      category: "new-product",
-      date: "2024-01-05",
+      title: "Thành tích đáng tự hào của Panda Uniform",
+      image: "/images/news-achievement.jpg",
+      category: "featured",
+      date: "2024-12-05",
+      excerpt:
+        "Chặng đường phát triển với những thành tựu ấn tượng và sự tin tưởng từ hàng ngàn khách hàng.",
     },
     {
       id: 5,
-      title: "Khuyến mãi đặc biệt mùa tựu trường",
-      image:
-        "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&h=400&fit=crop",
-      category: "promotion",
-      date: "2024-01-03",
+      title: "Slogan sáng tạo cho áo lớp - Tạo dấu ấn riêng",
+      image: "/images/news-slogan.jpg",
+      category: "new-product",
+      date: "2024-12-01",
+      excerpt:
+        "Top các slogan hay, ý nghĩa giúp lớp bạn nổi bật và để lại ấn tượng khó quên.",
     },
     {
       id: 6,
-      title: "BST đồng phục mới - Xu hướng 2024",
-      image:
-        "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=400&fit=crop",
+      title: "Áo lớp dành cho giáo viên - Phong cách chuyên nghiệp",
+      image: "/images/news-teacherShirt.jpg",
       category: "new-product",
-      date: "2024-01-01",
+      date: "2024-11-28",
+      excerpt:
+        "Thiết kế áo lớp đặc biệt cho giáo viên, kết hợp giữa sự lịch lãm và tính đồng đội.",
     },
   ];
 

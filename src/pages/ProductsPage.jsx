@@ -11,10 +11,12 @@ import "./ProductsPage.css";
 function ProductsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const categoryFromUrl = searchParams.get("category") || "all";
+  const subcategoryFromUrl = searchParams.get("subcategory") || null;
   const [selectedCategory, setSelectedCategory] = useState(categoryFromUrl);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [expandedCategories, setExpandedCategories] = useState({});
-  const [selectedSubcategory, setSelectedSubcategory] = useState(null);
+  const [selectedSubcategory, setSelectedSubcategory] =
+    useState(subcategoryFromUrl);
   const [searchTerm, setSearchTerm] = useState("");
 
   const { data: products, loading } = useFetch(
@@ -22,11 +24,17 @@ function ProductsPage() {
     []
   );
 
-  // Update selectedCategory when URL changes
+  // Update selectedCategory and subcategory when URL changes
   useEffect(() => {
     const categoryParam = searchParams.get("category");
+    const subcategoryParam = searchParams.get("subcategory");
     if (categoryParam) {
       setSelectedCategory(categoryParam);
+    }
+    if (subcategoryParam) {
+      setSelectedSubcategory(subcategoryParam);
+    } else {
+      setSelectedSubcategory(null);
     }
   }, [searchParams]);
 

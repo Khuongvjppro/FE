@@ -7,11 +7,13 @@ import {
   FiPlus,
   FiShoppingBag,
   FiArrowLeft,
+  FiCheck,
 } from "react-icons/fi";
 import "./Cart.css";
 
 function Cart() {
-  const { cart, removeFromCart, updateQuantity, getTotalPrice, clearCart } = useCart();
+  const { cart, removeFromCart, updateQuantity, getTotalPrice, clearCart } =
+    useCart();
   const { user } = useAuth();
   const navigate = useNavigate();
 
@@ -165,15 +167,15 @@ function Cart() {
 
             <div className="cart-benefits">
               <div className="benefit-item">
-                <span className="benefit-icon">✓</span>
+                <FiCheck className="benefit-icon" />
                 <span>Miễn phí vận chuyển với đơn hàng trên 500.000đ</span>
               </div>
               <div className="benefit-item">
-                <span className="benefit-icon">✓</span>
+                <FiCheck className="benefit-icon" />
                 <span>Đổi trả trong vòng 7 ngày</span>
               </div>
               <div className="benefit-item">
-                <span className="benefit-icon">✓</span>
+                <FiCheck className="benefit-icon" />
                 <span>Thanh toán an toàn & bảo mật</span>
               </div>
             </div>
