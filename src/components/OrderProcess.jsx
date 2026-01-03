@@ -1,4 +1,11 @@
-import { FiPhone, FiShoppingBag, FiClipboard, FiUsers, FiPackage, FiThumbsUp } from "react-icons/fi";
+import {
+  FiPhone,
+  FiShoppingBag,
+  FiClipboard,
+  FiUsers,
+  FiPackage,
+  FiThumbsUp,
+} from "react-icons/fi";
 import "./OrderProcess.css";
 
 function OrderProcess() {

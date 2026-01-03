@@ -12,7 +12,8 @@ import {
 import "./Cart.css";
 
 function Cart() {
-  const { cart, removeFromCart, updateQuantity, getTotalPrice, clearCart } = useCart();
+  const { cart, removeFromCart, updateQuantity, getTotalPrice, clearCart } =
+    useCart();
   const { user } = useAuth();
   const navigate = useNavigate();
 

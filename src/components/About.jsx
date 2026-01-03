@@ -51,19 +51,27 @@ function About() {
 
               <div className="about-highlights">
                 <div className="highlight-item">
-                  <div className="highlight-icon"><FiCheck /></div>
+                  <div className="highlight-icon">
+                    <FiCheck />
+                  </div>
                   <span>Áo lớp, áo nhóm, đồng phục CLB</span>
                 </div>
                 <div className="highlight-item">
-                  <div className="highlight-icon"><FiCheck /></div>
+                  <div className="highlight-icon">
+                    <FiCheck />
+                  </div>
                   <span>Đồng phục họp lớp</span>
                 </div>
                 <div className="highlight-item">
-                  <div className="highlight-icon"><FiCheck /></div>
+                  <div className="highlight-icon">
+                    <FiCheck />
+                  </div>
                   <span>Áo phông, Polo, Sơ mi</span>
                 </div>
                 <div className="highlight-item">
-                  <div className="highlight-icon"><FiCheck /></div>
+                  <div className="highlight-icon">
+                    <FiCheck />
+                  </div>
                   <span>Quần áu – chân váy</span>
                 </div>
               </div>
