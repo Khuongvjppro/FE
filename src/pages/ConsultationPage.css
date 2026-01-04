@@ -1,0 +1,91 @@
+.consultation-page {
+  min-height: calc(100vh - 80px);
+  background: #f8f9fa; /* keeps common background consistent */
+}
+
+.consultation-content .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 160px);
+  padding: 40px 20px;
+}
+
+.consultation-blank-box {
+  width: 100%;
+  max-width: 1100px;
+  height: 80vh;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+@media (max-width: 768px) {
+  .consultation-blank-box {
+    height: 70vh;
+    padding: 12px;
+  }
+}
+
+/* New styles to match screenshot */
+.consultation-hero {
+  background: linear-gradient(135deg, #ff7043 0%, #ff9a6b 100%);
+  padding: 48px 0 60px;
+  color: white;
+  position: relative;
+}
+
+.consultation-hero .hero-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.consultation-badge {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.consultation-hero .breadcrumb {
+  color: rgba(255,255,255,0.9);
+  margin-top: 6px;
+}
+
+.consultation-hashtag {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.consultation-center-card {
+  width: 100%;
+  max-width: 780px;
+  margin: 60px auto 120px;
+  padding: 28px 36px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.consultation-section-title {
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.consultation-card-text p {
+  margin: 8px 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .consultation-center-card { margin: 30px 12px 60px; }
+}
