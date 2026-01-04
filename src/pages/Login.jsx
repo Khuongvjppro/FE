@@ -41,10 +41,19 @@ function Login() {
       if (found) {
         // Đăng nhập thành công
         login(found); // Lưu user vào context
-        setSuccess("Đăng nhập thành công! Xin chào " + found.name);
+        
+        const params = new URLSearchParams(location.search);
+        const redirect = params.get("redirect");
+        const pendingCheckout = sessionStorage.getItem('pendingCheckout');
+        
+        if (pendingCheckout && redirect === '/checkout-info') {
+          setSuccess("Đăng nhập thành công! Đang chuyển đến trang thanh toán...");
+          sessionStorage.removeItem('pendingCheckout');
+        } else {
+          setSuccess("Đăng nhập thành công! Xin chào " + found.name);
+        }
+        
         setTimeout(() => {
-          const params = new URLSearchParams(location.search);
-          const redirect = params.get("redirect");
           navigate(redirect || ROUTES.HOME);
         }, 1200);
       } else {

@@ -1,91 +1,526 @@
 .consultation-page {
   min-height: calc(100vh - 80px);
-  background: #f8f9fa; /* keeps common background consistent */
+  background: #f8f9fa;
 }
 
-.consultation-content .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 160px);
-  padding: 40px 20px;
+/* Hero Section */
+.consultation-hero {
+  background: linear-gradient(135deg, #ff7043 0%, #ff9a6b 100%);
+  padding: 80px 0 100px;
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
 
-.consultation-blank-box {
-  width: 100%;
-  max-width: 1100px;
-  height: 80vh;
-  border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
-  border: 1px solid rgba(0,0,0,0.04);
+.consultation-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.03)"/></svg>');
+  animation: float 20s infinite linear;
 }
 
-@media (max-width: 768px) {
-  .consultation-blank-box {
-    height: 70vh;
-    padding: 12px;
+@keyframes float {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(-100px) translateX(100px);
   }
 }
 
-/* New styles to match screenshot */
-.consultation-hero {
-  background: linear-gradient(135deg, #ff7043 0%, #ff9a6b 100%);
-  padding: 48px 0 60px;
-  color: white;
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  animation: slideInDown 0.6s ease-out 0.2s both;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  animation: slideInLeft 0.8s ease-out 0.3s both;
+}
+
+.hero-title .highlight {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
-.consultation-hero .hero-inner {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.consultation-badge {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.consultation-hero .breadcrumb {
-  color: rgba(255,255,255,0.9);
-  margin-top: 6px;
-}
-
-.consultation-hashtag {
+.hero-title .highlight::after {
+  content: "";
   position: absolute;
-  bottom: 16px;
-  left: 16px;
-  font-size: 13px;
-  opacity: 0.9;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
 }
 
-.consultation-center-card {
+.hero-description {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  opacity: 0.95;
+  animation: slideInLeft 0.8s ease-out 0.4s both;
+}
+
+.hero-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  animation: slideInLeft 0.6s ease-out both;
+}
+
+.feature-item:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.feature-item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.feature-item:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+.feature-item .icon {
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.hero-image {
+  position: relative;
+  animation: slideInRight 0.8s ease-out 0.4s both;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.image-decoration {
+  position: absolute;
   width: 100%;
-  max-width: 780px;
-  margin: 60px auto 120px;
-  padding: 28px 36px;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 200px;
+  height: 200px;
+  top: 20%;
+  left: -10%;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  right: -5%;
+  animation-delay: 1s;
+}
+
+.circle-3 {
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  right: 30%;
+  animation-delay: 2s;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.2;
+  }
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.4s ease;
+  animation: scaleIn 0.6s ease-out 0.8s both;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.contact-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  font-size: 48px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-value {
+  font-size: 28px;
+  color: #ff7043;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Content Section */
+.consultation-content {
+  padding: 60px 0 80px;
+}
+
+.consultation-intro {
   text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
 }
 
 .consultation-section-title {
-  font-size: 20px;
+  font-size: 32px;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.consultation-card-text p {
-  margin: 8px 0;
-  color: #666;
+.consultation-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.consultation-note {
   font-size: 14px;
+  color: #777;
   line-height: 1.6;
+  font-style: italic;
+}
+
+/* Form Container */
+.consultation-form-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Form Styles */
+.consultation-form {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s;
+  background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ff7043;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 112, 67, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #ff7043 0%, #ff9a6b 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 112, 67, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Contact Info Sidebar */
+.contact-info {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 100px;
+}
+
+.contact-info h3 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.contact-item:hover {
+  background: #fff3f0;
+  transform: translateX(4px);
+}
+
+.contact-item .icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.contact-item strong {
+  display: block;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .consultation-form-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-info {
+    position: static;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
-  .consultation-center-card { margin: 30px 12px 60px; }
+  .consultation-hero {
+    padding: 60px 0 80px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .consultation-content {
+    padding: 40px 16px 60px;
+  }
+
+  .consultation-section-title {
+    font-size: 24px;
+  }
+
+  .consultation-description {
+    font-size: 14px;
+  }
+
+  .consultation-form {
+    padding: 24px;
+  }
+
+  .contact-info {
+    padding: 24px;
+  }
+
+  .contact-item {
+    padding: 12px;
+  }
+
+  .contact-card {
+    padding: 24px;
+  }
+
+  .card-value {
+    font-size: 24px;
+  }
 }

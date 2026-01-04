@@ -22,7 +22,8 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -149,7 +150,7 @@
 }
 
 .thumbnail::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0);
@@ -532,7 +533,7 @@
 }
 
 .tab-btn::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -589,7 +590,7 @@
 }
 
 .tab-panel li::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: #27ae60;
@@ -834,9 +835,6 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
   }
-}
-  gap: 15px;
-  margin-top: 10px;
 }
 
 .btn-quote,

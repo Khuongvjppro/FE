@@ -150,6 +150,8 @@ function Cart() {
                 className="checkout-btn"
                 onClick={() => {
                   if (!user) {
+                    // Lưu thông tin giỏ hàng trước khi chuyển sang login
+                    sessionStorage.setItem('pendingCheckout', 'true');
                     navigate("/login?redirect=/checkout-info");
                   } else {
                     navigate("/checkout-info");
@@ -158,6 +160,12 @@ function Cart() {
               >
                 Tiến hành thanh toán
               </button>
+              
+              {!user && (
+                <div className="login-notice">
+                  <span>💡 Vui lòng đăng nhập để tiếp tục thanh toán</span>
+                </div>
+              )}
 
               <Link to="/" className="continue-link">
                 <FiArrowLeft /> Tiếp tục mua sắm
