@@ -12,69 +12,69 @@ function FAQPage() {
   const faqData = [
     {
       id: 1,
-      category: "size",
+      category: "store",
       question: "Lớp em thích mặc rộng thì chọn size như thế nào á?",
-      answer: "Nếu lớp mình thích mặc form rộng thì hãy tăng 2 size so với bảng size mà Panda cung cấp phù hợp nhất. Hiện tại Panda cũng ra mắt form áo oversize trong trang bộ sưu tập của mình để các bạn có thể tham khảo thêm để chọn được mẫu áo phù hợp nhất nhé. Ngoài ra lớp mình cũng có thể tìm tin trên Panda được hỗ trợ tốt nhất nhé."
+      answer: "Nếu lớp mình thích mặc form rộng thì hãy tăng 2 size so với bảng size mà Panda cung cấp nha. Hiện tại Panda cũng ra mắt form áo oversize form rộng thời trang, lớp mình có thể tham khảo thêm để chọn được một chiếc áo phù hợp nhất nhé. Ngoài ra lớp mình cũng có thể nhắn tin cho Panda được hỗ trợ tốt nhất nhé."
     },
     {
       id: 2,
-      category: "material",
+      category: "warranty",
       question: "Vải áo có hây bi đão không á?",
-      answer: "Chất liệu vải mà Panda sử dụng đều là những loại vải cao cấp, không hây bi, co giãn tốt, thấm hút mồ hôi tốt và thoáng mát. Panda cam kết chất lượng vải đạt chuẩn cho mọi sản phẩm."
+      answer: "Vải áo của Panda được pha thêm sợi co giãn spandex nên có độ co giãn cực tốt, không bị đão như các chất vải bình thường. Tuy nhiên để có thể giữ gin chiếc áo tốt hơn thì hãy giặt áo bằng tay và băng nước lạnh các em nhé!!"
     },
     {
       id: 3,
-      category: "design",
-      question: "Lớp em muốn làm áo nhưng lại không có ý tưởng về thì làm thế nào á?",
-      answer: "Em ở tận trong Cà Mau thì phí vận chuyển có lớp tính như thế nào á? Panda sẽ hỗ trợ miễn phí thiết kế cho lớp em. Đội ngũ thiết kế của Panda sẽ tư vấn và đưa ra những ý tưởng phù hợp nhất với lớp mình. Em chỉ cần cung cấp thông tin cơ bản về lớp và yêu cầu, Panda sẽ lo hết."
+      category: "policy",
+      question: "Lớp em muốn làm áo nhưng lại không có ý tưởng gì thì làm thế nào á?",
+      answer: "Hiện tại Panda Uniform đang có chương trình miễn phí thiết kế nên nếu lớp mình chưa có ý tưởng gì thì cũng sẽ được các anh chị tư vấn và thiết kế đến khi ứng ý mới thôi nhé! Ngoài ra thì Panda cũng có rất nhiều những bộ thiết kế mẫu cực kì đẹp và bắt mắt cho lớp tham khảo thêm. Vậy còn chờ gì mà chưa liên hệ Panda ngay nào!"
     },
     {
       id: 4,
-      category: "shipping",
-      question: "Em ở tận trong Cà Mau thì phí vận chuyển có lớp tính như thế nào á?",
-      answer: "Panda miễn phí vận chuyển cho tất cả các đơn hàng trên toàn quốc. Dù em ở đâu, Cà Mau hay bất kỳ tỉnh thành nào, Panda đều giao hàng miễn phí cho em nhé."
+      category: "policy",
+      question: "Em ở tận trong Cà Mau thì phí vận chuyển áo lớp tính như thế nào á?",
+      answer: "Panda Uniform miễn phí vận chuyển áo lớp trên toàn quốc, nên các em ở xa cứ yên tâm đặt áo nha"
     },
     {
       id: 5,
-      category: "print",
+      category: "warranty",
       question: "Hình in bên mình có dễ bị bong không?",
-      answer: "Hình in của Panda sử dụng công nghệ in hiện đại, chất lượng cao, đảm bảo độ bền màu và không bị bong tróc sau nhiều lần giặt. Panda cam kết chất lượng in ấn đạt chuẩn và bền đẹp theo thời gian."
+      answer: "Mỗi chiếc áo của Panda Uniform đều được sử dụng mực in chất lượng cao nên sẽ không bong nhé! Tuy nhiên các em nhớ bảo quản áo theo đúng hướng dẫn để giữ gin tuổi thọ của chiếc áo thật lâu nha"
     },
     {
       id: 6,
-      category: "material",
+      category: "policy",
       question: "Em muốn xem chất liệu bên mình thì làm thế nào á?",
-      answer: "Em có thể ghé trực tiếp văn phòng/xưởng của Panda để xem và sờ trực tiếp chất liệu vải. Hoặc em có thể xem chi tiết các loại vải trên website tại mục 'Tư vấn > Chất liệu vải' với đầy đủ thông tin và hình ảnh."
+      answer: "Panda Uniform có hỗ trợ gửi áo mẫu về tận noi để lớp mình có thể test chất vải thoải mái em nhé. Nhanh tay đăng ký nhận áo mẫu thôi nào lớp mình ơi!"
     },
     {
       id: 7,
-      category: "size",
+      category: "store",
       question: "Lớp em có bạn nặng 120kg thì cỡ size nào vừa không á?",
-      answer: "Với bạn nặng 120kg, Panda khuyên nên chọn size 6XL hoặc có thể may đo theo số đo cụ thể. Panda có thể hỗ trợ may đo riêng theo yêu cầu để đảm bảo áo vừa vặn và thoải mái nhất cho bạn."
+      answer: "Panda có size áo từ S-6XL cho các bạn nặng tới 150kg nên các bạn yên tâm là vẫn có size mặc vừa nha"
     },
     {
       id: 8,
       category: "process",
       question: "Thời gian làm áo là bao lâu?",
-      answer: "Thời gian sản xuất áo đồng phục thường từ 10-15 ngày làm việc kể từ khi xác nhận đơn hàng và thiết kế. Tuy nhiên, tùy vào số lượng và độ phức tạp của thiết kế mà thời gian có thể thay đổi. Panda sẽ thông báo cụ thể cho từng đơn hàng."
+      answer: "Thời gian sản xuất trung bình của Panda là 7-10 ngày (không tính chủ nhật và ngày lễ) vì vậy Panda đảm bảo được cho khách hàng những đơn hàng gấp cần nhanh. Nhưng lớp mình đừng quên đặt áo sớm để nhận được nhiều quà tặng ưu đãi từ Panda đó nha!"
     },
     {
       id: 9,
-      category: "process",
+      category: "design",
       question: "Số lượng bao nhiêu trở lên thì được làm áo?",
-      answer: "Panda nhận đơn hàng từ 15 áo trở lên. Với số lượng từ 15-30 áo, Panda đã có thể hỗ trợ sản xuất với giá ưu đãi. Số lượng càng nhiều thì giá càng tốt nhé."
+      answer: "Với sản phẩm áo bóng cháy, áo gió Panda nhận sản xuất từ 20 chiếc trở lên, với các mẫu áo khác từ 10 chiếc trở lên"
     },
     {
       id: 10,
-      category: "price",
+      category: "design",
       question: "Giá áo đồng phục ở Panda như thế nào?",
-      answer: "Giá áo đồng phục tại Panda dao động từ 120.000đ - 350.000đ/áo tùy vào chất liệu vải, kiểu dáng, số lượng và phương thức in. Để biết giá chính xác, em hãy liên hệ trực tiếp với Panda để được tư vấn và báo giá chi tiết nhất nhé."
+      answer: "Giá áo đồng phục tại Panda Uniform sẽ tùy thuộc vào số lượng, loại vải, số màu trong hình in, kiểu dáng, các chi tiết may thêm. Để biết thêm thông tin chi tiết, các bạn có thể liên hệ với Panda trực tiếp qua hotline: 1900 8697 hoặc liên hệ Fanpage để được hỗ trợ nhanh nhất nhé."
     },
     {
       id: 11,
-      category: "warranty",
+      category: "policy",
       question: "Trường hợp áo bị lỗi khi nhận hàng xử lý ra sao?",
-      answer: "Nếu áo có lỗi từ phía sản xuất (lỗi kỹ thuật, lỗi in ấn, sai size...), Panda sẽ chịu trách nhiệm đổi mới hoàn toàn miễn phí. Trong vòng 7 ngày kể từ khi nhận hàng, nếu phát hiện lỗi, vui lòng liên hệ ngay với Panda để được hỗ trợ xử lý nhanh nhất."
+      answer: "Với các trường hợp sản phẩm bị lỗi trong quy trình sản xuất, in sai màu, không đúng thiết kế đã chốt, chúng mình hãy phản hồi trực tiếp với nhân viên kinh doanh hoặc gọi tới hotline để nhận được những phương án giải quyết hợp lý nhé!"
     }
   ];
 
@@ -104,15 +104,12 @@ function FAQPage() {
         {/* Hero Banner */}
         <div className="faq-hero">
           <div className="container">
+            <div className="faq-badge">Q&A</div>
             <div className="breadcrumb">
               <Link to="/">Trang chủ</Link>
               <span className="separator">›</span>
-              <Link to="/tu-van">Tư vấn</Link>
-              <span className="separator">›</span>
-              <span>Câu hỏi thường gặp</span>
+              <span>Q&A</span>
             </div>
-            <h1 className="faq-hero-title">Câu hỏi thường gặp</h1>
-            <p className="faq-subtitle">Hỏi - đáp và trả lời</p>
             
             {/* Search Box */}
             <div className="faq-search">
@@ -132,27 +129,9 @@ function FAQPage() {
         <div className="faq-content">
           <div className="container">
             <div className="faq-layout">
-              {/* Sidebar */}
-              <aside className="faq-sidebar">
-                <h3>Danh mục câu hỏi</h3>
-                {categories.map(category => (
-                  <button
-                    key={category.id}
-                    className={`sidebar-item ${activeSection === category.id ? "active" : ""}`}
-                    onClick={() => setActiveSection(category.id)}
-                  >
-                    <span className="category-icon">{category.icon}</span>
-                    {category.label}
-                  </button>
-                ))}
-              </aside>
-
-              {/* FAQ List */}
+              {/* FAQ List - Left Side */}
               <div className="faq-list">
-                <h2 className="faq-section-title">
-                  {activeSection === "all" ? "Tất cả câu hỏi" : categories.find(c => c.id === activeSection)?.label}
-                </h2>
-                
+
                 {filteredFAQs.length > 0 ? (
                   <div className="faq-items">
                     {filteredFAQs.map(faq => (
@@ -181,6 +160,22 @@ function FAQPage() {
                   </div>
                 )}
               </div>
+
+              {/* Sidebar - Right Side */}
+              <aside className="faq-sidebar">
+                <h3>Danh mục câu hỏi</h3>
+                <div className="sidebar-items">
+                  {categories.map(category => (
+                    <button
+                      key={category.id}
+                      className={`sidebar-item ${activeSection === category.id ? "active" : ""}`}
+                      onClick={() => setActiveSection(category.id)}
+                    >
+                      {category.label}
+                    </button>
+                  ))}
+                </div>
+              </aside>
             </div>
           </div>
         </div>
