@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import { FaSearch, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import "../styles/consultation-common.css";
 import "./FAQPage.css";
 
 function FAQPage() {
@@ -102,9 +103,9 @@ function FAQPage() {
     <MainLayout>
       <div className="faq-page">
         {/* Hero Banner */}
-        <div className="faq-hero">
+        <div className="consultation-hero">
           <div className="container">
-            <div className="faq-badge">Q&A</div>
+            <div className="consultation-badge">Q&A</div>
             <div className="breadcrumb">
               <Link to="/">Trang chủ</Link>
               <span className="separator">›</span>
@@ -122,7 +123,7 @@ function FAQPage() {
               />
             </div>
           </div>
-          <div className="faq-hashtag">#dongphucpanda</div>
+          <div className="consultation-hashtag">#dongphucpanda</div>
         </div>
 
         {/* FAQ Content */}

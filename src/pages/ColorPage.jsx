@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
+import "../styles/consultation-common.css";
 import "./ColorPage.css";
 
 function ColorPage() {
@@ -89,15 +91,21 @@ function ColorPage() {
     <MainLayout>
       <div className="color-page">
         {/* Hero Banner */}
-        <div className="color-hero">
-          <div className="hero-overlay"></div>
-          <div className="hero-content">
-            <h1 className="hero-title">Bảng màu</h1>
+        <div className="consultation-hero">
+          <div className="container">
+            <div className="consultation-badge">BẢNG MÀU</div>
             <div className="breadcrumb">
-              <a href="/">Trang chủ</a>
+              <Link to="/">Trang chủ</Link>
               <span className="separator">›</span>
-              <span className="current">Bảng màu</span>
+              <span>Bảng màu</span>
             </div>
+          </div>
+          <div className="consultation-hashtag">#dongphucpanda</div>
+        </div>
+
+        {/* Main Content */}
+        <div className="consultation-content">
+          <div className="container">
             <p className="hero-description">
               Panda Uniform là đơn vị cung cấp áo đồng phục chất lượng hàng đầu Việt Nam mang lại trải nghiệm tuyệt vời cho khách hàng về sản phẩm và dịch vụ. Dưới đây, Panda Uniform xin thấy được mỗi bảng màu của những chất vải khác nhau.
             </p>

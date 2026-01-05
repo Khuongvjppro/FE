@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import OrderProcess from "../components/OrderProcess";
+import "../styles/consultation-common.css";
 import "./OrderProcessPage.css";
 
 function OrderProcessPage() {
@@ -7,23 +9,22 @@ function OrderProcessPage() {
     <MainLayout>
       <div className="order-process-page">
         {/* Hero Banner */}
-        <div className="order-process-hero">
-          <div className="hero-overlay"></div>
-          <div className="hero-content">
-            <h1 className="hero-title">Quy trình đặt áo</h1>
+        <div className="consultation-hero">
+          <div className="container">
+            <div className="consultation-badge">QUY TRÌNH</div>
             <div className="breadcrumb">
-              <a href="/">Trang chủ</a>
+              <Link to="/">Trang chủ</Link>
               <span className="separator">›</span>
-              <a href="/tu-van">Tư vấn</a>
-              <span className="separator">›</span>
-              <span className="current">Quy trình đặt áo</span>
+              <span>Quy trình đặt áo</span>
             </div>
-            <div className="hero-hashtag">#dongphucpanda</div>
           </div>
+          <div className="consultation-hashtag">#dongphucpanda</div>
         </div>
 
         {/* Order Process Content */}
-        <OrderProcess />
+        <div className="consultation-content">
+          <OrderProcess />
+        </div>
       </div>
     </MainLayout>
   );

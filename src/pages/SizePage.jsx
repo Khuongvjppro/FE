@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
+import "../styles/consultation-common.css";
 import "./SizePage.css";
 
 function SizePage() {
@@ -101,26 +103,20 @@ function SizePage() {
     <MainLayout>
       <div className="size-page">
         {/* Hero Banner */}
-        <div className="size-hero">
-          <div className="hero-overlay"></div>
-          <div className="hero-content">
-            <h1 className="hero-title">Bảng Size</h1>
+        <div className="consultation-hero">
+          <div className="container">
+            <div className="consultation-badge">SIZE ÁO</div>
             <div className="breadcrumb">
-              <a href="/">Trang chủ</a>
+              <Link to="/">Trang chủ</Link>
               <span className="separator">›</span>
-              <a href="/tu-van">Tư vấn</a>
-              <span className="separator">›</span>
-              <span className="current">Bảng Size</span>
+              <span>Size Áo</span>
             </div>
-            <p className="hero-description">
-              Panda Uniform cung cấp đến khách hàng bảng size nhằm thuận tiện trong quá trình đặt áo và có những trải nghiệm tốt nhất khi sử dụng. Dưới đây là bảng size áo/quần/váy tại Panda Uniform.
-            </p>
-            <button className="contact-btn-hero">Liên hệ ngay</button>
           </div>
+          <div className="consultation-hashtag">#dongphucpanda</div>
         </div>
 
         {/* Main Content */}
-        <div className="size-content">
+        <div className="consultation-content">
           <div className="container">
             <div className="size-layout">
               {/* Sidebar */}
