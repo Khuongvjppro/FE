@@ -29,11 +29,14 @@ function Cart() {
       <div className="cart-page">
         <div className="container">
           <div className="empty-cart">
-            <FiShoppingBag className="empty-cart-icon" />
+            <div className="empty-cart-icon-wrapper">
+              <FiShoppingBag className="empty-cart-icon" />
+            </div>
             <h2>Giỏ hàng trống</h2>
             <p>Bạn chưa có sản phẩm nào trong giỏ hàng</p>
-            <Link to="/" className="continue-shopping-btn">
-              <FiArrowLeft /> Tiếp tục mua sắm
+            <Link to="/products" className="continue-shopping-btn">
+              <FiArrowLeft size={18} />
+              Tiếp tục mua sắm
             </Link>
           </div>
         </div>
