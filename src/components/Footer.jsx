@@ -34,15 +34,12 @@ function Footer() {
               <h3 className="footer-title">LIÊN HỆ</h3>
               <ul className="footer-contact">
                 <li>
-                  <span className="contact-icon">📞</span>
                   <a href="tel:19008697">1900 8697</a>
                 </li>
                 <li>
-                  <span className="contact-icon">✉️</span>
                   <a href="mailto:dongphucsangxinmin@gmail.com">dongphucsangxinmin@gmail.com</a>
                 </li>
                 <li>
-                  <span className="contact-icon">📍</span>
                   <span>Số 25, ngách 2, ngõ 208 Trần Cung, phường Nghĩa Đô, TP Hà Nội</span>
                 </li>
               </ul>
@@ -51,20 +48,20 @@ function Footer() {
             <div className="footer-column">
               <h3 className="footer-title">MẠNG XÃ HỘI</h3>
               <div className="social-links">
-                <a href="https://www.facebook.com/pandauniform" target="_blank" rel="noopener noreferrer" className="social-link facebook">
-                  <i className="fab fa-facebook-f"></i>
+                <a href="https://www.facebook.com/pandauniform" target="_blank" rel="noopener noreferrer" className="social-link">
+                  Facebook
                 </a>
-                <a href="https://www.instagram.com/panda_uniform" target="_blank" rel="noopener noreferrer" className="social-link instagram">
-                  <i className="fab fa-instagram"></i>
+                <a href="https://www.instagram.com/panda_uniform" target="_blank" rel="noopener noreferrer" className="social-link">
+                  Instagram
                 </a>
-                <a href="https://www.tiktok.com/@dilamkieu.pandauniform" target="_blank" rel="noopener noreferrer" className="social-link tiktok">
-                  <i className="fab fa-tiktok"></i>
+                <a href="https://www.tiktok.com/@dilamkieu.pandauniform" target="_blank" rel="noopener noreferrer" className="social-link">
+                  TikTok
                 </a>
-                <a href="https://www.youtube.com/pandauniform" target="_blank" rel="noopener noreferrer" className="social-link youtube">
-                  <i className="fab fa-youtube"></i>
+                <a href="https://www.youtube.com/pandauniform" target="_blank" rel="noopener noreferrer" className="social-link">
+                  Youtube
                 </a>
-                <a href="http://zalo.me/pandauniform" target="_blank" rel="noopener noreferrer" className="social-link zalo">
-                  <span>Z</span>
+                <a href="http://zalo.me/pandauniform" target="_blank" rel="noopener noreferrer" className="social-link">
+                  Zalo
                 </a>
               </div>
             </div>
