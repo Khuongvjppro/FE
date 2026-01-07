@@ -244,8 +244,8 @@ function Header() {
               ))}
 
               {/* Search icon */}
-              <button 
-                className="header-icon" 
+              <button
+                className="header-icon"
                 onClick={() => setShowSearchBar(true)}
               >
                 <FiSearch size={22} />
@@ -294,7 +294,10 @@ function Header() {
       </nav>
 
       {/* Search Modal */}
-      <SearchBar isOpen={showSearchBar} onClose={() => setShowSearchBar(false)} />
+      <SearchBar
+        isOpen={showSearchBar}
+        onClose={() => setShowSearchBar(false)}
+      />
     </header>
   );
 }

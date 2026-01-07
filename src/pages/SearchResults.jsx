@@ -143,32 +143,34 @@ function SearchResults() {
         )}
 
         {/* No Results */}
-        {!isLoading && filteredProducts.length === 0 && searchParams.get("q") && (
-          <div className="no-results-container">
-            <div className="no-results-icon">
-              <FiSearch size={64} />
+        {!isLoading &&
+          filteredProducts.length === 0 &&
+          searchParams.get("q") && (
+            <div className="no-results-container">
+              <div className="no-results-icon">
+                <FiSearch size={64} />
+              </div>
+              <h2>Không tìm thấy sản phẩm</h2>
+              <p>
+                Rất tiếc, chúng tôi không tìm thấy sản phẩm nào phù hợp với từ
+                khóa "{searchParams.get("q")}"
+              </p>
+              <div className="no-results-suggestions">
+                <h3>Gợi ý:</h3>
+                <ul>
+                  <li>Kiểm tra lại chính tả từ khóa</li>
+                  <li>Thử sử dụng từ khóa khác</li>
+                  <li>Sử dụng từ khóa chung chung hơn</li>
+                </ul>
+              </div>
+              <button
+                className="back-to-products-btn"
+                onClick={() => navigate("/products")}
+              >
+                Xem tất cả sản phẩm
+              </button>
             </div>
-            <h2>Không tìm thấy sản phẩm</h2>
-            <p>
-              Rất tiếc, chúng tôi không tìm thấy sản phẩm nào phù hợp với từ
-              khóa "{searchParams.get("q")}"
-            </p>
-            <div className="no-results-suggestions">
-              <h3>Gợi ý:</h3>
-              <ul>
-                <li>Kiểm tra lại chính tả từ khóa</li>
-                <li>Thử sử dụng từ khóa khác</li>
-                <li>Sử dụng từ khóa chung chung hơn</li>
-              </ul>
-            </div>
-            <button
-              className="back-to-products-btn"
-              onClick={() => navigate("/products")}
-            >
-              Xem tất cả sản phẩm
-            </button>
-          </div>
-        )}
+          )}
       </div>
     </div>
   );
