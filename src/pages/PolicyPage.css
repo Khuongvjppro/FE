@@ -1,0 +1,530 @@
+/* Hero Section */
+.policy-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.policy-hero {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+  background: linear-gradient(135deg, #ff9fb9 0%, #ffc0cb 50%, #ffd4e0 100%);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.8rem 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  opacity: 1;
+}
+
+.breadcrumb .separator {
+  font-size: 1rem;
+}
+
+.breadcrumb-link {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Main Content Layout */
+.policy-main {
+  padding: 0;
+  background: #f5f5f5;
+}
+
+.container-full {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.policy-layout {
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+}
+
+/* Sidebar */
+.policy-sidebar {
+  width: 280px;
+  background: #fff;
+  flex-shrink: 0;
+  position: sticky;
+  top: 80px;
+}
+
+.sidebar-item {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  background: #e0e0e0;
+  color: #666;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+}
+
+.sidebar-item:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.sidebar-item:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.sidebar-item.active {
+  background: #ff6347;
+  color: white;
+}
+
+.sidebar-item:hover:not(.active) {
+  background: #d0d0d0;
+}
+
+/* Content Area */
+.policy-content-main {
+  flex: 1;
+  padding: 2rem;
+  background: #fff;
+}
+
+.promo-box {
+  background: white;
+  padding: 2rem;
+  border: 2px solid #f0f0f0;
+  border-radius: 8px;
+}
+
+.promo-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.promo-subtitle {
+  font-size: 1.05rem;
+  color: #333;
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+}
+
+.promo-note {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 0 1rem 0;
+  line-height: 1.7;
+}
+
+.arrow {
+  color: #ff6347;
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+
+.orange-icon {
+  color: #ff9800;
+  font-size: 1.1rem;
+  margin-right: 0.3rem;
+}
+
+.highlight-red {
+  color: #ff6347;
+  font-weight: 600;
+}
+
+.highlight-green {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.promo-combo {
+  font-size: 1rem;
+  color: #333;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.promo-list {
+  list-style: none;
+  padding: 0 0 0 1.5rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.promo-list li {
+  position: relative;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.promo-list li:before {
+  content: '•';
+  position: absolute;
+  left: -1rem;
+  color: #ff6347;
+  font-weight: bold;
+}
+
+.combo-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ff6347;
+  margin: 2rem 0 1.5rem 0;
+  text-align: center;
+}
+
+.combo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.combo-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.combo-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.combo-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  padding: 1rem;
+  margin: 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.combo-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ff6347;
+  text-align: center;
+  padding: 0 1rem 1rem;
+  margin: 0;
+}
+
+/* Design Section */
+.design-section {
+  background: white;
+  padding: 2rem;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.design-image-container {
+  width: 100%;
+  margin: 0 0 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.design-main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.design-content {
+  padding: 1rem 0;
+}
+
+.design-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0 0 1.5rem 0;
+}
+
+.design-subtitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #333;
+  margin: 2rem 0 1rem 0;
+  text-transform: uppercase;
+}
+
+.design-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.design-list li {
+  padding: 0.8rem 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.design-list li:last-child {
+  border-bottom: none;
+}
+
+.design-note {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-left: 3px solid #ff6347;
+  border-radius: 4px;
+}
+
+.design-footer {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+  margin: 1.5rem 0 0 0;
+  font-style: italic;
+}
+
+.warranty-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 1.5rem 0 0.8rem 0;
+}
+
+/* Shipping Section Styles */
+.shipping-intro {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0 0 1.5rem 0;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.shipping-image-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.shipping-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.shipping-content {
+  padding: 0;
+}
+
+.shipping-highlight {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.7;
+  margin: 0 0 1.5rem 0;
+}
+
+.text-red {
+  color: #ff0000;
+  font-weight: 700;
+}
+
+.text-green {
+  color: #4caf50;
+  font-weight: 700;
+}
+
+.shipping-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin: 2rem 0 1rem 0;
+}
+
+.shipping-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.shipping-list li {
+  position: relative;
+  padding: 0.6rem 0 0.6rem 1.5rem;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.shipping-list li:last-child {
+  border-bottom: none;
+}
+
+.shipping-list li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #ff6347;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.shipping-note {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #fff3e0;
+  border-left: 3px solid #ff9800;
+  border-radius: 4px;
+}
+
+.shipping-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 1rem 0;
+}
+
+.shipping-footer {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.7;
+  margin: 1.5rem 0 0 0;
+  padding: 1rem;
+  background: #f0f8ff;
+  border-left: 3px solid #2196f3;
+  border-radius: 4px;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .policy-layout {
+    flex-direction: column;
+  }
+
+  .policy-sidebar {
+    width: 100%;
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .sidebar-item {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .combo-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .policy-hero {
+    min-height: 180px;
+  }
+
+  .hero-overlay {
+    padding: 1.5rem;
+  }
+
+  .policy-content-main {
+    padding: 1.5rem;
+  }
+
+  .promo-box {
+    padding: 1.5rem;
+  }
+
+  .sidebar-item {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  .combo-image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .policy-content-main {
+    padding: 1rem;
+  }
+
+  .promo-box {
+    padding: 1rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.85rem;
+  }
+
+  .sidebar-item {
+    flex: 1 1 100%;
+  }
+}
