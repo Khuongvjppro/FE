@@ -25,6 +25,12 @@ const OrderConfirm = lazy(() => import("./pages/OrderConfirm"));
 const CheckoutInfo = lazy(() => import("./pages/CheckoutInfo"));
 const CheckoutConfirm = lazy(() => import("./pages/CheckoutConfirm"));
 const BulkOrder = lazy(() => import("./pages/BulkOrder"));
+const FAQPage = lazy(() => import("./pages/FAQPage"));
+const SizePage = lazy(() => import("./pages/SizePage"));
+const ColorPage = lazy(() => import("./pages/ColorPage"));
+const FabricMaterial = lazy(() => import("./pages/FabricMaterial"));
+const PolicyPage = lazy(() => import("./pages/PolicyPage"));
+const PrintTechnologyPage = lazy(() => import("./pages/PrintTechnologyPage"));
 
 function RequireAuth({ children }) {
   const { user } = useAuth();
@@ -97,6 +103,16 @@ function App() {
                   </RequireAuth>
                 }
               />
+              <Route path="/tu-van/quy-trinh-dat-ao" element={<OrderProcessPage />} />
+              <Route path="/tu-van/phuong-thuc-thanh-toan" element={<PaymentMethodsPage />} />
+              <Route path="/tu-van/cau-hoi-thuong-gap" element={<FAQPage />} />
+              <Route path="/tu-van/faq" element={<FAQPage />} />
+              <Route path="/tu-van/bang-size" element={<SizePage />} />
+              <Route path="/tu-van/bang-mau" element={<ColorPage />} />
+              <Route path={ROUTES.FABRIC_MATERIAL} element={<FabricMaterial />} />
+              <Route path={ROUTES.POLICY_GIFT} element={<PolicyPage />} />
+              <Route path="/tu-van/chinh-sach" element={<PolicyPage />} />
+              <Route path="/tu-van/cong-nghe-in" element={<PrintTechnologyPage />} />
             </Routes>
           </Suspense>
         </Router>

@@ -151,11 +151,15 @@ function Header() {
                             <ul className="dropdown-list">
                               {section.items.map((item, itemIdx) => (
                                 <li key={itemIdx}>
-                                  <a
-                                    href={item.link}
+                                  <Link
+                                    to={item.link}
                                     className={
                                       item.highlight ? "highlight" : ""
                                     }
+                                    onClick={() => {
+                                      setActiveDropdown(null);
+                                      setHoveredCategory(null);
+                                    }}
                                   >
                                     {item.name}
                                     {item.subtitle && (
@@ -163,7 +167,7 @@ function Header() {
                                         {item.subtitle}
                                       </span>
                                     )}
-                                  </a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
@@ -218,11 +222,14 @@ function Header() {
                             <ul className="dropdown-list">
                               {section.items.map((item, itemIdx) => (
                                 <li key={itemIdx}>
-                                  <a
-                                    href={item.link}
+                                  <Link
+                                    to={item.link}
                                     className={
                                       item.highlight ? "highlight" : ""
                                     }
+                                    onClick={() => {
+                                      setActiveDropdown(null);
+                                    }}
                                   >
                                     {item.name}
                                     {item.subtitle && (
@@ -230,7 +237,7 @@ function Header() {
                                         {item.subtitle}
                                       </span>
                                     )}
-                                  </a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
