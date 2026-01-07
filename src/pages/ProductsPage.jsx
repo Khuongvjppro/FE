@@ -18,6 +18,8 @@ function ProductsPage() {
   const [selectedSubcategory, setSelectedSubcategory] =
     useState(subcategoryFromUrl);
   const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 9;
 
   const { data: products, loading } = useFetch(
     () => productService.getAll(),
@@ -64,6 +66,7 @@ function ProductsPage() {
       }
 
       setFilteredProducts(filtered);
+      setCurrentPage(1); // Reset to page 1 when filters change
     }
   }, [products, selectedCategory, selectedSubcategory, searchTerm]);
 
@@ -84,6 +87,17 @@ function ProductsPage() {
     }
     const category = CATEGORY_LIST.find((cat) => cat.id === selectedCategory);
     return category ? category.name : "Sản phẩm bán chạy";
+  };
+
+  // Pagination calculations
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const categorySubItems = {
@@ -255,11 +269,62 @@ function ProductsPage() {
             {loading ? (
               <div className="loading">Đang tải sản phẩm...</div>
             ) : (
-              <div className="products-grid">
-                {filteredProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
-              </div>
+              <>
+                <div className="products-grid">
+                  {currentProducts.map((product) => (
+                    <ProductCard key={product.id} product={product} />
+                  ))}
+                </div>
+
+                {/* Pagination */}
+                {totalPages > 1 && (
+                  <div className="pagination">
+                    <button
+                      className="pagination-btn prev-btn"
+                      onClick={() => handlePageChange(currentPage - 1)}
+                      disabled={currentPage === 1}
+                    >
+                      ‹ Trước
+                    </button>
+
+                    <div className="pagination-numbers">
+                      {[...Array(totalPages)].map((_, index) => {
+                        const pageNumber = index + 1;
+                        // Show first page, last page, current page, and pages around current
+                        if (
+                          pageNumber === 1 ||
+                          pageNumber === totalPages ||
+                          (pageNumber >= currentPage - 1 && pageNumber <= currentPage + 1)
+                        ) {
+                          return (
+                            <button
+                              key={pageNumber}
+                              className={`pagination-btn page-number ${currentPage === pageNumber ? 'active' : ''}`}
+                              onClick={() => handlePageChange(pageNumber)}
+                            >
+                              {pageNumber}
+                            </button>
+                          );
+                        } else if (
+                          pageNumber === currentPage - 2 ||
+                          pageNumber === currentPage + 2
+                        ) {
+                          return <span key={pageNumber} className="pagination-dots">...</span>;
+                        }
+                        return null;
+                      })}
+                    </div>
+
+                    <button
+                      className="pagination-btn next-btn"
+                      onClick={() => handlePageChange(currentPage + 1)}
+                      disabled={currentPage === totalPages}
+                    >
+                      Sau ›
+                    </button>
+                  </div>
+                )}
+              </>
             )}
 
             {filteredProducts.length === 0 && !loading && (
