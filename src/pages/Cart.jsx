@@ -1,17 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../contexts/CartContext";
+import { useAuth } from "../contexts/AuthContext";
 import {
   FiTrash2,
   FiMinus,
   FiPlus,
   FiShoppingBag,
   FiArrowLeft,
+  FiCheck,
 } from "react-icons/fi";
 import "./Cart.css";
 
 function Cart() {
   const { cart, removeFromCart, updateQuantity, getTotalPrice, clearCart } =
     useCart();
+  const { user } = useAuth();
+  const navigate = useNavigate();
 
   const formatPrice = (price) => {
     return new Intl.NumberFormat("vi-VN", {
@@ -139,7 +143,18 @@ function Cart() {
                 </span>
               </div>
 
-              <button className="checkout-btn">Tiến hành thanh toán</button>
+              <button
+                className="checkout-btn"
+                onClick={() => {
+                  if (!user) {
+                    navigate("/login?redirect=/checkout-info");
+                  } else {
+                    navigate("/checkout-info");
+                  }
+                }}
+              >
+                Tiến hành thanh toán
+              </button>
 
               <Link to="/" className="continue-link">
                 <FiArrowLeft /> Tiếp tục mua sắm
@@ -152,15 +167,15 @@ function Cart() {
 
             <div className="cart-benefits">
               <div className="benefit-item">
-                <span className="benefit-icon">✓</span>
+                <FiCheck className="benefit-icon" />
                 <span>Miễn phí vận chuyển với đơn hàng trên 500.000đ</span>
               </div>
               <div className="benefit-item">
-                <span className="benefit-icon">✓</span>
+                <FiCheck className="benefit-icon" />
                 <span>Đổi trả trong vòng 7 ngày</span>
               </div>
               <div className="benefit-item">
-                <span className="benefit-icon">✓</span>
+                <FiCheck className="benefit-icon" />
                 <span>Thanh toán an toàn & bảo mật</span>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LazyImage from "./LazyImage";
 import "./ProductCard.css";
 
 function ProductCard({ product }) {
@@ -13,27 +14,20 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div className="product-card">
-      <div className="product-image">
-        <img src={product.image} alt={product.name} />
-        <div className="product-overlay">
-          <Link
-            to={`/product/${product.id}`}
-            className="overlay-btn detail-btn"
-          >
-            Chi tiết
-          </Link>
-          <button className="overlay-btn preview-btn">Xem trước</button>
+    <Link to={`/product/${product.id}`} className="product-card-wrapper">
+      <div className="product-card">
+        <div className="product-image">
+          <LazyImage src={product.image} alt={product.name} />
         </div>
-      </div>
 
-      <div className="product-info">
-        <div className="product-category">
-          {getCategoryName(product.category)}
+        <div className="product-info">
+          <div className="product-category">
+            {getCategoryName(product.category)}
+          </div>
+          <h3 className="product-name">{product.name}</h3>
         </div>
-        <h3 className="product-name">{product.name}</h3>
       </div>
-    </div>
+    </Link>
   );
 }
 

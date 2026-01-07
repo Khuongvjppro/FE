@@ -43,7 +43,7 @@ function CategorySection({ products, categories }) {
           {/* Products Area */}
           <div className="category-products">
             <div className="category-products-header">
-              <a href="/san-pham" className="view-more-link">
+              <a href="/products" className="view-more-link">
                 Xem thêm sản phẩm <span>›</span>
               </a>
             </div>

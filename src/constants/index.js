@@ -10,8 +10,8 @@ export const API_ENDPOINTS = {
 
 // App routes
 export const ROUTES = {
-  LOGIN: "/",
-  HOME: "/home",
+  LOGIN: "/login",
+  HOME: "/",
   PRODUCTS: "/products",
   PRODUCT_DETAIL: "/product/:id",
   NEWS: "/news",
@@ -19,6 +19,7 @@ export const ROUTES = {
   ABOUT: "/about",
   CONTACT: "/contact",
   CART: "/cart",
+  BULK_ORDER: "/bulk-order",
   ORDER_PROCESS: "/order-process",
   PAYMENT_METHODS: "/payment-methods",
   PAYMENT_METHODS_PAGE: "/tu-van/phuong-thuc-thanh-toan",
