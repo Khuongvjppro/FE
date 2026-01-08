@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
+import '../styles/consultation-common.css';
 import './PolicyPage.css';
 
 const PolicyPage = () => {
@@ -31,17 +32,18 @@ const PolicyPage = () => {
     <MainLayout>
       <div className="policy-page">
         {/* Hero Section */}
-        <div className="policy-hero">
-          <div className="hero-overlay">
-            <h1 className="hero-title">Chính sách quà tặng</h1>
+        <div className="consultation-hero">
+          <div className="container">
+            <div className="consultation-badge">CHÍNH SÁCH QUÀ TẶNG</div>
             <div className="breadcrumb">
-              <Link to="/home" className="breadcrumb-link">Trang chủ</Link>
+              <Link to="/">Trang chủ</Link>
               <span className="separator">›</span>
               <span>Tư vấn</span>
               <span className="separator">›</span>
               <span>Chính sách quà tặng</span>
             </div>
           </div>
+          <div className="consultation-hashtag">#dongphucpanda</div>
         </div>
 
         {/* Main Content with Sidebar */}

@@ -19,83 +19,28 @@
 
 .section-header {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
   position: relative;
   z-index: 1;
   padding: 0 20px;
 }
 
-.section-header::before {
-  content: '✦';
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 48px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  opacity: 0.3;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateX(-50%) translateY(0px); }
-  50% { transform: translateX(-50%) translateY(-10px); }
-}
-
 .order-process-title {
-  font-size: 48px;
-  font-weight: 900;
-  color: #1a1a2e;
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
   position: relative;
   display: inline-block;
   width: 100%;
-  text-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
-  animation: fadeInDown 0.8s ease-out;
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.order-process-title::after {
-  content: '';
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #667eea, #764ba2, #667eea, transparent);
-  border-radius: 2px;
-  animation: shimmer 2s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
 }
 
 .section-subtitle {
-  font-size: 19px;
-  color: #64748b;
-  font-weight: 500;
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
   max-width: 650px;
   margin: 0 auto;
   line-height: 1.6;

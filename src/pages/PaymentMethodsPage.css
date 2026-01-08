@@ -3,7 +3,11 @@
 }
 
 .payment-hero {
-  background: linear-gradient(135deg, #e8505b 0%, #f39c6b 50%, #e56f8c 100%);
+  background: linear-gradient(135deg, rgba(255, 102, 52, 0.4) 0%, rgba(255, 142, 83, 0.4) 50%, rgba(255, 179, 128, 0.4) 100%),
+              url('/images/banner-quy trình đặt áo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 80px 0 40px;
   color: white;
   position: relative;
@@ -16,10 +20,13 @@
 }
 
 .payment-hero-title {
-  font-size: 48px;
-  font-weight: bold;
+  font-size: 36px;
+  font-weight: 800;
   margin: 0;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: 2px;
 }
 
 .breadcrumb {

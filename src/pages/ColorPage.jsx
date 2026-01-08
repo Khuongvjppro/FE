@@ -99,21 +99,15 @@ function ColorPage() {
               <span className="separator">›</span>
               <span>Bảng màu</span>
             </div>
-          </div>
-          <div className="consultation-hashtag">#dongphucpanda</div>
-        </div>
-
-        {/* Main Content */}
-        <div className="consultation-content">
-          <div className="container">
             <p className="hero-description">
-              Panda Uniform là đơn vị cung cấp áo đồng phục chất lượng hàng đầu Việt Nam mang lại trải nghiệm tuyệt vời cho khách hàng về sản phẩm và dịch vụ. Dưới đây, Panda Uniform xin thấy được mỗi bảng màu của những chất vải khác nhau.
+              Panda Uniform là đơn vị cung cấp áo đồng phục chất lượng hàng đầu Việt Nam mang lại trải nghiệm tuyệt vời cho khách hàng về sản phẩm và dịch vụ. Đặc biệt, Panda Uniform có khả năng cung cấp màu đa dạng trên nhiều chất liệu khác nhau.
             </p>
             <div className="hero-buttons">
               <button className="btn-primary">Trải nghiệm màu áo thực tế</button>
               <button className="btn-secondary">Liên hệ ngay</button>
             </div>
           </div>
+          <div className="consultation-hashtag">#dongphucpanda</div>
         </div>
 
         {/* Main Content */}
