@@ -6,7 +6,7 @@
 /* Hero Banner */
 .print-hero {
   position: relative;
-  min-height: 350px;
+  min-height: 220px;
   background: linear-gradient(135deg, rgba(255, 102, 52, 0.4) 0%, rgba(255, 142, 83, 0.4) 50%, rgba(255, 179, 128, 0.4) 100%),
               url('/images/banner-quy trình đặt áo.png');
   background-size: cover;
@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  padding: 60px 80px;
+  padding: 50px 80px 70px;
 }
 
 .print-hero .hero-overlay {

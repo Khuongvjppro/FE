@@ -175,6 +175,7 @@ function ProductsPage() {
       <div className="products-page">
         {/* Banner */}
         <div className="products-banner">
+          <img src="/images/Banner sản phẩm.png" alt="Banner sản phẩm" className="banner-image" />
           <div className="banner-content">
             <h1>{getCategoryName()}</h1>
             <div className="breadcrumb">
