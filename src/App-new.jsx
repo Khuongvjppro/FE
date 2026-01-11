@@ -31,6 +31,7 @@ const ColorPage = lazy(() => import("./pages/ColorPage"));
 const FabricMaterial = lazy(() => import("./pages/FabricMaterial"));
 const PolicyPage = lazy(() => import("./pages/PolicyPage"));
 const PrintTechnologyPage = lazy(() => import("./pages/PrintTechnologyPage"));
+const Profile = lazy(() => import("./pages/Profile"));
 
 function RequireAuth({ children }) {
   const { user } = useAuth();
@@ -113,6 +114,22 @@ function App() {
               <Route path={ROUTES.POLICY_GIFT} element={<PolicyPage />} />
               <Route path="/tu-van/chinh-sach" element={<PolicyPage />} />
               <Route path="/tu-van/cong-nghe-in" element={<PrintTechnologyPage />} />
+              <Route 
+                path="/profile" 
+                element={
+                  <RequireAuth>
+                    <Profile />
+                  </RequireAuth>
+                } 
+              />
+              <Route 
+                path="/profiles" 
+                element={
+                  <RequireAuth>
+                    <Profile />
+                  </RequireAuth>
+                } 
+              />
             </Routes>
           </Suspense>
         </Router>
