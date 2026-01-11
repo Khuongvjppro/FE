@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import { useCart } from "../contexts/CartContext";
+import LocationMap from "../components/LocationMap";
+import "../components/LocationMap.css";
 
 function CheckoutInfo() {
   const navigate = useNavigate();
@@ -14,9 +16,15 @@ function CheckoutInfo() {
     note: "",
   });
   const [error, setError] = useState("");
+  const [selectedCoords, setSelectedCoords] = useState(null);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleLocationSelect = (address, coords) => {
+    setForm({ ...form, address });
+    setSelectedCoords(coords);
   };
 
   const handleSubmit = (e) => {
@@ -25,7 +33,11 @@ function CheckoutInfo() {
       setError("Vui lòng nhập đầy đủ thông tin!");
       return;
     }
-    localStorage.setItem("checkoutInfo", JSON.stringify(form));
+    const checkoutData = {
+      ...form,
+      coordinates: selectedCoords
+    };
+    localStorage.setItem("checkoutInfo", JSON.stringify(checkoutData));
     navigate("/checkout-confirm");
   };
 
@@ -68,6 +80,10 @@ function CheckoutInfo() {
               value={form.email}
               onChange={handleChange}
               style={{padding: '12px 14px', borderRadius: 8, border: '1px solid #e0e0e0', fontSize: 16, outline: 'none', marginBottom: 8, width: '100%'}}
+            />
+            <LocationMap 
+              onLocationSelect={handleLocationSelect}
+              initialPosition={selectedCoords}
             />
             <input
               name="address"
