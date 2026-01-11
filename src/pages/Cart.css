@@ -1,7 +1,7 @@
 .cart-page {
-  padding: 40px 0;
+  padding: 60px 0;
   min-height: calc(100vh - 200px);
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: #f8f9fa;
 }
 
 .cart-header {
@@ -24,49 +24,92 @@
 /* Empty Cart */
 .empty-cart {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 40px;
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  max-width: 480px;
   margin: 0 auto;
 }
 
+.empty-cart-icon-wrapper {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 24px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.empty-cart-icon-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 102, 0, 0.1) 0%,
+    rgba(255, 102, 0, 0.05) 100%
+  );
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
 .empty-cart-icon {
-  font-size: 5rem;
-  color: #e0e0e0;
-  margin-bottom: 20px;
+  font-size: 56px;
+  color: #adb5bd;
+  position: relative;
+  z-index: 1;
 }
 
 .empty-cart h2 {
-  font-size: 1.8rem;
-  color: #2c3e50;
-  margin-bottom: 10px;
+  font-size: 24px;
+  color: #212529;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
 .empty-cart p {
-  color: #7f8c8d;
-  margin-bottom: 30px;
-  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 32px;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .continue-shopping-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 14px 32px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 14px 28px;
+  background: #ff6600;
   color: white;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 12px;
   font-weight: 600;
+  font-size: 15px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.2);
 }
 
 .continue-shopping-btn:hover {
+  background: #e55a00;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 6px 16px rgba(255, 102, 0, 0.3);
 }
 
 /* Cart Content */
