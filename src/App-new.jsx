@@ -16,6 +16,7 @@ const HomePage = lazy(() => import("./pages/HomePage"));
 const ProductsPage = lazy(() => import("./pages/ProductsPage"));
 const ProductDetail = lazy(() => import("./pages/ProductDetail"));
 const NewsPage = lazy(() => import("./pages/NewsPage"));
+const SearchResults = lazy(() => import("./pages/SearchResults"));
 const Cart = lazy(() => import("./pages/Cart"));
 const OrderProcessPage = lazy(() => import("./pages/OrderProcessPage"));
 const PaymentMethodsPage = lazy(() => import("./pages/PaymentMethodsPage"));
@@ -52,6 +53,7 @@ function App() {
               <Route path={ROUTES.LOGIN} element={<Login />} />
               <Route path={ROUTES.ABOUT} element={<AboutPage />} />
               <Route path="/products" element={<ProductsPage />} />
+              <Route path={ROUTES.SEARCH} element={<SearchResults />} />
               <Route path={ROUTES.BULK_ORDER} element={<BulkOrder />} />
               <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
               <Route path={ROUTES.NEWS} element={<NewsPage />} />

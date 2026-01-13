@@ -36,6 +36,8 @@ export const productService = {
   getById: (id) => api.get(`${API_ENDPOINTS.PRODUCTS}/${id}`),
   getByCategory: (category) =>
     api.get(`${API_ENDPOINTS.PRODUCTS}?category=${category}`),
+  search: (query) =>
+    api.get(`${API_ENDPOINTS.PRODUCTS}?q=${encodeURIComponent(query)}`),
 };
 
 // Category services

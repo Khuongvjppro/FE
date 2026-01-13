@@ -5,6 +5,7 @@ import { FiShoppingCart, FiUser, FiSearch } from "react-icons/fi";
 import { useRef } from "react";
 import { useCart } from "../contexts/CartContext";
 import { ROUTES, API_BASE_URL, API_ENDPOINTS } from "../constants";
+import SearchBar from "./SearchBar";
 import "./Header.css";
 
 function Header() {
@@ -12,6 +13,7 @@ function Header() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [hoveredCategory, setHoveredCategory] = useState(null);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
+  const [showSearchBar, setShowSearchBar] = useState(false);
   const userDropdownRef = useRef(null);
 
   // Đóng dropdown khi click ra ngoài
@@ -249,7 +251,10 @@ function Header() {
               ))}
 
               {/* Search icon */}
-              <button className="header-icon">
+              <button
+                className="header-icon"
+                onClick={() => setShowSearchBar(true)}
+              >
                 <FiSearch size={22} />
               </button>
 
@@ -294,6 +299,12 @@ function Header() {
           </div>
         </div>
       </nav>
+
+      {/* Search Modal */}
+      <SearchBar
+        isOpen={showSearchBar}
+        onClose={() => setShowSearchBar(false)}
+      />
     </header>
   );
 }
