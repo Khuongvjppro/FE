@@ -176,10 +176,10 @@ function ProductsPage() {
         {/* Banner */}
         <div className="products-banner">
           <div className="banner-content">
-            <h1>{getCategoryName()}</h1>
+            <h1>Tất cả sản phẩm</h1>
             <div className="breadcrumb">
               <Link to="/">Trang chủ</Link> &gt;{" "}
-              <span>{getCategoryName()}</span>
+              <span>Tất cả sản phẩm</span>
             </div>
             <div className="hashtag">#dongphucpanda</div>
           </div>

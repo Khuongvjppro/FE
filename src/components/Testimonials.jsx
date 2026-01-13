@@ -12,7 +12,7 @@ function Testimonials() {
       avatar:
         "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop",
       image:
-        "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&h=600&fit=crop",
+        "/images/MyCustomer1.png",
       review:
         "Chất lượng tốt, giá cả hợp lý, anh chị tư vấn nhiệt tình. Nói chung là rất ưng ạ.",
     },
@@ -23,7 +23,7 @@ function Testimonials() {
       avatar:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
       image:
-        "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=600&fit=crop",
+        "/images/MyCustomer2.png",
       review:
         "Áo đẹp, chất lượng tốt, in sắc nét. Cả lớp đều rất hài lòng với sản phẩm. Sẽ ủng hộ lâu dài!",
     },
@@ -34,7 +34,7 @@ function Testimonials() {
       avatar:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
       image:
-        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
+        "/images/MyCustomer3.png",
       review:
         "Dịch vụ tuyệt vời, giao hàng nhanh. Thiết kế đẹp, chất liệu vải mềm mại. Rất đáng để thử!",
     },
