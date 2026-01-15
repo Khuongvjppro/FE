@@ -11,8 +11,7 @@ function Testimonials() {
       school: "D2 THPT Tiên Lữ",
       avatar:
         "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop",
-      image:
-        "/images/MyCustomer1.png",
+      image: "/images/MyCustomer1.png",
       review:
         "Chất lượng tốt, giá cả hợp lý, anh chị tư vấn nhiệt tình. Nói chung là rất ưng ạ.",
     },
@@ -22,8 +21,7 @@ function Testimonials() {
       school: "11C8 THPT Nguyễn Bỉnh Khiêm",
       avatar:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
-      image:
-        "/images/MyCustomer2.png",
+      image: "/images/MyCustomer2.png",
       review:
         "Áo đẹp, chất lượng tốt, in sắc nét. Cả lớp đều rất hài lòng với sản phẩm. Sẽ ủng hộ lâu dài!",
     },
@@ -33,8 +31,7 @@ function Testimonials() {
       school: "12A1 THPT Chu Văn An",
       avatar:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
-      image:
-        "/images/MyCustomer3.png",
+      image: "/images/MyCustomer3.png",
       review:
         "Dịch vụ tuyệt vời, giao hàng nhanh. Thiết kế đẹp, chất liệu vải mềm mại. Rất đáng để thử!",
     },

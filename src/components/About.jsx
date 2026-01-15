@@ -61,9 +61,13 @@ function About() {
             <div className="about-body">
               <div className="about-intro-card">
                 <p className="about-description primary">
-                  <strong className="brand-name">Panda Uniform</strong> tự hào là nhà cung cấp đồng phục
-                  uy tín chất lượng hàng đầu miền Bắc với sản phẩm đồng phục{" "}
-                  <span className="highlight-text">Xịn Mịn – 100% cotton cao cấp</span> nhất trên thị trường hiện nay.
+                  <strong className="brand-name">Panda Uniform</strong> tự hào
+                  là nhà cung cấp đồng phục uy tín chất lượng hàng đầu miền Bắc
+                  với sản phẩm đồng phục{" "}
+                  <span className="highlight-text">
+                    Xịn Mịn – 100% cotton cao cấp
+                  </span>{" "}
+                  nhất trên thị trường hiện nay.
                 </p>
               </div>
 
