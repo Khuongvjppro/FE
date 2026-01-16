@@ -53,7 +53,7 @@ function App() {
               <Route path={ROUTES.HOME} element={<HomePage />} />
               <Route path={ROUTES.LOGIN} element={<Login />} />
               <Route path={ROUTES.ABOUT} element={<AboutPage />} />
-              <Route path="/products" element={<ProductsPage />} />
+              <Route path={ROUTES.PRODUCTS} element={<ProductsPage />} />
               <Route path={ROUTES.SEARCH} element={<SearchResults />} />
               <Route path={ROUTES.BULK_ORDER} element={<BulkOrder />} />
               <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
