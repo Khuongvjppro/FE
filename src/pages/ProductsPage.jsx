@@ -92,12 +92,15 @@ function ProductsPage() {
   // Pagination calculations
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+  const currentProducts = filteredProducts.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const categorySubItems = {
@@ -178,8 +181,7 @@ function ProductsPage() {
           <div className="banner-content">
             <h1>Tất cả sản phẩm</h1>
             <div className="breadcrumb">
-              <Link to="/">Trang chủ</Link> &gt;{" "}
-              <span>Tất cả sản phẩm</span>
+              <Link to="/">Trang chủ</Link> &gt; <span>Tất cả sản phẩm</span>
             </div>
             <div className="hashtag">#dongphucpanda</div>
           </div>
@@ -294,12 +296,15 @@ function ProductsPage() {
                         if (
                           pageNumber === 1 ||
                           pageNumber === totalPages ||
-                          (pageNumber >= currentPage - 1 && pageNumber <= currentPage + 1)
+                          (pageNumber >= currentPage - 1 &&
+                            pageNumber <= currentPage + 1)
                         ) {
                           return (
                             <button
                               key={pageNumber}
-                              className={`pagination-btn page-number ${currentPage === pageNumber ? 'active' : ''}`}
+                              className={`pagination-btn page-number ${
+                                currentPage === pageNumber ? "active" : ""
+                              }`}
                               onClick={() => handlePageChange(pageNumber)}
                             >
                               {pageNumber}
@@ -309,7 +314,11 @@ function ProductsPage() {
                           pageNumber === currentPage - 2 ||
                           pageNumber === currentPage + 2
                         ) {
-                          return <span key={pageNumber} className="pagination-dots">...</span>;
+                          return (
+                            <span key={pageNumber} className="pagination-dots">
+                              ...
+                            </span>
+                          );
                         }
                         return null;
                       })}

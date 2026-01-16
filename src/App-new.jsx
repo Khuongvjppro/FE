@@ -107,13 +107,22 @@ function App() {
                   </RequireAuth>
                 }
               />
-              <Route path="/tu-van/quy-trinh-dat-ao" element={<OrderProcessPage />} />
-              <Route path="/tu-van/phuong-thuc-thanh-toan" element={<PaymentMethodsPage />} />
+              <Route
+                path="/tu-van/quy-trinh-dat-ao"
+                element={<OrderProcessPage />}
+              />
+              <Route
+                path="/tu-van/phuong-thuc-thanh-toan"
+                element={<PaymentMethodsPage />}
+              />
               <Route path="/tu-van/cau-hoi-thuong-gap" element={<FAQPage />} />
               <Route path="/tu-van/faq" element={<FAQPage />} />
               <Route path="/tu-van/bang-size" element={<SizePage />} />
               <Route path="/tu-van/bang-mau" element={<ColorPage />} />
-              <Route path={ROUTES.FABRIC_MATERIAL} element={<FabricMaterial />} />
+              <Route
+                path={ROUTES.FABRIC_MATERIAL}
+                element={<FabricMaterial />}
+              />
               <Route path={ROUTES.POLICY_GIFT} element={<PolicyPage />} />
               <Route path="/tu-van/chinh-sach" element={<PolicyPage />} />
               <Route path="/tu-van/cong-nghe-in" element={<PrintTechnologyPage />} />
@@ -126,13 +135,13 @@ function App() {
                   </RequireAuth>
                 } 
               />
-              <Route 
-                path="/profiles" 
+              <Route
+                path="/profiles"
                 element={
                   <RequireAuth>
                     <Profile />
                   </RequireAuth>
-                } 
+                }
               />
             </Routes>
           </Suspense>
