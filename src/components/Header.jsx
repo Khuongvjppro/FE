@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { FiShoppingCart, FiUser, FiSearch } from "react-icons/fi";
+import { FiShoppingCart, FiUser, FiSearch, FiLogOut } from "react-icons/fi";
 import { useRef } from "react";
 import { useCart } from "../contexts/CartContext";
+import { useAuth } from "../contexts/AuthContext";
 import { ROUTES, API_BASE_URL, API_ENDPOINTS } from "../constants";
 import SearchBar from "./SearchBar";
 import "./Header.css";
@@ -15,6 +16,9 @@ function Header() {
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const [showSearchBar, setShowSearchBar] = useState(false);
   const userDropdownRef = useRef(null);
+  const { getTotalItems } = useCart();
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
 
   // Đóng dropdown khi click ra ngoài
   useEffect(() => {
@@ -35,7 +39,6 @@ function Header() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showUserDropdown]);
-  const { getTotalItems } = useCart();
 
   useEffect(() => {
     fetchMenuData();
@@ -269,29 +272,65 @@ function Header() {
               {/* User icon có dropdown */}
               <div className="user-menu" ref={userDropdownRef}>
                 <button
-                  className="header-icon"
+                  className="header-icon user-icon-btn"
                   onClick={() => setShowUserDropdown((v) => !v)}
                   aria-haspopup="true"
                   aria-expanded={showUserDropdown}
                 >
-                  <FiUser size={22} />
+                  {user ? (
+                    <div className="user-avatar">
+                      {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
+                    </div>
+                  ) : (
+                    <FiUser size={22} />
+                  )}
                 </button>
                 {showUserDropdown && (
                   <div className="user-dropdown-menu">
-                    <Link
-                      to="/login"
-                      className="user-dropdown-link"
-                      onClick={() => setShowUserDropdown(false)}
-                    >
-                      Đăng nhập
-                    </Link>
-                    <Link
-                      to="/profile"
-                      className="user-dropdown-link"
-                      onClick={() => setShowUserDropdown(false)}
-                    >
-                      profile
-                    </Link>
+                    {user ? (
+                      <>
+                        <div className="user-dropdown-header">
+                          <div className="user-avatar-large">
+                            {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
+                          </div>
+                          <div className="user-info">
+                            <div className="user-name">{user.name || 'User'}</div>
+                            <div className="user-email">{user.email || ''}</div>
+                          </div>
+                        </div>
+                        <div className="dropdown-divider"></div>
+                        <Link
+                          to="/profile"
+                          className="user-dropdown-link"
+                          onClick={() => setShowUserDropdown(false)}
+                        >
+                          <FiUser size={18} />
+                          <span>Tài khoản của tôi</span>
+                        </Link>
+                        <button
+                          className="user-dropdown-link logout-btn"
+                          onClick={() => {
+                            logout();
+                            setShowUserDropdown(false);
+                            navigate('/');
+                          }}
+                        >
+                          <FiLogOut size={18} />
+                          <span>Đăng xuất</span>
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <Link
+                          to="/login"
+                          className="user-dropdown-link"
+                          onClick={() => setShowUserDropdown(false)}
+                        >
+                          <FiUser size={18} />
+                          <span>Đăng nhập</span>
+                        </Link>
+                      </>
+                    )}
                   </div>
                 )}
               </div>

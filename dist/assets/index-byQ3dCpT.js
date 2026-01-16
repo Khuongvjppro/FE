@@ -1,0 +1,1 @@
+import{r as e}from"./index-DxTk0xe3.js";const h=(o,c=[])=>{const[n,u]=e.useState(null),[l,r]=e.useState(!0),[f,a]=e.useState(null),s=async()=>{try{r(!0),a(null);const t=await o();u(t.data)}catch(t){a(t.message||"An error occurred"),console.error("Fetch error:",t)}finally{r(!1)}};return e.useEffect(()=>{s()},c),{data:n,loading:l,error:f,refetch:s}};export{h as u};

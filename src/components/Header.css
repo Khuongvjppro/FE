@@ -93,35 +93,126 @@
   display: inline-block;
 }
 
-/* Dropdown user giống sản phẩm/tư vấn */
+.user-icon-btn {
+  padding: 4px !important;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
 
 .user-dropdown-menu {
   position: absolute;
   top: 120%;
   right: 0;
-  min-width: 160px;
-  max-width: 200px;
+  min-width: 260px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
   animation: fadeInDown 0.2s ease;
-  padding: 12px 0;
+  padding: 8px;
   z-index: 1100;
+}
+
+.user-dropdown-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+
+.user-avatar-large {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #212529;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-email {
+  font-size: 13px;
+  color: #6c757d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: #e9ecef;
+  margin: 8px 0;
 }
 
 .user-dropdown-link {
   color: #333;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   transition: all 0.2s;
-  display: block;
-  padding: 13px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
   font-weight: 500;
   border-radius: 6px;
+  border: none;
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
 }
+
 .user-dropdown-link:hover {
   color: #ff6600;
-  background: #f7f7f7;
+  background: #fff3f0;
+}
+
+.logout-btn {
+  color: #dc3545;
+}
+
+.logout-btn:hover {
+  color: #fff;
+  background: #dc3545;
 }
 
 .nav-item {
@@ -193,7 +284,7 @@
 }
 
 .category-item {
-  padding: 12px 25px;
+  padding: 13px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -245,7 +336,7 @@
   left: 100%;
   top: -13px;
   background: white;
-  padding: 23px 35px;
+  padding: 15px 35px;
   min-width: 300px;
   display: flex;
   flex-direction: column;
@@ -253,6 +344,8 @@
   box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.15);
   animation: slideInRight 0.15s ease;
   z-index: 1001;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 @keyframes slideInRight {
@@ -284,7 +377,7 @@
 
 /* Dropdown thông thường cho các menu khác */
 .dropdown-column {
-  min-width: 280px;
+  min-width: 300px;
   padding: 0;
 }
 
@@ -299,7 +392,7 @@
 
 .dropdown-list {
   list-style: none;
-  padding: 20px 0;
+  padding: 15px 0;
   margin: 0;
 }
 
@@ -366,7 +459,7 @@
   .dropdown-categories {
     border-right: none;
     border-bottom: 1px solid #e5e5e5;
-    min-width: 100%;
+    /* min-width: 100%; */
   }
 
   .dropdown-subcategories {
